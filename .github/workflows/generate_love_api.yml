@@ -234,7 +234,7 @@ jobs:
         shell: bash
 
       - name: Manage version branch
-        if: steps.check_changes.outputs.changed == 'true' && (github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main')
+        if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -242,11 +242,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          BRANCH="${{ steps.branch.outputs.branch }}"
+          CURRENT_BRANCH="${{ steps.branch.outputs.branch }}"
           API_VER="${{ steps.api_version.outputs.api_version }}"
 
           if [ -z "${API_VER:-}" ]; then
-            echo "API version is empty — skipping."
+            echo "⚠️ API version is empty — cannot manage version branch."
             exit 0
           fi
 
@@ -257,25 +257,25 @@ jobs:
 
           # Check if version branch exists remotely
           if git ls-remote --exit-code --heads origin "${VERSION_BRANCH}" >/dev/null 2>&1; then
-            echo "Version branch ${VERSION_BRANCH} exists. Updating it."
+            echo "✅ Version branch ${VERSION_BRANCH} exists. Merging ${CURRENT_BRANCH} into it."
 
             # Checkout version branch
             git checkout -B "${VERSION_BRANCH}" "origin/${VERSION_BRANCH}"
 
-            # Merge changes from develop/main
-            if git merge --no-ff --no-edit "origin/${BRANCH}"; then
+            # Merge changes from current branch (develop/main)
+            if git merge --no-ff --no-edit "origin/${CURRENT_BRANCH}"; then
               git push origin "${VERSION_BRANCH}"
-              echo "✅ Updated ${VERSION_BRANCH} with changes from ${BRANCH}"
+              echo "✅ Merged ${CURRENT_BRANCH} into ${VERSION_BRANCH}"
             else
               echo "❌ Merge conflict. Aborting."
               git merge --abort || true
               exit 1
             fi
           else
-            echo "Version branch ${VERSION_BRANCH} does not exist. Creating it."
+            echo "Version branch ${VERSION_BRANCH} does not exist. Creating it from ${CURRENT_BRANCH}."
             git checkout -b "${VERSION_BRANCH}"
             git push -u origin "${VERSION_BRANCH}"
-            echo "✅ Created new branch ${VERSION_BRANCH}"
+            echo "✅ Created and pushed new branch ${VERSION_BRANCH}"
           fi
 
       - name: Summary
