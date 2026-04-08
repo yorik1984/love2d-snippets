@@ -246,45 +246,37 @@ jobs:
           API_VER="${{ steps.api_version.outputs.api_version }}"
 
           if [ -z "${API_VER:-}" ]; then
-            echo "API version is empty — cannot merge into version branch. Skipping."
+            echo "API version is empty — skipping."
             exit 0
           fi
 
           VERSION_BRANCH="$API_VER"
           echo "📌 Managing version branch: ${VERSION_BRANCH}"
 
-          # Fetch remote branches
-          git fetch origin "+refs/heads/*:refs/remotes/origin/*" --prune
+          git fetch origin
 
-          # Check if version branch exists
+          # Check if version branch exists remotely
           if git ls-remote --exit-code --heads origin "${VERSION_BRANCH}" >/dev/null 2>&1; then
-            echo "Version branch ${VERSION_BRANCH} exists. Merging ${BRANCH} into it."
+            echo "Version branch ${VERSION_BRANCH} exists. Updating it."
 
             # Checkout version branch
-            if git show-ref --verify --quiet "refs/heads/${VERSION_BRANCH}"; then
-              git checkout "${VERSION_BRANCH}"
-              git reset --hard "origin/${VERSION_BRANCH}"
-            else
-              git checkout -b "${VERSION_BRANCH}" "origin/${VERSION_BRANCH}"
-            fi
+            git checkout -B "${VERSION_BRANCH}" "origin/${VERSION_BRANCH}"
 
-            # Merge from original branch
+            # Merge changes from develop/main
             if git merge --no-ff --no-edit "origin/${BRANCH}"; then
               git push origin "${VERSION_BRANCH}"
-              echo "✅ Merged ${BRANCH} -> ${VERSION_BRANCH} and pushed."
+              echo "✅ Updated ${VERSION_BRANCH} with changes from ${BRANCH}"
             else
-              echo "❌ Merge conflicts detected. Aborting."
+              echo "❌ Merge conflict. Aborting."
               git merge --abort || true
               exit 1
             fi
           else
-            # Create new version branch
-            echo "Version branch ${VERSION_BRANCH} does not exist. Creating it from ${BRANCH}."
+            echo "Version branch ${VERSION_BRANCH} does not exist. Creating it."
             git checkout -b "${VERSION_BRANCH}"
             git push -u origin "${VERSION_BRANCH}"
-            echo "✅ Created and pushed new branch ${VERSION_BRANCH}."
+            echo "✅ Created new branch ${VERSION_BRANCH}"
           fi
-        shell: bash
 
       - name: Summary
         if: always()
