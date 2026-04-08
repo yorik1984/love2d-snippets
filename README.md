@@ -42,7 +42,7 @@ Use the plugins listed below to integrate these snippets into your editor (IDE),
 
 ### [VS Code](https://code.visualstudio.com/)
 
-This is actually a VS Code extension. You can install it from the VS Code Marketplace.
+This is actually link to the VS Code extension. You can install it from the VS Code Marketplace.
 
 [![Install from VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-Install-blue)](https://marketplace.visualstudio.com/items?itemName=yorik1984.love2d-snippets)
 
