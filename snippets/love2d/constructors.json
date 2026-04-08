@@ -1,0 +1,1154 @@
+{
+	"love.audio.newQueueableSource()": {
+		"prefix": "lnewQueueableSource",
+		"scope": "lua",
+		"body": [
+			"local ${1:source} = love.audio.newQueueableSource(${2:samplerate}, ${3:bitdepth}, ${4:channels}, ${5:0})",
+			"${0:}"
+		],
+		"description": "Creates a new Source usable for real-time generated sound playback with Source:queue. (Constructor)"
+	},
+	"love.audio.newSource()": {
+		"prefix": "lnewSource",
+		"scope": "lua",
+		"body": [
+			"local ${1:source} = love.audio.newSource(${2:filename}, ${3|\"static\",\"stream\",\"queue\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Source from a filepath, File, Decoder or SoundData. (Constructor)"
+	},
+	"love.audio.newSource()_overload2": {
+		"prefix": "lnewSource2",
+		"scope": "lua",
+		"body": [
+			"local ${1:source} = love.audio.newSource(${2:file}, ${3|\"static\",\"stream\",\"queue\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Source from a filepath, File, Decoder or SoundData. (Constructor)"
+	},
+	"love.audio.newSource()_overload3": {
+		"prefix": "lnewSource3",
+		"scope": "lua",
+		"body": [
+			"local ${1:source} = love.audio.newSource(${2:decoder}, ${3|\"static\",\"stream\",\"queue\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Source from a filepath, File, Decoder or SoundData. (Constructor)"
+	},
+	"love.audio.newSource()_overload4": {
+		"prefix": "lnewSource4",
+		"scope": "lua",
+		"body": [
+			"local ${1:source} = love.audio.newSource(${2:data}, ${3|\"static\",\"stream\",\"queue\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Source from a filepath, File, Decoder or SoundData. (Constructor)"
+	},
+	"love.audio.newSource()_overload5": {
+		"prefix": "lnewSource5",
+		"scope": "lua",
+		"body": [
+			"local ${1:source} = love.audio.newSource(${2:data})",
+			"${0:}"
+		],
+		"description": "Creates a new Source from a filepath, File, Decoder or SoundData. (Constructor)"
+	},
+	"love.data.newByteData()": {
+		"prefix": "lnewByteData",
+		"scope": "lua",
+		"body": [
+			"local ${1:bytedata} = love.data.newByteData(${2:datastring})",
+			"${0:}"
+		],
+		"description": "Creates a new Data object containing arbitrary bytes. (Constructor)"
+	},
+	"love.data.newByteData()_overload2": {
+		"prefix": "lnewByteData2",
+		"scope": "lua",
+		"body": [
+			"local ${1:bytedata} = love.data.newByteData(${2:Data}, ${3:0}, ${4:data:getSize()})",
+			"${0:}"
+		],
+		"description": "Creates a new Data object containing arbitrary bytes. (Constructor)"
+	},
+	"love.data.newByteData()_overload3": {
+		"prefix": "lnewByteData3",
+		"scope": "lua",
+		"body": [
+			"local ${1:bytedata} = love.data.newByteData(${2:size})",
+			"${0:}"
+		],
+		"description": "Creates a new Data object containing arbitrary bytes. (Constructor)"
+	},
+	"love.data.newDataView()": {
+		"prefix": "lnewDataView",
+		"scope": "lua",
+		"body": [
+			"local ${1:view} = love.data.newDataView(${2:data}, ${3:offset}, ${4:size})",
+			"${0:}"
+		],
+		"description": "Creates a new Data referencing a subsection of an existing Data object. (Constructor)"
+	},
+	"love.filesystem.newFile()": {
+		"prefix": "lnewFile",
+		"scope": "lua",
+		"body": [
+			"local ${1:file} = love.filesystem.newFile(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates a new File object. (Constructor)"
+	},
+	"love.filesystem.newFile()_overload2": {
+		"prefix": "lnewFile2",
+		"scope": "lua",
+		"body": [
+			"local ${1:file} = love.filesystem.newFile(${2:filename}, ${3|\"r\",\"w\",\"a\",\"c\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new File object. (Constructor)"
+	},
+	"love.filesystem.newFileData()": {
+		"prefix": "lnewFileData",
+		"scope": "lua",
+		"body": [
+			"local ${1:data} = love.filesystem.newFileData(${2:contents}, ${3:name})",
+			"${0:}"
+		],
+		"description": "Creates a new FileData object from a file on disk, or from a string in memory. (Constructor)"
+	},
+	"love.filesystem.newFileData()_overload2": {
+		"prefix": "lnewFileData2",
+		"scope": "lua",
+		"body": [
+			"local ${1:data} = love.filesystem.newFileData(${2:originaldata}, ${3:name})",
+			"${0:}"
+		],
+		"description": "Creates a new FileData object from a file on disk, or from a string in memory. (Constructor)"
+	},
+	"love.filesystem.newFileData()_overload3": {
+		"prefix": "lnewFileData3",
+		"scope": "lua",
+		"body": [
+			"local ${1:data} = love.filesystem.newFileData(${2:filepath})",
+			"${0:}"
+		],
+		"description": "Creates a new FileData object from a file on disk, or from a string in memory. (Constructor)"
+	},
+	"love.font.newBMFontRasterizer()": {
+		"prefix": "lnewBMFontRasterizer",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newBMFontRasterizer(${2:imageData}, ${3:glyphs}, ${4:1})",
+			"${0:}"
+		],
+		"description": "Creates a new BMFont Rasterizer. (Constructor)"
+	},
+	"love.font.newBMFontRasterizer()_overload2": {
+		"prefix": "lnewBMFontRasterizer2",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newBMFontRasterizer(${2:fileName}, ${3:glyphs}, ${4:1})",
+			"${0:}"
+		],
+		"description": "Creates a new BMFont Rasterizer. (Constructor)"
+	},
+	"love.font.newImageRasterizer()": {
+		"prefix": "lnewImageRasterizer",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newImageRasterizer(${2:imageData}, ${3:glyphs}, ${4:0}, ${5:1})",
+			"${0:}"
+		],
+		"description": "Creates a new Image Rasterizer. (Constructor)"
+	},
+	"love.font.newRasterizer()": {
+		"prefix": "lnewRasterizer",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newRasterizer(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates a new Rasterizer. (Constructor)"
+	},
+	"love.font.newRasterizer()_overload2": {
+		"prefix": "lnewRasterizer2",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newRasterizer(${2:data})",
+			"${0:}"
+		],
+		"description": "Creates a new Rasterizer. (Constructor)"
+	},
+	"love.font.newRasterizer()_overload3": {
+		"prefix": "lnewRasterizer3",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newRasterizer(${2:12}, ${3|\"normal\",\"light\",\"mono\",\"none\"|}, ${4:love.window.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new Rasterizer. (Constructor)"
+	},
+	"love.font.newRasterizer()_overload4": {
+		"prefix": "lnewRasterizer4",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newRasterizer(${2:fileName}, ${3:12}, ${4|\"normal\",\"light\",\"mono\",\"none\"|}, ${5:love.window.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new Rasterizer. (Constructor)"
+	},
+	"love.font.newRasterizer()_overload5": {
+		"prefix": "lnewRasterizer5",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newRasterizer(${2:fileData}, ${3:12}, ${4|\"normal\",\"light\",\"mono\",\"none\"|}, ${5:love.window.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new Rasterizer. (Constructor)"
+	},
+	"love.font.newRasterizer()_overload6": {
+		"prefix": "lnewRasterizer6",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newRasterizer(${2:imageData}, ${3:glyphs}, ${4:1})",
+			"${0:}"
+		],
+		"description": "Creates a new Rasterizer. (Constructor)"
+	},
+	"love.font.newRasterizer()_overload7": {
+		"prefix": "lnewRasterizer7",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newRasterizer(${2:fileName}, ${3:glyphs}, ${4:1})",
+			"${0:}"
+		],
+		"description": "Creates a new Rasterizer. (Constructor)"
+	},
+	"love.font.newTrueTypeRasterizer()": {
+		"prefix": "lnewTrueTypeRasterizer",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newTrueTypeRasterizer(${2:12}, ${3|\"normal\",\"light\",\"mono\",\"none\"|}, ${4:love.window.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new TrueType Rasterizer. (Constructor)"
+	},
+	"love.font.newTrueTypeRasterizer()_overload2": {
+		"prefix": "lnewTrueTypeRasterizer2",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newTrueTypeRasterizer(${2:fileName}, ${3:12}, ${4|\"normal\",\"light\",\"mono\",\"none\"|}, ${5:love.window.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new TrueType Rasterizer. (Constructor)"
+	},
+	"love.font.newTrueTypeRasterizer()_overload3": {
+		"prefix": "lnewTrueTypeRasterizer3",
+		"scope": "lua",
+		"body": [
+			"local ${1:rasterizer} = love.font.newTrueTypeRasterizer(${2:fileData}, ${3:12}, ${4|\"normal\",\"light\",\"mono\",\"none\"|}, ${5:love.window.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new TrueType Rasterizer. (Constructor)"
+	},
+	"love.graphics.newArrayImage()": {
+		"prefix": "lnewArrayImage",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newArrayImage(${2:slices}, { mipmaps = ${3:false}, linear = ${4:false}, dpiscale = ${5:1} })",
+			"${0:}"
+		],
+		"description": "Creates a new array Image. (Constructor)"
+	},
+	"love.graphics.newCanvas()": {
+		"prefix": "lnewCanvas",
+		"scope": "lua",
+		"body": [
+			"local ${1:canvas} = love.graphics.newCanvas()",
+			"${0:}"
+		],
+		"description": "Creates a new Canvas object for offscreen rendering. (Constructor)"
+	},
+	"love.graphics.newCanvas()_overload2": {
+		"prefix": "lnewCanvas2",
+		"scope": "lua",
+		"body": [
+			"local ${1:canvas} = love.graphics.newCanvas(${2:width}, ${3:height})",
+			"${0:}"
+		],
+		"description": "Creates a new Canvas object for offscreen rendering. (Constructor)"
+	},
+	"love.graphics.newCanvas()_overload3": {
+		"prefix": "lnewCanvas3",
+		"scope": "lua",
+		"body": [
+			"local ${1:canvas} = love.graphics.newCanvas(${2:width}, ${3:height}, { type = ${4|\"2d\",\"array\",\"cube\",\"volume\"|}, format = ${5|\"unknown\",\"normal\",\"hdr\",\"r8\",\"rg8\",\"rgba8\",\"srgba8\",\"r16\",\"rg16\",\"rgba16\",\"r16f\",\"rg16f\",\"rgba16f\",\"r32f\",\"rg32f\",\"rgba32f\",\"la8\",\"rgba4\",\"rgb5a1\",\"rgb565\",\"rgb10a2\",\"rg11b10f\",\"stencil8\",\"depth16\",\"depth24\",\"depth32f\",\"depth24stencil8\",\"depth32fstencil8\",\"DXT1\",\"DXT3\",\"DXT5\",\"BC4\",\"BC4s\",\"BC5\",\"BC5s\",\"BC6h\",\"BC6hs\",\"BC7\",\"ETC1\",\"ETC2rgb\",\"ETC2rgba\",\"ETC2rgba1\",\"EACr\",\"EACrs\",\"EACrg\",\"EACrgs\",\"PVR1rgb2\",\"PVR1rgb4\",\"PVR1rgba2\",\"PVR1rgba4\",\"ASTC4x4\",\"ASTC5x4\",\"ASTC5x5\",\"ASTC6x5\",\"ASTC6x6\",\"ASTC8x5\",\"ASTC8x6\",\"ASTC8x8\",\"ASTC10x5\",\"ASTC10x6\",\"ASTC10x8\",\"ASTC10x10\",\"ASTC12x10\",\"ASTC12x12\"|}, readable = ${6:}, msaa = ${7:0}, dpiscale = ${8:love.graphics.getDPIScale()}, mipmaps = ${9|\"none\",\"auto\",\"manual\"|} })",
+			"${0:}"
+		],
+		"description": "Creates a new Canvas object for offscreen rendering. (Constructor)"
+	},
+	"love.graphics.newCanvas()_overload4": {
+		"prefix": "lnewCanvas4",
+		"scope": "lua",
+		"body": [
+			"local ${1:canvas} = love.graphics.newCanvas(${2:width}, ${3:height}, ${4:layers}, { type = ${5|\"2d\",\"array\",\"cube\",\"volume\"|}, format = ${6|\"unknown\",\"normal\",\"hdr\",\"r8\",\"rg8\",\"rgba8\",\"srgba8\",\"r16\",\"rg16\",\"rgba16\",\"r16f\",\"rg16f\",\"rgba16f\",\"r32f\",\"rg32f\",\"rgba32f\",\"la8\",\"rgba4\",\"rgb5a1\",\"rgb565\",\"rgb10a2\",\"rg11b10f\",\"stencil8\",\"depth16\",\"depth24\",\"depth32f\",\"depth24stencil8\",\"depth32fstencil8\",\"DXT1\",\"DXT3\",\"DXT5\",\"BC4\",\"BC4s\",\"BC5\",\"BC5s\",\"BC6h\",\"BC6hs\",\"BC7\",\"ETC1\",\"ETC2rgb\",\"ETC2rgba\",\"ETC2rgba1\",\"EACr\",\"EACrs\",\"EACrg\",\"EACrgs\",\"PVR1rgb2\",\"PVR1rgb4\",\"PVR1rgba2\",\"PVR1rgba4\",\"ASTC4x4\",\"ASTC5x4\",\"ASTC5x5\",\"ASTC6x5\",\"ASTC6x6\",\"ASTC8x5\",\"ASTC8x6\",\"ASTC8x8\",\"ASTC10x5\",\"ASTC10x6\",\"ASTC10x8\",\"ASTC10x10\",\"ASTC12x10\",\"ASTC12x12\"|}, readable = ${7:nil}, msaa = ${8:0}, dpiscale = ${9:love.graphics.getDPIScale()}, mipmaps = ${10|\"none\",\"auto\",\"manual\"|} })",
+			"${0:}"
+		],
+		"description": "Creates a new Canvas object for offscreen rendering. (Constructor)"
+	},
+	"love.graphics.newCubeImage()": {
+		"prefix": "lnewCubeImage",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newCubeImage(${2:filename}, { mipmaps = ${3:false}, linear = ${4:false} })",
+			"${0:}"
+		],
+		"description": "Creates a new cubemap Image. (Constructor)"
+	},
+	"love.graphics.newCubeImage()_overload2": {
+		"prefix": "lnewCubeImage2",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newCubeImage(${2:faces}, { mipmaps = ${3:false}, linear = ${4:false} })",
+			"${0:}"
+		],
+		"description": "Creates a new cubemap Image. (Constructor)"
+	},
+	"love.graphics.newFont()": {
+		"prefix": "lnewFont",
+		"scope": "lua",
+		"body": [
+			"local ${1:font} = love.graphics.newFont(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates a new Font from a TrueType Font or BMFont file. (Constructor)"
+	},
+	"love.graphics.newFont()_overload2": {
+		"prefix": "lnewFont2",
+		"scope": "lua",
+		"body": [
+			"local ${1:font} = love.graphics.newFont(${2:filename}, ${3:size}, ${4|\"normal\",\"light\",\"mono\",\"none\"|}, ${5:love.graphics.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new Font from a TrueType Font or BMFont file. (Constructor)"
+	},
+	"love.graphics.newFont()_overload3": {
+		"prefix": "lnewFont3",
+		"scope": "lua",
+		"body": [
+			"local ${1:font} = love.graphics.newFont(${2:filename}, ${3:imagefilename})",
+			"${0:}"
+		],
+		"description": "Creates a new Font from a TrueType Font or BMFont file. (Constructor)"
+	},
+	"love.graphics.newFont()_overload4": {
+		"prefix": "lnewFont4",
+		"scope": "lua",
+		"body": [
+			"local ${1:font} = love.graphics.newFont(${2:12}, ${3|\"normal\",\"light\",\"mono\",\"none\"|}, ${4:love.graphics.getDPIScale()})",
+			"${0:}"
+		],
+		"description": "Creates a new Font from a TrueType Font or BMFont file. (Constructor)"
+	},
+	"love.graphics.newImage()": {
+		"prefix": "lnewImage",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newImage(${2:filename}, { dpiscale = ${3:1}, linear = ${4:false}, mipmaps = ${5:false} })",
+			"${0:}"
+		],
+		"description": "Creates a new Image from a filepath, FileData, an ImageData, or a CompressedImageData, and optionally generates or specifies mipmaps for the image. (Constructor)"
+	},
+	"love.graphics.newImage()_overload2": {
+		"prefix": "lnewImage2",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newImage(${2:fileData}, { dpiscale = ${3:1}, linear = ${4:false}, mipmaps = ${5:false} })",
+			"${0:}"
+		],
+		"description": "Creates a new Image from a filepath, FileData, an ImageData, or a CompressedImageData, and optionally generates or specifies mipmaps for the image. (Constructor)"
+	},
+	"love.graphics.newImage()_overload3": {
+		"prefix": "lnewImage3",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newImage(${2:imageData}, { dpiscale = ${3:1}, linear = ${4:false}, mipmaps = ${5:false} })",
+			"${0:}"
+		],
+		"description": "Creates a new Image from a filepath, FileData, an ImageData, or a CompressedImageData, and optionally generates or specifies mipmaps for the image. (Constructor)"
+	},
+	"love.graphics.newImage()_overload4": {
+		"prefix": "lnewImage4",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newImage(${2:compressedImageData}, { dpiscale = ${3:1}, linear = ${4:false}, mipmaps = ${5:false} })",
+			"${0:}"
+		],
+		"description": "Creates a new Image from a filepath, FileData, an ImageData, or a CompressedImageData, and optionally generates or specifies mipmaps for the image. (Constructor)"
+	},
+	"love.graphics.newImageFont()": {
+		"prefix": "lnewImageFont",
+		"scope": "lua",
+		"body": [
+			"local ${1:font} = love.graphics.newImageFont(${2:filename}, ${3:glyphs})",
+			"${0:}"
+		],
+		"description": "Creates a new specifically formatted image. (Constructor)"
+	},
+	"love.graphics.newImageFont()_overload2": {
+		"prefix": "lnewImageFont2",
+		"scope": "lua",
+		"body": [
+			"local ${1:font} = love.graphics.newImageFont(${2:imageData}, ${3:glyphs})",
+			"${0:}"
+		],
+		"description": "Creates a new specifically formatted image. (Constructor)"
+	},
+	"love.graphics.newImageFont()_overload3": {
+		"prefix": "lnewImageFont3",
+		"scope": "lua",
+		"body": [
+			"local ${1:font} = love.graphics.newImageFont(${2:filename}, ${3:glyphs}, ${4:extraspacing})",
+			"${0:}"
+		],
+		"description": "Creates a new specifically formatted image. (Constructor)"
+	},
+	"love.graphics.newMesh()": {
+		"prefix": "lnewMesh",
+		"scope": "lua",
+		"body": [
+			"local ${1:mesh} = love.graphics.newMesh({ 1 = ${2:}, 2 = ${3:}, 3 = ${4:0}, 4 = ${5:0}, 5 = ${6:1}, 6 = ${7:1}, 7 = ${8:1}, 8 = ${9:1} }, ${3|\"fan\",\"strip\",\"triangles\",\"points\"|}, ${4|\"dynamic\",\"static\",\"stream\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Mesh. (Constructor)"
+	},
+	"love.graphics.newMesh()_overload2": {
+		"prefix": "lnewMesh2",
+		"scope": "lua",
+		"body": [
+			"local ${1:mesh} = love.graphics.newMesh(${2:vertexcount}, ${3|\"fan\",\"strip\",\"triangles\",\"points\"|}, ${4|\"dynamic\",\"static\",\"stream\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Mesh. (Constructor)"
+	},
+	"love.graphics.newMesh()_overload3": {
+		"prefix": "lnewMesh3",
+		"scope": "lua",
+		"body": [
+			"local ${1:mesh} = love.graphics.newMesh({ attribute = ${2:} }, { attributecomponent = ${3:} }, ${4|\"fan\",\"strip\",\"triangles\",\"points\"|}, ${5|\"dynamic\",\"static\",\"stream\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Mesh. (Constructor)"
+	},
+	"love.graphics.newMesh()_overload4": {
+		"prefix": "lnewMesh4",
+		"scope": "lua",
+		"body": [
+			"local ${1:mesh} = love.graphics.newMesh({ attribute = ${2:} }, ${3:vertexcount}, ${4|\"fan\",\"strip\",\"triangles\",\"points\"|}, ${5|\"dynamic\",\"static\",\"stream\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Mesh. (Constructor)"
+	},
+	"love.graphics.newMesh()_overload5": {
+		"prefix": "lnewMesh5",
+		"scope": "lua",
+		"body": [
+			"local ${1:mesh} = love.graphics.newMesh(${2:vertexcount}, ${3:nil}, ${4|\"fan\",\"strip\",\"triangles\",\"points\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new Mesh. (Constructor)"
+	},
+	"love.graphics.newParticleSystem()": {
+		"prefix": "lnewParticleSystem",
+		"scope": "lua",
+		"body": [
+			"local ${1:system} = love.graphics.newParticleSystem(${2:image}, ${3:1000})",
+			"${0:}"
+		],
+		"description": "Creates a new ParticleSystem. (Constructor)"
+	},
+	"love.graphics.newParticleSystem()_overload2": {
+		"prefix": "lnewParticleSystem2",
+		"scope": "lua",
+		"body": [
+			"local ${1:system} = love.graphics.newParticleSystem(${2:texture}, ${3:1000})",
+			"${0:}"
+		],
+		"description": "Creates a new ParticleSystem. (Constructor)"
+	},
+	"love.graphics.newQuad()": {
+		"prefix": "lnewQuad",
+		"scope": "lua",
+		"body": [
+			"local ${1:quad} = love.graphics.newQuad(${2:x}, ${3:y}, ${4:width}, ${5:height}, ${6:sw}, ${7:sh})",
+			"${0:}"
+		],
+		"description": "Creates a new Quad. (Constructor)"
+	},
+	"love.graphics.newQuad()_overload2": {
+		"prefix": "lnewQuad2",
+		"scope": "lua",
+		"body": [
+			"local ${1:quad} = love.graphics.newQuad(${2:x}, ${3:y}, ${4:width}, ${5:height}, ${6:texture})",
+			"${0:}"
+		],
+		"description": "Creates a new Quad. (Constructor)"
+	},
+	"love.graphics.newShader()": {
+		"prefix": "lnewShader",
+		"scope": "lua",
+		"body": [
+			"local ${1:shader} = love.graphics.newShader(${2:code})",
+			"${0:}"
+		],
+		"description": "Creates a new Shader object for hardware-accelerated vertex and pixel effects. (Constructor)"
+	},
+	"love.graphics.newShader()_overload2": {
+		"prefix": "lnewShader2",
+		"scope": "lua",
+		"body": [
+			"local ${1:shader} = love.graphics.newShader(${2:pixelcode}, ${3:vertexcode})",
+			"${0:}"
+		],
+		"description": "Creates a new Shader object for hardware-accelerated vertex and pixel effects. (Constructor)"
+	},
+	"love.graphics.newSpriteBatch()": {
+		"prefix": "lnewSpriteBatch",
+		"scope": "lua",
+		"body": [
+			"local ${1:spriteBatch} = love.graphics.newSpriteBatch(${2:image}, ${3:1000})",
+			"${0:}"
+		],
+		"description": "Creates a new SpriteBatch object. (Constructor)"
+	},
+	"love.graphics.newSpriteBatch()_overload2": {
+		"prefix": "lnewSpriteBatch2",
+		"scope": "lua",
+		"body": [
+			"local ${1:spriteBatch} = love.graphics.newSpriteBatch(${2:image}, ${3:1000}, ${4|\"dynamic\",\"static\",\"stream\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new SpriteBatch object. (Constructor)"
+	},
+	"love.graphics.newSpriteBatch()_overload3": {
+		"prefix": "lnewSpriteBatch3",
+		"scope": "lua",
+		"body": [
+			"local ${1:spriteBatch} = love.graphics.newSpriteBatch(${2:texture}, ${3:1000}, ${4|\"dynamic\",\"static\",\"stream\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new SpriteBatch object. (Constructor)"
+	},
+	"love.graphics.newText()": {
+		"prefix": "lnewText",
+		"scope": "lua",
+		"body": [
+			"local ${1:text} = love.graphics.newText(${2:font}, ${3:nil})",
+			"${0:}"
+		],
+		"description": "Creates a new drawable Text object. (Constructor)"
+	},
+	"love.graphics.newText()_overload2": {
+		"prefix": "lnewText2",
+		"scope": "lua",
+		"body": [
+			"local ${1:text} = love.graphics.newText(${2:font}, { color1 = ${3:}, string1 = ${4:}, color2 = ${5:}, string2 = ${6:} })",
+			"${0:}"
+		],
+		"description": "Creates a new drawable Text object. (Constructor)"
+	},
+	"love.graphics.newVideo()": {
+		"prefix": "lnewVideo",
+		"scope": "lua",
+		"body": [
+			"local ${1:video} = love.graphics.newVideo(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates a new drawable Video. (Constructor)"
+	},
+	"love.graphics.newVideo()_overload2": {
+		"prefix": "lnewVideo2",
+		"scope": "lua",
+		"body": [
+			"local ${1:video} = love.graphics.newVideo(${2:videostream})",
+			"${0:}"
+		],
+		"description": "Creates a new drawable Video. (Constructor)"
+	},
+	"love.graphics.newVideo()_overload3": {
+		"prefix": "lnewVideo3",
+		"scope": "lua",
+		"body": [
+			"local ${1:video} = love.graphics.newVideo(${2:filename}, { audio = ${3:false}, dpiscale = ${4:love.graphics.getDPIScale()} })",
+			"${0:}"
+		],
+		"description": "Creates a new drawable Video. (Constructor)"
+	},
+	"love.graphics.newVideo()_overload4": {
+		"prefix": "lnewVideo4",
+		"scope": "lua",
+		"body": [
+			"local ${1:video} = love.graphics.newVideo(${2:filename}, ${3:nil})",
+			"${0:}"
+		],
+		"description": "Creates a new drawable Video. (Constructor)"
+	},
+	"love.graphics.newVideo()_overload5": {
+		"prefix": "lnewVideo5",
+		"scope": "lua",
+		"body": [
+			"local ${1:video} = love.graphics.newVideo(${2:videostream}, ${3:nil})",
+			"${0:}"
+		],
+		"description": "Creates a new drawable Video. (Constructor)"
+	},
+	"love.graphics.newVolumeImage()": {
+		"prefix": "lnewVolumeImage",
+		"scope": "lua",
+		"body": [
+			"local ${1:image} = love.graphics.newVolumeImage(${2:layers}, { mipmaps = ${3:false}, linear = ${4:false} })",
+			"${0:}"
+		],
+		"description": "Creates a new volume (3D) Image. (Constructor)"
+	},
+	"love.image.newCompressedData()": {
+		"prefix": "lnewCompressedData",
+		"scope": "lua",
+		"body": [
+			"local ${1:compressedImageData} = love.image.newCompressedData(${2:filename})",
+			"${0:}"
+		],
+		"description": "Create a new CompressedImageData object from a compressed image file. (Constructor)"
+	},
+	"love.image.newCompressedData()_overload2": {
+		"prefix": "lnewCompressedData2",
+		"scope": "lua",
+		"body": [
+			"local ${1:compressedImageData} = love.image.newCompressedData(${2:fileData})",
+			"${0:}"
+		],
+		"description": "Create a new CompressedImageData object from a compressed image file. (Constructor)"
+	},
+	"love.image.newImageData()": {
+		"prefix": "lnewImageData",
+		"scope": "lua",
+		"body": [
+			"local ${1:imageData} = love.image.newImageData(${2:width}, ${3:height})",
+			"${0:}"
+		],
+		"description": "Creates a new ImageData object. (Constructor)"
+	},
+	"love.image.newImageData()_overload2": {
+		"prefix": "lnewImageData2",
+		"scope": "lua",
+		"body": [
+			"local ${1:imageData} = love.image.newImageData(${2:width}, ${3:height}, ${4|\"unknown\",\"normal\",\"hdr\",\"r8\",\"rg8\",\"rgba8\",\"srgba8\",\"r16\",\"rg16\",\"rgba16\",\"r16f\",\"rg16f\",\"rgba16f\",\"r32f\",\"rg32f\",\"rgba32f\",\"la8\",\"rgba4\",\"rgb5a1\",\"rgb565\",\"rgb10a2\",\"rg11b10f\",\"stencil8\",\"depth16\",\"depth24\",\"depth32f\",\"depth24stencil8\",\"depth32fstencil8\",\"DXT1\",\"DXT3\",\"DXT5\",\"BC4\",\"BC4s\",\"BC5\",\"BC5s\",\"BC6h\",\"BC6hs\",\"BC7\",\"ETC1\",\"ETC2rgb\",\"ETC2rgba\",\"ETC2rgba1\",\"EACr\",\"EACrs\",\"EACrg\",\"EACrgs\",\"PVR1rgb2\",\"PVR1rgb4\",\"PVR1rgba2\",\"PVR1rgba4\",\"ASTC4x4\",\"ASTC5x4\",\"ASTC5x5\",\"ASTC6x5\",\"ASTC6x6\",\"ASTC8x5\",\"ASTC8x6\",\"ASTC8x8\",\"ASTC10x5\",\"ASTC10x6\",\"ASTC10x8\",\"ASTC10x10\",\"ASTC12x10\",\"ASTC12x12\"|}, ${5:nil})",
+			"${0:}"
+		],
+		"description": "Creates a new ImageData object. (Constructor)"
+	},
+	"love.image.newImageData()_overload3": {
+		"prefix": "lnewImageData3",
+		"scope": "lua",
+		"body": [
+			"local ${1:imageData} = love.image.newImageData(${2:width}, ${3:height}, ${4:data})",
+			"${0:}"
+		],
+		"description": "Creates a new ImageData object. (Constructor)"
+	},
+	"love.image.newImageData()_overload4": {
+		"prefix": "lnewImageData4",
+		"scope": "lua",
+		"body": [
+			"local ${1:imageData} = love.image.newImageData(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates a new ImageData object. (Constructor)"
+	},
+	"love.image.newImageData()_overload5": {
+		"prefix": "lnewImageData5",
+		"scope": "lua",
+		"body": [
+			"local ${1:imageData} = love.image.newImageData(${2:filedata})",
+			"${0:}"
+		],
+		"description": "Creates a new ImageData object. (Constructor)"
+	},
+	"love.math.newBezierCurve()": {
+		"prefix": "lnewBezierCurve",
+		"scope": "lua",
+		"body": [
+			"local ${1:curve} = love.math.newBezierCurve(${2:vertices})",
+			"${0:}"
+		],
+		"description": "Creates a new BezierCurve object. (Constructor)"
+	},
+	"love.math.newBezierCurve()_overload2": {
+		"prefix": "lnewBezierCurve2",
+		"scope": "lua",
+		"body": [
+			"local ${1:curve} = love.math.newBezierCurve(${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ...)",
+			"${0:}"
+		],
+		"description": "Creates a new BezierCurve object. (Constructor)"
+	},
+	"love.math.newRandomGenerator()": {
+		"prefix": "lnewRandomGenerator",
+		"scope": "lua",
+		"body": [
+			"local ${1:rng} = love.math.newRandomGenerator()",
+			"${0:}"
+		],
+		"description": "Creates a new RandomGenerator object which is completely independent of other RandomGenerator objects and random functions. (Constructor)"
+	},
+	"love.math.newRandomGenerator()_overload2": {
+		"prefix": "lnewRandomGenerator2",
+		"scope": "lua",
+		"body": [
+			"local ${1:rng} = love.math.newRandomGenerator(${2:seed})",
+			"${0:}"
+		],
+		"description": "Creates a new RandomGenerator object which is completely independent of other RandomGenerator objects and random functions. (Constructor)"
+	},
+	"love.math.newRandomGenerator()_overload3": {
+		"prefix": "lnewRandomGenerator3",
+		"scope": "lua",
+		"body": [
+			"local ${1:rng} = love.math.newRandomGenerator(${2:low}, ${3:high})",
+			"${0:}"
+		],
+		"description": "Creates a new RandomGenerator object which is completely independent of other RandomGenerator objects and random functions. (Constructor)"
+	},
+	"love.math.newTransform()": {
+		"prefix": "lnewTransform",
+		"scope": "lua",
+		"body": [
+			"local ${1:transform} = love.math.newTransform()",
+			"${0:}"
+		],
+		"description": "Creates a new Transform object. (Constructor)"
+	},
+	"love.math.newTransform()_overload2": {
+		"prefix": "lnewTransform2",
+		"scope": "lua",
+		"body": [
+			"local ${1:transform} = love.math.newTransform(${2:x}, ${3:y}, ${4:0}, ${5:1}, ${6:sx}, ${7:0}, ${8:0}, ${9:0}, ${10:0})",
+			"${0:}"
+		],
+		"description": "Creates a new Transform object. (Constructor)"
+	},
+	"love.mouse.newCursor()": {
+		"prefix": "lnewCursor",
+		"scope": "lua",
+		"body": [
+			"local ${1:cursor} = love.mouse.newCursor(${2:imageData}, ${3:0}, ${4:0})",
+			"${0:}"
+		],
+		"description": "Creates a new hardware Cursor object from an image file or ImageData. (Constructor)"
+	},
+	"love.mouse.newCursor()_overload2": {
+		"prefix": "lnewCursor2",
+		"scope": "lua",
+		"body": [
+			"local ${1:cursor} = love.mouse.newCursor(${2:filename}, ${3:0}, ${4:0})",
+			"${0:}"
+		],
+		"description": "Creates a new hardware Cursor object from an image file or ImageData. (Constructor)"
+	},
+	"love.mouse.newCursor()_overload3": {
+		"prefix": "lnewCursor3",
+		"scope": "lua",
+		"body": [
+			"local ${1:cursor} = love.mouse.newCursor(${2:fileData}, ${3:0}, ${4:0})",
+			"${0:}"
+		],
+		"description": "Creates a new hardware Cursor object from an image file or ImageData. (Constructor)"
+	},
+	"love.physics.newBody()": {
+		"prefix": "lnewBody",
+		"scope": "lua",
+		"body": [
+			"local ${1:body} = love.physics.newBody(${2:world}, ${3:0}, ${4:0}, ${5|\"static\",\"dynamic\",\"kinematic\"|})",
+			"${0:}"
+		],
+		"description": "Creates a new body. (Constructor)"
+	},
+	"love.physics.newChainShape()": {
+		"prefix": "lnewChainShape",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newChainShape(${2:loop}, ${3:x1}, ${4:y1}, ${5:x2}, ${6:y2}, ...)",
+			"${0:}"
+		],
+		"description": "Creates a new ChainShape. (Constructor)"
+	},
+	"love.physics.newChainShape()_overload2": {
+		"prefix": "lnewChainShape2",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newChainShape(${2:loop}, ${3:points})",
+			"${0:}"
+		],
+		"description": "Creates a new ChainShape. (Constructor)"
+	},
+	"love.physics.newCircleShape()": {
+		"prefix": "lnewCircleShape",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newCircleShape(${2:radius})",
+			"${0:}"
+		],
+		"description": "Creates a new CircleShape. (Constructor)"
+	},
+	"love.physics.newCircleShape()_overload2": {
+		"prefix": "lnewCircleShape2",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newCircleShape(${2:x}, ${3:y}, ${4:radius})",
+			"${0:}"
+		],
+		"description": "Creates a new CircleShape. (Constructor)"
+	},
+	"love.physics.newDistanceJoint()": {
+		"prefix": "lnewDistanceJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newDistanceJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a DistanceJoint between two bodies. (Constructor)"
+	},
+	"love.physics.newEdgeShape()": {
+		"prefix": "lnewEdgeShape",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newEdgeShape(${2:x1}, ${3:y1}, ${4:x2}, ${5:y2})",
+			"${0:}"
+		],
+		"description": "Creates a new EdgeShape. (Constructor)"
+	},
+	"love.physics.newFixture()": {
+		"prefix": "lnewFixture",
+		"scope": "lua",
+		"body": [
+			"local ${1:fixture} = love.physics.newFixture(${2:body}, ${3:shape}, ${4:1})",
+			"${0:}"
+		],
+		"description": "Creates and attaches a Fixture to a body. (Constructor)"
+	},
+	"love.physics.newFrictionJoint()": {
+		"prefix": "lnewFrictionJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newFrictionJoint(${2:body1}, ${3:body2}, ${4:x}, ${5:y}, ${6|false,true|})",
+			"${0:}"
+		],
+		"description": "Create a friction joint between two bodies. (Constructor)"
+	},
+	"love.physics.newFrictionJoint()_overload2": {
+		"prefix": "lnewFrictionJoint2",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newFrictionJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8|false,true|})",
+			"${0:}"
+		],
+		"description": "Create a friction joint between two bodies. (Constructor)"
+	},
+	"love.physics.newGearJoint()": {
+		"prefix": "lnewGearJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newGearJoint(${2:joint1}, ${3:joint2}, ${4:1}, ${5|false,true|})",
+			"${0:}"
+		],
+		"description": "Create a GearJoint connecting two Joints. (Constructor)"
+	},
+	"love.physics.newMotorJoint()": {
+		"prefix": "lnewMotorJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newMotorJoint(${2:body1}, ${3:body2}, ${4:0.3})",
+			"${0:}"
+		],
+		"description": "Creates a joint between two bodies which controls the relative motion between them. (Constructor)"
+	},
+	"love.physics.newMotorJoint()_overload2": {
+		"prefix": "lnewMotorJoint2",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newMotorJoint(${2:body1}, ${3:body2}, ${4:0.3}, ${5|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a joint between two bodies which controls the relative motion between them. (Constructor)"
+	},
+	"love.physics.newMouseJoint()": {
+		"prefix": "lnewMouseJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newMouseJoint(${2:body}, ${3:x}, ${4:y})",
+			"${0:}"
+		],
+		"description": "Create a joint between a body and the mouse. (Constructor)"
+	},
+	"love.physics.newPolygonShape()": {
+		"prefix": "lnewPolygonShape",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newPolygonShape(${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:x3}, ${7:y3}, ...)",
+			"${0:}"
+		],
+		"description": "Creates a new PolygonShape. (Constructor)"
+	},
+	"love.physics.newPolygonShape()_overload2": {
+		"prefix": "lnewPolygonShape2",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newPolygonShape(${2:vertices})",
+			"${0:}"
+		],
+		"description": "Creates a new PolygonShape. (Constructor)"
+	},
+	"love.physics.newPrismaticJoint()": {
+		"prefix": "lnewPrismaticJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newPrismaticJoint(${2:body1}, ${3:body2}, ${4:x}, ${5:y}, ${6:ax}, ${7:ay}, ${8|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a PrismaticJoint between two bodies. (Constructor)"
+	},
+	"love.physics.newPrismaticJoint()_overload2": {
+		"prefix": "lnewPrismaticJoint2",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newPrismaticJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8:ax}, ${9:ay}, ${10|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a PrismaticJoint between two bodies. (Constructor)"
+	},
+	"love.physics.newPrismaticJoint()_overload3": {
+		"prefix": "lnewPrismaticJoint3",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newPrismaticJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8:ax}, ${9:ay}, ${10|false,true|}, ${11:0})",
+			"${0:}"
+		],
+		"description": "Creates a PrismaticJoint between two bodies. (Constructor)"
+	},
+	"love.physics.newPulleyJoint()": {
+		"prefix": "lnewPulleyJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newPulleyJoint(${2:body1}, ${3:body2}, ${4:gx1}, ${5:gy1}, ${6:gx2}, ${7:gy2}, ${8:x1}, ${9:y1}, ${10:x2}, ${11:y2}, ${12:1}, ${13|true,false|})",
+			"${0:}"
+		],
+		"description": "Creates a PulleyJoint to join two bodies to each other and the ground. (Constructor)"
+	},
+	"love.physics.newRectangleShape()": {
+		"prefix": "lnewRectangleShape",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newRectangleShape(${2:width}, ${3:height})",
+			"${0:}"
+		],
+		"description": "Shorthand for creating rectangular PolygonShapes. (Constructor)"
+	},
+	"love.physics.newRectangleShape()_overload2": {
+		"prefix": "lnewRectangleShape2",
+		"scope": "lua",
+		"body": [
+			"local ${1:shape} = love.physics.newRectangleShape(${2:x}, ${3:y}, ${4:width}, ${5:height}, ${6:0})",
+			"${0:}"
+		],
+		"description": "Shorthand for creating rectangular PolygonShapes. (Constructor)"
+	},
+	"love.physics.newRevoluteJoint()": {
+		"prefix": "lnewRevoluteJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newRevoluteJoint(${2:body1}, ${3:body2}, ${4:x}, ${5:y}, ${6|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a pivot joint between two bodies. (Constructor)"
+	},
+	"love.physics.newRevoluteJoint()_overload2": {
+		"prefix": "lnewRevoluteJoint2",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newRevoluteJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8|false,true|}, ${9:0})",
+			"${0:}"
+		],
+		"description": "Creates a pivot joint between two bodies. (Constructor)"
+	},
+	"love.physics.newRopeJoint()": {
+		"prefix": "lnewRopeJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newRopeJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8:maxLength}, ${9|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a joint between two bodies. (Constructor)"
+	},
+	"love.physics.newWeldJoint()": {
+		"prefix": "lnewWeldJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newWeldJoint(${2:body1}, ${3:body2}, ${4:x}, ${5:y}, ${6|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a constraint joint between two bodies. (Constructor)"
+	},
+	"love.physics.newWeldJoint()_overload2": {
+		"prefix": "lnewWeldJoint2",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newWeldJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a constraint joint between two bodies. (Constructor)"
+	},
+	"love.physics.newWeldJoint()_overload3": {
+		"prefix": "lnewWeldJoint3",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newWeldJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8|false,true|}, ${9:0})",
+			"${0:}"
+		],
+		"description": "Creates a constraint joint between two bodies. (Constructor)"
+	},
+	"love.physics.newWheelJoint()": {
+		"prefix": "lnewWheelJoint",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newWheelJoint(${2:body1}, ${3:body2}, ${4:x}, ${5:y}, ${6:ax}, ${7:ay}, ${8|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a wheel joint. (Constructor)"
+	},
+	"love.physics.newWheelJoint()_overload2": {
+		"prefix": "lnewWheelJoint2",
+		"scope": "lua",
+		"body": [
+			"local ${1:joint} = love.physics.newWheelJoint(${2:body1}, ${3:body2}, ${4:x1}, ${5:y1}, ${6:x2}, ${7:y2}, ${8:ax}, ${9:ay}, ${10|false,true|})",
+			"${0:}"
+		],
+		"description": "Creates a wheel joint. (Constructor)"
+	},
+	"love.physics.newWorld()": {
+		"prefix": "lnewWorld",
+		"scope": "lua",
+		"body": [
+			"local ${1:world} = love.physics.newWorld(${2:0}, ${3:0}, ${4|true,false|})",
+			"${0:}"
+		],
+		"description": "Creates a new World. (Constructor)"
+	},
+	"love.sound.newDecoder()": {
+		"prefix": "lnewDecoder",
+		"scope": "lua",
+		"body": [
+			"local ${1:decoder} = love.sound.newDecoder(${2:file}, ${3:2048})",
+			"${0:}"
+		],
+		"description": "Attempts to find a decoder for the encoded sound data in the specified file. (Constructor)"
+	},
+	"love.sound.newDecoder()_overload2": {
+		"prefix": "lnewDecoder2",
+		"scope": "lua",
+		"body": [
+			"local ${1:decoder} = love.sound.newDecoder(${2:filename}, ${3:2048})",
+			"${0:}"
+		],
+		"description": "Attempts to find a decoder for the encoded sound data in the specified file. (Constructor)"
+	},
+	"love.sound.newSoundData()": {
+		"prefix": "lnewSoundData",
+		"scope": "lua",
+		"body": [
+			"local ${1:soundData} = love.sound.newSoundData(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates new SoundData from a filepath, File, or Decoder. (Constructor)"
+	},
+	"love.sound.newSoundData()_overload2": {
+		"prefix": "lnewSoundData2",
+		"scope": "lua",
+		"body": [
+			"local ${1:soundData} = love.sound.newSoundData(${2:file})",
+			"${0:}"
+		],
+		"description": "Creates new SoundData from a filepath, File, or Decoder. (Constructor)"
+	},
+	"love.sound.newSoundData()_overload3": {
+		"prefix": "lnewSoundData3",
+		"scope": "lua",
+		"body": [
+			"local ${1:soundData} = love.sound.newSoundData(${2:decoder})",
+			"${0:}"
+		],
+		"description": "Creates new SoundData from a filepath, File, or Decoder. (Constructor)"
+	},
+	"love.sound.newSoundData()_overload4": {
+		"prefix": "lnewSoundData4",
+		"scope": "lua",
+		"body": [
+			"local ${1:soundData} = love.sound.newSoundData(${2:samples}, ${3:44100}, ${4:16}, ${5:2})",
+			"${0:}"
+		],
+		"description": "Creates new SoundData from a filepath, File, or Decoder. (Constructor)"
+	},
+	"love.thread.newChannel()": {
+		"prefix": "lnewChannel",
+		"scope": "lua",
+		"body": [
+			"local ${1:channel} = love.thread.newChannel()",
+			"${0:}"
+		],
+		"description": "Create a new unnamed thread channel. (Constructor)"
+	},
+	"love.thread.newThread()": {
+		"prefix": "lnewThread",
+		"scope": "lua",
+		"body": [
+			"local ${1:thread} = love.thread.newThread(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates a new Thread from a filename, string or FileData object containing Lua code. (Constructor)"
+	},
+	"love.thread.newThread()_overload2": {
+		"prefix": "lnewThread2",
+		"scope": "lua",
+		"body": [
+			"local ${1:thread} = love.thread.newThread(${2:fileData})",
+			"${0:}"
+		],
+		"description": "Creates a new Thread from a filename, string or FileData object containing Lua code. (Constructor)"
+	},
+	"love.thread.newThread()_overload3": {
+		"prefix": "lnewThread3",
+		"scope": "lua",
+		"body": [
+			"local ${1:thread} = love.thread.newThread(${2:codestring})",
+			"${0:}"
+		],
+		"description": "Creates a new Thread from a filename, string or FileData object containing Lua code. (Constructor)"
+	},
+	"love.video.newVideoStream()": {
+		"prefix": "lnewVideoStream",
+		"scope": "lua",
+		"body": [
+			"local ${1:videostream} = love.video.newVideoStream(${2:filename})",
+			"${0:}"
+		],
+		"description": "Creates a new VideoStream. (Constructor)"
+	},
+	"love.video.newVideoStream()_overload2": {
+		"prefix": "lnewVideoStream2",
+		"scope": "lua",
+		"body": [
+			"local ${1:videostream} = love.video.newVideoStream(${2:file})",
+			"${0:}"
+		],
+		"description": "Creates a new VideoStream. (Constructor)"
+	}
+}

@@ -1,0 +1,466 @@
+{
+	"alias love.AlignMode": {
+		"prefix": "AlignMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"center\",\"left\",\"right\",\"justify\"|}"
+		],
+		"description": "Text alignment."
+	},
+	"alias love.ArcType": {
+		"prefix": "ArcType",
+		"scope": "lua",
+		"body": [
+			"${1|\"pie\",\"open\",\"closed\"|}"
+		],
+		"description": "Different types of arcs that can be drawn."
+	},
+	"alias love.AreaSpreadDistribution": {
+		"prefix": "AreaSpreadDistribution",
+		"scope": "lua",
+		"body": [
+			"${1|\"uniform\",\"normal\",\"ellipse\",\"borderellipse\",\"borderrectangle\",\"none\"|}"
+		],
+		"description": "Types of particle area spread distribution."
+	},
+	"alias love.BlendAlphaMode": {
+		"prefix": "BlendAlphaMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"alphamultiply\",\"premultiplied\"|}"
+		],
+		"description": "Different ways alpha affects color blending."
+	},
+	"alias love.BlendMode": {
+		"prefix": "BlendMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"alpha\",\"replace\",\"screen\",\"add\",\"subtract\",\"multiply\",\"lighten\",\"darken\",\"additive\",\"subtractive\",\"multiplicative\",\"premultiplied\"|}"
+		],
+		"description": "Different ways to do color blending."
+	},
+	"alias love.BodyType": {
+		"prefix": "BodyType",
+		"scope": "lua",
+		"body": [
+			"${1|\"static\",\"dynamic\",\"kinematic\"|}"
+		],
+		"description": "The types of a Body."
+	},
+	"alias love.BufferMode": {
+		"prefix": "BufferMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"none\",\"line\",\"full\"|}"
+		],
+		"description": "Buffer modes for File objects."
+	},
+	"alias love.CompareMode": {
+		"prefix": "CompareMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"equal\",\"notequal\",\"less\",\"lequal\",\"gequal\",\"greater\",\"never\",\"always\"|}"
+		],
+		"description": "Different types of per-pixel stencil test and depth test comparisons."
+	},
+	"alias love.CompressedDataFormat": {
+		"prefix": "CompressedDataFormat",
+		"scope": "lua",
+		"body": [
+			"${1|\"lz4\",\"zlib\",\"gzip\",\"deflate\"|}"
+		],
+		"description": "Compressed data formats."
+	},
+	"alias love.CompressedImageFormat": {
+		"prefix": "CompressedImageFormat",
+		"scope": "lua",
+		"body": [
+			"${1|\"DXT1\",\"DXT3\",\"DXT5\",\"BC4\",\"BC4s\",\"BC5\",\"BC5s\",\"BC6h\",\"BC6hs\",\"BC7\",\"ETC1\",\"ETC2rgb\",\"ETC2rgba\",\"ETC2rgba1\",\"EACr\",\"EACrs\",\"EACrg\",\"EACrgs\",\"PVR1rgb2\",\"PVR1rgb4\",\"PVR1rgba2\",\"PVR1rgba4\",\"ASTC4x4\",\"ASTC5x4\",\"ASTC5x5\",\"ASTC6x5\",\"ASTC6x6\",\"ASTC8x5\",\"ASTC8x6\",\"ASTC8x8\",\"ASTC10x5\",\"ASTC10x6\",\"ASTC10x8\",\"ASTC10x10\",\"ASTC12x10\",\"ASTC12x12\"|}"
+		],
+		"description": "Compressed image data formats."
+	},
+	"alias love.ContainerType": {
+		"prefix": "ContainerType",
+		"scope": "lua",
+		"body": [
+			"${1|\"data\",\"string\"|}"
+		],
+		"description": "Return type of various data-returning functions."
+	},
+	"alias love.CullMode": {
+		"prefix": "CullMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"back\",\"front\",\"none\"|}"
+		],
+		"description": "How Mesh geometry is culled when rendering."
+	},
+	"alias love.CursorType": {
+		"prefix": "CursorType",
+		"scope": "lua",
+		"body": [
+			"${1|\"image\",\"arrow\",\"ibeam\",\"wait\",\"waitarrow\",\"crosshair\",\"sizenwse\",\"sizenesw\",\"sizewe\",\"sizens\",\"sizeall\",\"no\",\"hand\"|}"
+		],
+		"description": "Types of hardware cursors."
+	},
+	"alias love.DisplayOrientation": {
+		"prefix": "DisplayOrientation",
+		"scope": "lua",
+		"body": [
+			"${1|\"unknown\",\"landscape\",\"landscapeflipped\",\"portrait\",\"portraitflipped\"|}"
+		],
+		"description": "Types of device display orientation."
+	},
+	"alias love.DistanceModel": {
+		"prefix": "DistanceModel",
+		"scope": "lua",
+		"body": [
+			"${1|\"none\",\"inverse\",\"inverseclamped\",\"linear\",\"linearclamped\",\"exponent\",\"exponentclamped\"|}"
+		],
+		"description": "The different distance models."
+	},
+	"alias love.DrawMode": {
+		"prefix": "DrawMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"fill\",\"line\"|}"
+		],
+		"description": "Controls whether shapes are drawn as an outline, or filled."
+	},
+	"alias love.EffectType": {
+		"prefix": "EffectType",
+		"scope": "lua",
+		"body": [
+			"${1|\"chorus\",\"compressor\",\"distortion\",\"echo\",\"equalizer\",\"flanger\",\"reverb\",\"ringmodulator\"|}"
+		],
+		"description": "The different types of effects supported by love."
+	},
+	"alias love.EffectWaveform": {
+		"prefix": "EffectWaveform",
+		"scope": "lua",
+		"body": [
+			"${1|\"sawtooth\",\"sine\",\"square\",\"triangle\"|}"
+		],
+		"description": "The different types of waveforms that can be used with the '''ringmodulator''' EffectType."
+	},
+	"alias love.EncodeFormat": {
+		"prefix": "EncodeFormat",
+		"scope": "lua",
+		"body": [
+			"${1|\"base64\",\"hex\"|}"
+		],
+		"description": "Encoding format used to encode or decode data."
+	},
+	"alias love.Event": {
+		"prefix": "Event",
+		"scope": "lua",
+		"body": [
+			"${1|\"focus\",\"joystickpressed\",\"joystickreleased\",\"keypressed\",\"keyreleased\",\"mousepressed\",\"mousereleased\",\"quit\",\"resize\",\"visible\",\"mousefocus\",\"threaderror\",\"joystickadded\",\"joystickremoved\",\"joystickaxis\",\"joystickhat\",\"gamepadpressed\",\"gamepadreleased\",\"gamepadaxis\",\"textinput\",\"mousemoved\",\"lowmemory\",\"textedited\",\"wheelmoved\",\"touchpressed\",\"touchreleased\",\"touchmoved\",\"directorydropped\",\"filedropped\",\"jp\",\"jr\",\"kp\",\"kr\",\"mp\",\"mr\",\"q\",\"f\"|}"
+		],
+		"description": "Arguments to love."
+	},
+	"alias love.FileDecoder": {
+		"prefix": "FileDecoder",
+		"scope": "lua",
+		"body": [
+			"${1|\"file\",\"base64\"|}"
+		],
+		"description": "How to decode a given FileData."
+	},
+	"alias love.FileMode": {
+		"prefix": "FileMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"r\",\"w\",\"a\",\"c\"|}"
+		],
+		"description": "The different modes you can open a File in."
+	},
+	"alias love.FileType": {
+		"prefix": "FileType",
+		"scope": "lua",
+		"body": [
+			"${1|\"file\",\"directory\",\"symlink\",\"other\"|}"
+		],
+		"description": "The type of a file."
+	},
+	"alias love.FilterMode": {
+		"prefix": "FilterMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"linear\",\"nearest\"|}"
+		],
+		"description": "How the image is filtered when scaling."
+	},
+	"alias love.FilterType": {
+		"prefix": "FilterType",
+		"scope": "lua",
+		"body": [
+			"${1|\"lowpass\",\"highpass\",\"bandpass\"|}"
+		],
+		"description": "Types of filters for Sources."
+	},
+	"alias love.FullscreenType": {
+		"prefix": "FullscreenType",
+		"scope": "lua",
+		"body": [
+			"${1|\"desktop\",\"exclusive\",\"normal\"|}"
+		],
+		"description": "Types of fullscreen modes."
+	},
+	"alias love.GamepadAxis": {
+		"prefix": "GamepadAxis",
+		"scope": "lua",
+		"body": [
+			"${1|\"leftx\",\"lefty\",\"rightx\",\"righty\",\"triggerleft\",\"triggerright\"|}"
+		],
+		"description": "Virtual gamepad axes."
+	},
+	"alias love.GamepadButton": {
+		"prefix": "GamepadButton",
+		"scope": "lua",
+		"body": [
+			"${1|\"a\",\"b\",\"x\",\"y\",\"back\",\"guide\",\"start\",\"leftstick\",\"rightstick\",\"leftshoulder\",\"rightshoulder\",\"dpup\",\"dpdown\",\"dpleft\",\"dpright\"|}"
+		],
+		"description": "Virtual gamepad buttons."
+	},
+	"alias love.GraphicsFeature": {
+		"prefix": "GraphicsFeature",
+		"scope": "lua",
+		"body": [
+			"${1|\"clampzero\",\"lighten\",\"multicanvasformats\",\"glsl3\",\"instancing\",\"fullnpot\",\"pixelshaderhighp\",\"shaderderivatives\"|}"
+		],
+		"description": "Graphics features that can be checked for with love."
+	},
+	"alias love.GraphicsLimit": {
+		"prefix": "GraphicsLimit",
+		"scope": "lua",
+		"body": [
+			"${1|\"pointsize\",\"texturesize\",\"multicanvas\",\"canvasmsaa\",\"texturelayers\",\"volumetexturesize\",\"cubetexturesize\",\"anisotropy\"|}"
+		],
+		"description": "Types of system-dependent graphics limits checked for using love."
+	},
+	"alias love.HashFunction": {
+		"prefix": "HashFunction",
+		"scope": "lua",
+		"body": [
+			"${1|\"md5\",\"sha1\",\"sha224\",\"sha256\",\"sha384\",\"sha512\"|}"
+		],
+		"description": "Hash algorithm of love."
+	},
+	"alias love.HintingMode": {
+		"prefix": "HintingMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"normal\",\"light\",\"mono\",\"none\"|}"
+		],
+		"description": "True Type hinting mode."
+	},
+	"alias love.ImageFormat": {
+		"prefix": "ImageFormat",
+		"scope": "lua",
+		"body": [
+			"${1|\"tga\",\"png\",\"jpg\",\"bmp\"|}"
+		],
+		"description": "Encoded image formats."
+	},
+	"alias love.IndexDataType": {
+		"prefix": "IndexDataType",
+		"scope": "lua",
+		"body": [
+			"${1|\"uint16\",\"uint32\"|}"
+		],
+		"description": "Vertex map datatype for Data variant of Mesh:setVertexMap."
+	},
+	"alias love.JointType": {
+		"prefix": "JointType",
+		"scope": "lua",
+		"body": [
+			"${1|\"distance\",\"friction\",\"gear\",\"mouse\",\"prismatic\",\"pulley\",\"revolute\",\"rope\",\"weld\"|}"
+		],
+		"description": "Different types of joints."
+	},
+	"alias love.JoystickHat": {
+		"prefix": "JoystickHat",
+		"scope": "lua",
+		"body": [
+			"${1|\"c\",\"d\",\"l\",\"ld\",\"lu\",\"r\",\"rd\",\"ru\",\"u\"|}"
+		],
+		"description": "Joystick hat positions."
+	},
+	"alias love.JoystickInputType": {
+		"prefix": "JoystickInputType",
+		"scope": "lua",
+		"body": [
+			"${1|\"axis\",\"button\",\"hat\"|}"
+		],
+		"description": "Types of Joystick inputs."
+	},
+	"alias love.KeyConstant": {
+		"prefix": "KeyConstant",
+		"scope": "lua",
+		"body": [
+			"${1|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"space\",\"!\",\"\\\"\",\"#\",\"$\",\"&\",\"'\",\"(\",\")\",\"*\",\"+\",\"\\,\",\"-\",\".\",\"/\",\":\",\";\",\"<\",\"=\",\">\",\"?\",\"@\",\"[\",\"\\\\\",\"]\",\"^\",\"_\",\"`\",\"kp0\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp.\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kpenter\",\"kp=\",\"up\",\"down\",\"right\",\"left\",\"home\",\"end\",\"pageup\",\"pagedown\",\"insert\",\"backspace\",\"tab\",\"clear\",\"return\",\"delete\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"numlock\",\"capslock\",\"scrollock\",\"rshift\",\"lshift\",\"rctrl\",\"lctrl\",\"ralt\",\"lalt\",\"rmeta\",\"lmeta\",\"lsuper\",\"rsuper\",\"mode\",\"compose\",\"pause\",\"escape\",\"help\",\"print\",\"sysreq\",\"break\",\"menu\",\"power\",\"euro\",\"undo\",\"www\",\"mail\",\"calculator\",\"appsearch\",\"apphome\",\"appback\",\"appforward\",\"apprefresh\",\"appbookmarks\"|}"
+		],
+		"description": "All the keys you can press."
+	},
+	"alias love.LineJoin": {
+		"prefix": "LineJoin",
+		"scope": "lua",
+		"body": [
+			"${1|\"miter\",\"none\",\"bevel\"|}"
+		],
+		"description": "Line join style."
+	},
+	"alias love.LineStyle": {
+		"prefix": "LineStyle",
+		"scope": "lua",
+		"body": [
+			"${1|\"rough\",\"smooth\"|}"
+		],
+		"description": "The styles in which lines are drawn."
+	},
+	"alias love.MatrixLayout": {
+		"prefix": "MatrixLayout",
+		"scope": "lua",
+		"body": [
+			"${1|\"row\",\"column\"|}"
+		],
+		"description": "The layout of matrix elements (row-major or column-major)."
+	},
+	"alias love.MeshDrawMode": {
+		"prefix": "MeshDrawMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"fan\",\"strip\",\"triangles\",\"points\"|}"
+		],
+		"description": "How a Mesh's vertices are used when drawing."
+	},
+	"alias love.MessageBoxType": {
+		"prefix": "MessageBoxType",
+		"scope": "lua",
+		"body": [
+			"${1|\"info\",\"warning\",\"error\"|}"
+		],
+		"description": "Types of message box dialogs."
+	},
+	"alias love.MipmapMode": {
+		"prefix": "MipmapMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"none\",\"auto\",\"manual\"|}"
+		],
+		"description": "Controls whether a Canvas has mipmaps, and its behaviour when it does."
+	},
+	"alias love.ParticleInsertMode": {
+		"prefix": "ParticleInsertMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"top\",\"bottom\",\"random\"|}"
+		],
+		"description": "How newly created particles are added to the ParticleSystem."
+	},
+	"alias love.PixelFormat": {
+		"prefix": "PixelFormat",
+		"scope": "lua",
+		"body": [
+			"${1|\"unknown\",\"normal\",\"hdr\",\"r8\",\"rg8\",\"rgba8\",\"srgba8\",\"r16\",\"rg16\",\"rgba16\",\"r16f\",\"rg16f\",\"rgba16f\",\"r32f\",\"rg32f\",\"rgba32f\",\"la8\",\"rgba4\",\"rgb5a1\",\"rgb565\",\"rgb10a2\",\"rg11b10f\",\"stencil8\",\"depth16\",\"depth24\",\"depth32f\",\"depth24stencil8\",\"depth32fstencil8\",\"DXT1\",\"DXT3\",\"DXT5\",\"BC4\",\"BC4s\",\"BC5\",\"BC5s\",\"BC6h\",\"BC6hs\",\"BC7\",\"ETC1\",\"ETC2rgb\",\"ETC2rgba\",\"ETC2rgba1\",\"EACr\",\"EACrs\",\"EACrg\",\"EACrgs\",\"PVR1rgb2\",\"PVR1rgb4\",\"PVR1rgba2\",\"PVR1rgba4\",\"ASTC4x4\",\"ASTC5x4\",\"ASTC5x5\",\"ASTC6x5\",\"ASTC6x6\",\"ASTC8x5\",\"ASTC8x6\",\"ASTC8x8\",\"ASTC10x5\",\"ASTC10x6\",\"ASTC10x8\",\"ASTC10x10\",\"ASTC12x10\",\"ASTC12x12\"|}"
+		],
+		"description": "Pixel formats for Textures, ImageData, and CompressedImageData."
+	},
+	"alias love.PowerState": {
+		"prefix": "PowerState",
+		"scope": "lua",
+		"body": [
+			"${1|\"unknown\",\"battery\",\"nobattery\",\"charging\",\"charged\"|}"
+		],
+		"description": "The basic state of the system's power supply."
+	},
+	"alias love.Scancode": {
+		"prefix": "Scancode",
+		"scope": "lua",
+		"body": [
+			"${1|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"0\",\"return\",\"escape\",\"backspace\",\"tab\",\"space\",\"-\",\"=\",\"[\",\"]\",\"\\\\\",\"nonus#\",\";\",\"'\",\"`\",\"\\,\",\".\",\"/\",\"capslock\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"f16\",\"f17\",\"f18\",\"f19\",\"f20\",\"f21\",\"f22\",\"f23\",\"f24\",\"lctrl\",\"lshift\",\"lalt\",\"lgui\",\"rctrl\",\"rshift\",\"ralt\",\"rgui\",\"printscreen\",\"scrolllock\",\"pause\",\"insert\",\"home\",\"numlock\",\"pageup\",\"delete\",\"end\",\"pagedown\",\"right\",\"left\",\"down\",\"up\",\"nonusbackslash\",\"application\",\"execute\",\"help\",\"menu\",\"select\",\"stop\",\"again\",\"undo\",\"cut\",\"copy\",\"paste\",\"find\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kp=\",\"kpenter\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp0\",\"kp.\",\"international1\",\"international2\",\"international3\",\"international4\",\"international5\",\"international6\",\"international7\",\"international8\",\"international9\",\"lang1\",\"lang2\",\"lang3\",\"lang4\",\"lang5\",\"mute\",\"volumeup\",\"volumedown\",\"audionext\",\"audioprev\",\"audiostop\",\"audioplay\",\"audiomute\",\"mediaselect\",\"www\",\"mail\",\"calculator\",\"computer\",\"acsearch\",\"achome\",\"acback\",\"acforward\",\"acstop\",\"acrefresh\",\"acbookmarks\",\"power\",\"brightnessdown\",\"brightnessup\",\"displayswitch\",\"kbdillumtoggle\",\"kbdillumdown\",\"kbdillumup\",\"eject\",\"sleep\",\"alterase\",\"sysreq\",\"cancel\",\"clear\",\"prior\",\"return2\",\"separator\",\"out\",\"oper\",\"clearagain\",\"crsel\",\"exsel\",\"kp00\",\"kp000\",\"thsousandsseparator\",\"decimalseparator\",\"currencyunit\",\"currencysubunit\",\"app1\",\"app2\",\"unknown\"|}"
+		],
+		"description": "Keyboard scancodes."
+	},
+	"alias love.ShapeType": {
+		"prefix": "ShapeType",
+		"scope": "lua",
+		"body": [
+			"${1|\"circle\",\"polygon\",\"edge\",\"chain\"|}"
+		],
+		"description": "The different types of Shapes, as returned by Shape:getType."
+	},
+	"alias love.SourceType": {
+		"prefix": "SourceType",
+		"scope": "lua",
+		"body": [
+			"${1|\"static\",\"stream\",\"queue\"|}"
+		],
+		"description": "Types of audio sources."
+	},
+	"alias love.SpriteBatchUsage": {
+		"prefix": "SpriteBatchUsage",
+		"scope": "lua",
+		"body": [
+			"${1|\"dynamic\",\"static\",\"stream\"|}"
+		],
+		"description": "Usage hints for SpriteBatches and Meshes to optimize data storage and access."
+	},
+	"alias love.StackType": {
+		"prefix": "StackType",
+		"scope": "lua",
+		"body": [
+			"${1|\"transform\",\"all\"|}"
+		],
+		"description": "Graphics state stack types used with love."
+	},
+	"alias love.StencilAction": {
+		"prefix": "StencilAction",
+		"scope": "lua",
+		"body": [
+			"${1|\"replace\",\"increment\",\"decrement\",\"incrementwrap\",\"decrementwrap\",\"invert\"|}"
+		],
+		"description": "How a stencil function modifies the stencil values of pixels it touches."
+	},
+	"alias love.TextureType": {
+		"prefix": "TextureType",
+		"scope": "lua",
+		"body": [
+			"${1|\"2d\",\"array\",\"cube\",\"volume\"|}"
+		],
+		"description": "Types of textures (2D, cubemap, etc."
+	},
+	"alias love.TimeUnit": {
+		"prefix": "TimeUnit",
+		"scope": "lua",
+		"body": [
+			"${1|\"seconds\",\"samples\"|}"
+		],
+		"description": "Units that represent time."
+	},
+	"alias love.VertexAttributeStep": {
+		"prefix": "VertexAttributeStep",
+		"scope": "lua",
+		"body": [
+			"${1|\"pervertex\",\"perinstance\"|}"
+		],
+		"description": "The frequency at which a vertex shader fetches the vertex attribute's data from the Mesh when it's drawn."
+	},
+	"alias love.VertexWinding": {
+		"prefix": "VertexWinding",
+		"scope": "lua",
+		"body": [
+			"${1|\"cw\",\"ccw\"|}"
+		],
+		"description": "How Mesh geometry vertices are ordered."
+	},
+	"alias love.WrapMode": {
+		"prefix": "WrapMode",
+		"scope": "lua",
+		"body": [
+			"${1|\"clamp\",\"repeat\",\"mirroredrepeat\",\"clampzero\"|}"
+		],
+		"description": "How the image wraps inside a Quad with a larger quad size than image size."
+	}
+}

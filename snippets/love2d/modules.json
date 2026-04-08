@@ -1,0 +1,211 @@
+{
+	"love.audio": {
+		"prefix": [
+			"la",
+			"love.audio"
+		],
+		"scope": "lua",
+		"body": [
+			"love.audio.${0:}"
+		],
+		"description": "Insert `love.audio.`"
+	},
+	"love.data": {
+		"prefix": [
+			"ld",
+			"love.data"
+		],
+		"scope": "lua",
+		"body": [
+			"love.data.${0:}"
+		],
+		"description": "Insert `love.data.`"
+	},
+	"love.event": {
+		"prefix": [
+			"le",
+			"love.event"
+		],
+		"scope": "lua",
+		"body": [
+			"love.event.${0:}"
+		],
+		"description": "Insert `love.event.`"
+	},
+	"love.filesystem": {
+		"prefix": [
+			"lfi",
+			"love.filesystem"
+		],
+		"scope": "lua",
+		"body": [
+			"love.filesystem.${0:}"
+		],
+		"description": "Insert `love.filesystem.`"
+	},
+	"love.font": {
+		"prefix": [
+			"lfo",
+			"love.font"
+		],
+		"scope": "lua",
+		"body": [
+			"love.font.${0:}"
+		],
+		"description": "Insert `love.font.`"
+	},
+	"love.graphics": {
+		"prefix": [
+			"lg",
+			"love.graphics"
+		],
+		"scope": "lua",
+		"body": [
+			"love.graphics.${0:}"
+		],
+		"description": "Insert `love.graphics.`"
+	},
+	"love.image": {
+		"prefix": [
+			"li",
+			"love.image"
+		],
+		"scope": "lua",
+		"body": [
+			"love.image.${0:}"
+		],
+		"description": "Insert `love.image.`"
+	},
+	"love.joystick": {
+		"prefix": [
+			"lj",
+			"love.joystick"
+		],
+		"scope": "lua",
+		"body": [
+			"love.joystick.${0:}"
+		],
+		"description": "Insert `love.joystick.`"
+	},
+	"love.keyboard": {
+		"prefix": [
+			"lk",
+			"love.keyboard"
+		],
+		"scope": "lua",
+		"body": [
+			"love.keyboard.${0:}"
+		],
+		"description": "Insert `love.keyboard.`"
+	},
+	"love.math": {
+		"prefix": [
+			"lma",
+			"love.math"
+		],
+		"scope": "lua",
+		"body": [
+			"love.math.${0:}"
+		],
+		"description": "Insert `love.math.`"
+	},
+	"love.mouse": {
+		"prefix": [
+			"lmo",
+			"love.mouse"
+		],
+		"scope": "lua",
+		"body": [
+			"love.mouse.${0:}"
+		],
+		"description": "Insert `love.mouse.`"
+	},
+	"love.physics": {
+		"prefix": [
+			"lp",
+			"love.physics"
+		],
+		"scope": "lua",
+		"body": [
+			"love.physics.${0:}"
+		],
+		"description": "Insert `love.physics.`"
+	},
+	"love.sound": {
+		"prefix": [
+			"lso",
+			"love.sound"
+		],
+		"scope": "lua",
+		"body": [
+			"love.sound.${0:}"
+		],
+		"description": "Insert `love.sound.`"
+	},
+	"love.system": {
+		"prefix": [
+			"lsy",
+			"love.system"
+		],
+		"scope": "lua",
+		"body": [
+			"love.system.${0:}"
+		],
+		"description": "Insert `love.system.`"
+	},
+	"love.thread": {
+		"prefix": [
+			"lth",
+			"love.thread"
+		],
+		"scope": "lua",
+		"body": [
+			"love.thread.${0:}"
+		],
+		"description": "Insert `love.thread.`"
+	},
+	"love.timer": {
+		"prefix": [
+			"lti",
+			"love.timer"
+		],
+		"scope": "lua",
+		"body": [
+			"love.timer.${0:}"
+		],
+		"description": "Insert `love.timer.`"
+	},
+	"love.touch": {
+		"prefix": [
+			"lto",
+			"love.touch"
+		],
+		"scope": "lua",
+		"body": [
+			"love.touch.${0:}"
+		],
+		"description": "Insert `love.touch.`"
+	},
+	"love.video": {
+		"prefix": [
+			"lv",
+			"love.video"
+		],
+		"scope": "lua",
+		"body": [
+			"love.video.${0:}"
+		],
+		"description": "Insert `love.video.`"
+	},
+	"love.window": {
+		"prefix": [
+			"lw",
+			"love.window"
+		],
+		"scope": "lua",
+		"body": [
+			"love.window.${0:}"
+		],
+		"description": "Insert `love.window.`"
+	}
+}

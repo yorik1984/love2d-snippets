@@ -1,0 +1,322 @@
+name: Generate LÖVE snippets
+
+on:
+  schedule:
+    # Runs every Monday at 00:00 UTC
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-commit:
+    runs-on: ubuntu-latest
+    env:
+      REPO: ${{ github.repository }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Lua 5.1
+        uses: leafo/gh-actions-lua@v10
+        with:
+          luaVersion: "5.1"
+
+      - name: Determine current branch
+        id: branch
+        run: |
+          if [ -n "${GITHUB_HEAD_REF:-}" ]; then
+            BR="${GITHUB_HEAD_REF}"
+          else
+            BR="${GITHUB_REF#refs/heads/}"
+          fi
+          echo "branch=${BR}" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Fetch love-api and read API version
+        id: api_version
+        run: |
+          set -euo pipefail
+          TMP="/tmp/love-api-for-version"
+          rm -rf "$TMP"
+          git clone --depth 1 https://github.com/love2d-community/love-api "$TMP"
+          if [ ! -f "$TMP/love_api.lua" ]; then
+            echo "love_api.lua not found in cloned repo"
+            echo "api_version=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Extract version value like version = '11.5'
+          VER_LINE=$(grep -E "version[[:space:]]*=" "$TMP/love_api.lua" || true)
+          API_VER=""
+          if [ -n "$VER_LINE" ]; then
+            API_VER=$(echo "$VER_LINE" | sed -E "s/.*version[[:space:]]*=[[:space:]]*'([^']+)'.*/\1/")
+          fi
+          echo "api_version=${API_VER}" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Prepare love-api source
+        run: |
+          git clone https://github.com/love2d-community/love-api love_source
+          cp -r love_source/modules .
+          cp love_source/love_api.lua .
+        shell: bash
+
+      - name: Generate snippets
+        run: |
+          echo "🔧 Generating LÖVE snippets..."
+          # Run generator (default output is snippets/)
+          lua genLOVEsnippets.lua
+          # Count generated snippet JSON files under snippets/love2d/
+          if [ -d "snippets/love2d" ]; then
+            SNIPPET_COUNT=$(find snippets/love2d -type f -name "*.json" | wc -l | tr -d '[:space:]')
+          else
+            SNIPPET_COUNT=0
+          fi
+          echo "📊 Generated ${SNIPPET_COUNT} snippet files"
+        shell: bash
+
+      - name: Cleanup temporary files
+        run: |
+          rm -rf modules love_api.lua love_source
+        shell: bash
+
+      - name: Update README badge to target version
+        id: update_readme
+        run: |
+          set -euo pipefail
+          BRANCH="${{ steps.branch.outputs.branch }}"
+          API_VER="${{ steps.api_version.outputs.api_version }}"
+
+          # decide target version:
+          if [ "$BRANCH" = "develop" ] || [ "$BRANCH" = "main" ]; then
+            TARGET_VERSION="$API_VER"
+          elif echo "$BRANCH" | grep -Eq "^[0-9]+(\\.[0-9]+)*$"; then
+            TARGET_VERSION="$BRANCH"
+          else
+            TARGET_VERSION="$API_VER"
+          fi
+
+          echo "Detected branch: $BRANCH"
+          echo "Parsed API version: $API_VER"
+          echo "Target version for README badge: $TARGET_VERSION"
+
+          if [ -z "${TARGET_VERSION:-}" ]; then
+            echo "No target version — skipping README badge update"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CHANGED=false
+          for README in README.md README.MD README; do
+            if [ -f "$README" ]; then
+              TMPFILE="$(mktemp)"
+              # Update only the version number in the LÖVE API badge
+              sed -E "s/(https:\/\/img\.shields\.io\/badge\/L%C3%96VE_API-)[^-]+(-EA316E\.svg)/\1${TARGET_VERSION}\2/g" "$README" > "$TMPFILE"
+
+              if ! cmp -s "$README" "$TMPFILE"; then
+                mv "$TMPFILE" "$README"
+                CHANGED=true
+                echo "Updated README badge version to ${TARGET_VERSION}"
+              else
+                rm -f "$TMPFILE"
+                echo "No changes needed for README badge"
+              fi
+            fi
+          done
+
+          echo "changed=${CHANGED}" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Check for changes in snippets/ or README
+        id: check_changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "📝 Changes detected"
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ No changes detected"
+          fi
+        shell: bash
+
+      - name: Commit and push changes to current branch
+        if: steps.check_changes.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          BRANCH="${{ steps.branch.outputs.branch }}"
+          API_VER="${{ steps.api_version.outputs.api_version }}"
+
+          echo "Branch: $BRANCH"
+          echo "API version: $API_VER"
+
+          # Add all changes (snippets/ folder and README)
+          git add -A
+
+          # Get statistics for commit message
+          if [ -d "snippets/love2d" ]; then
+            file_count=$(find snippets/love2d -type f -name "*.json" | wc -l | tr -d '[:space:]')
+          else
+            file_count=0
+          fi
+
+          git commit -m "chore: regenerate LÖVE snippets v${API_VER}
+
+          - Generated ${file_count} snippet files
+          - Updated README badge to v${API_VER}
+
+          Auto-generated by GitHub Actions"
+
+          # Configure remote with token for push
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
+
+          # Push back to the same branch
+          if git rev-parse --verify --quiet "refs/remotes/origin/${BRANCH}" >/dev/null; then
+            git push origin "HEAD:${BRANCH}"
+          else
+            git push -u origin "HEAD:${BRANCH}"
+          fi
+
+          echo "✅ Changes pushed to ${BRANCH}"
+        shell: bash
+
+      - name: Sync branches (develop ↔ main)
+        if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          CURRENT_BRANCH="${{ steps.branch.outputs.branch }}"
+          OTHER_BRANCH=$([ "$CURRENT_BRANCH" = "develop" ] && echo "main" || echo "develop")
+          API_VER="${{ steps.api_version.outputs.api_version }}"
+
+          echo "🔄 Syncing branches: $CURRENT_BRANCH → $OTHER_BRANCH"
+
+          # Fetch latest changes
+          git fetch origin
+
+          # Checkout the other branch
+          if git diff --quiet "origin/$CURRENT_BRANCH" "origin/$OTHER_BRANCH"; then
+            echo "✅ Branches are already in sync"
+            exit 0
+          fi
+
+          git checkout "$OTHER_BRANCH"
+          git pull origin "$OTHER_BRANCH"
+
+          # Merge changes from current branch
+          if git merge --no-ff --no-edit "origin/$CURRENT_BRANCH"; then
+            git push origin "$OTHER_BRANCH"
+            echo "✅ Successfully merged $CURRENT_BRANCH into $OTHER_BRANCH"
+          else
+            echo "❌ Merge conflict detected between $CURRENT_BRANCH and $OTHER_BRANCH"
+            echo "🔍 Please resolve conflicts manually"
+            git merge --abort || true
+            exit 1
+          fi
+        shell: bash
+
+      - name: Manage version branch
+        if: steps.check_changes.outputs.changed == 'true' && (github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          BRANCH="${{ steps.branch.outputs.branch }}"
+          API_VER="${{ steps.api_version.outputs.api_version }}"
+
+          if [ -z "${API_VER:-}" ]; then
+            echo "API version is empty — cannot merge into version branch. Skipping."
+            exit 0
+          fi
+
+          VERSION_BRANCH="$API_VER"
+          echo "📌 Managing version branch: ${VERSION_BRANCH}"
+
+          # Fetch remote branches
+          git fetch origin "+refs/heads/*:refs/remotes/origin/*" --prune
+
+          # Check if version branch exists
+          if git ls-remote --exit-code --heads origin "${VERSION_BRANCH}" >/dev/null 2>&1; then
+            echo "Version branch ${VERSION_BRANCH} exists. Merging ${BRANCH} into it."
+
+            # Checkout version branch
+            if git show-ref --verify --quiet "refs/heads/${VERSION_BRANCH}"; then
+              git checkout "${VERSION_BRANCH}"
+              git reset --hard "origin/${VERSION_BRANCH}"
+            else
+              git checkout -b "${VERSION_BRANCH}" "origin/${VERSION_BRANCH}"
+            fi
+
+            # Merge from original branch
+            if git merge --no-ff --no-edit "origin/${BRANCH}"; then
+              git push origin "${VERSION_BRANCH}"
+              echo "✅ Merged ${BRANCH} -> ${VERSION_BRANCH} and pushed."
+            else
+              echo "❌ Merge conflicts detected. Aborting."
+              git merge --abort || true
+              exit 1
+            fi
+          else
+            # Create new version branch
+            echo "Version branch ${VERSION_BRANCH} does not exist. Creating it from ${BRANCH}."
+            git checkout -b "${VERSION_BRANCH}"
+            git push -u origin "${VERSION_BRANCH}"
+            echo "✅ Created and pushed new branch ${VERSION_BRANCH}."
+          fi
+        shell: bash
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "════════════════════════════════════════════════════════════"
+          echo "📊 Generation Summary for LÖVE API v${{ steps.api_version.outputs.api_version }}"
+          echo "════════════════════════════════════════════════════════════"
+
+          if [ -d "snippets/love2d" ]; then
+            file_count=$(find snippets/love2d -type f -name "*.json" | wc -l | tr -d '[:space:]')
+
+            echo "Event: ${{ github.event_name }}"
+            echo "Branch: ${{ steps.branch.outputs.branch }}"
+            echo "API Version: ${{ steps.api_version.outputs.api_version }}"
+
+            if [ "${{ steps.check_changes.outputs.changed }}" = "true" ]; then
+              echo ""
+              echo "✅ Changes committed to ${{ steps.branch.outputs.branch }}"
+
+              if [ "${{ steps.branch.outputs.branch }}" = "develop" ] || [ "${{ steps.branch.outputs.branch }}" = "main" ]; then
+                OTHER_BRANCH=$([ "${{ steps.branch.outputs.branch }}" = "develop" ] && echo "main" || echo "develop")
+                echo "✅ Synced ${{ steps.branch.outputs.branch }} → ${OTHER_BRANCH}"
+                echo "✅ Version branch ${{ steps.api_version.outputs.api_version }} updated"
+              fi
+              echo ""
+              echo "Files generated: ${file_count}"
+            else
+              echo ""
+              echo "ℹ️ No changes to commit"
+            fi
+          else
+            echo "❌ Generation failed - snippets/love2d directory not found"
+          fi
+
+          echo "════════════════════════════════════════════════════════════"
