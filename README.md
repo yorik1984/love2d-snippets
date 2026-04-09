@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="https://github.com/yorik1984/love2d-snippets">
-    <img src="assets/love2d-snippets-logo512.png" alt="LÖVE snippets logo" height="256">
+    <img src="https://raw.githubusercontent.com/yorik1984/love2d-snippets/main/assets/love2d-snippets-logo512.png" alt="LÖVE snippets logo" height="256">
   </a>
 
 <h1>&nbsp;&nbsp;♡ <a href="https://love2d.org">LÖVE</a> ♡ Snippets&nbsp;&nbsp;</h1>
