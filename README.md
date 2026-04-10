@@ -29,10 +29,10 @@ The `snippets/` folder contains prepared snippet JSON files for all LÖVE module
 - [Constructors](./USAGE.md#constructors)
 - [Getters and setters](./USAGE.md#getters-and-setters)
 - [Enums](./USAGE.md#enums) as choice snippets
-- [Conf](/USAGE.md#conf-snippets) snippets
-- [package.json](https://github.com/yorik1984/love2d-snippets/blob/main/snippets/package.json) manifest listing the snippet files
+- [Conf](./USAGE.md#conf-snippets) snippets
+- [package.json](./package.json) manifest listing the snippet files
 
-For full instructions, see [USAGE.md](USAGE.md).
+For full instructions, see [USAGE.md](./USAGE.md).
 
 ## 📦 Installations
 
@@ -59,8 +59,7 @@ Or search for `love2d-snippets` in the Extensions view (`Ctrl+Shift+X`).
         "L3MON4D3/LuaSnip",
     },
     config = function()
-        local paths = { vim.fn.stdpath("data") .. "/lazy/love2d-snippets/snippets" }
-        require("luasnip.loaders.from_vscode").lazy_load({ paths = paths })
+        require("luasnip.loaders.from_vscode").lazy_load()
     end
 }
 ```
@@ -89,14 +88,7 @@ The workflow automatically:
 
 ### Typical output files:
 
-- `snippets/love2d/callbacks.json`
-- `snippets/love2d/conf.json`
-- `snippets/love2d/constructors.json`
-- `snippets/love2d/enums.json`
-- `snippets/love2d/functions.json`
-- `snippets/love2d/getters-setters.json`
-- `snippets/love2d/modules.json`
-- `snippets/package.json`
+For a complete list of generated files, see [FILES.md](./FILES.md).
 
 ### ✋ Manual Generation (Optional)
 

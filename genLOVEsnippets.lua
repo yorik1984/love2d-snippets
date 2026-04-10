@@ -75,6 +75,7 @@ local API = {
     ENGINE_NAME     = "LÖVE",
     FILE            = "love_api",
     FILE_EXT        = "lua",
+    FILES_LIST      = "FILES.md",
     NAME            = "love",
     OUTPUT_DIR      = "snippets",
     PREF_GET        = "get",
@@ -929,14 +930,14 @@ local function generateGettersSetters(pairs)
     local snippets = {}
 
     for _, pair in ipairs(pairs) do
-        local module     = pair.modulePath                         -- "love.graphics"
+        local module     = pair.modulePath                          -- "love.graphics"
         local moduleName = module:gsub("^" .. API.NAME .. "%.", "") -- graphics
-        local baseName   = pair.baseName                           -- "Color"
-        local varName    = toVariableName(baseName)                -- "color"
-        local getterName = pair.getter.name                        -- "getColor"
-        local setterName = pair.setter.name                        -- "setColor"
-        local getterCall = pair.getter.fullName                    -- "love.graphics.getColor"
-        local getKey     = getterCall .. "()"                      -- "love.graphics.getColor()"
+        local baseName   = pair.baseName                            -- "Color"
+        local varName    = toVariableName(baseName)                 -- "color"
+        local getterName = pair.getter.name                         -- "getColor"
+        local setterName = pair.setter.name                         -- "setColor"
+        local getterCall = pair.getter.fullName                     -- "love.graphics.getColor"
+        local getKey     = getterCall .. "()"                       -- "love.graphics.getColor()"
 
         if not snippets[module] then
             snippets[module] = {}
@@ -1493,7 +1494,7 @@ local function writeSnippetFiles(outPath, apiData)
                     stats.files = stats.files + 1
                     stats.snippets = stats.snippets + count
                     print(" • Created " ..
-                    outputDir .. "/" .. API.ENGINE .. "/" .. field.filename .. " with " .. count .. " snippets")
+                        outputDir .. "/" .. API.ENGINE .. "/" .. field.filename .. " with " .. count .. " snippets")
                 end
             end
         end
@@ -1503,13 +1504,20 @@ local function writeSnippetFiles(outPath, apiData)
 end
 
 -- Write package.json file
-local function writePackageJson(outPath, apiData)
-    local packageJsonPath = outPath .. "/" .. API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT
+local function writePackage(outPath, apiData)
+    local packageJsonPath  = API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT
+    local packageFilesList = API.FILES_LIST
 
-    local pkg = io.open(packageJsonPath, "w")
+    local pkg       = io.open(packageJsonPath, "w")
+    local filesList = io.open(packageFilesList, "w")
 
     if not pkg then
-        print(" • Warning: Could not create " .. API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT)
+        print(" • Warning: Could not create " .. packageJsonPath)
+        return false
+    end
+
+    if not filesList then
+        print(" • Warning: Could not create " .. packageFilesList)
         return false
     end
 
@@ -1526,15 +1534,24 @@ local function writePackageJson(outPath, apiData)
     end
     table.sort(files)
 
+    local basePath = "./" .. outPath .. "/" .. API.ENGINE
+
     for i, filename in ipairs(files) do
         local comma = (i < #files) and "," or ""
         pkg:write(
             string.format(
-                '\t\t\t{ "language": ["%s"], "path": "./%s/%s" }%s\n',
+                '\t\t\t{ "language": "%s", "path": "%s/%s" }%s\n',
                 API.TARGET_FILE_EXT,
-                API.ENGINE,
+                basePath,
                 filename,
                 comma
+            )
+        )
+        filesList:write(
+            string.format(
+                "- `%s/%s`\n",
+                basePath,
+                filename
             )
         )
     end
@@ -1543,6 +1560,8 @@ local function writePackageJson(outPath, apiData)
     pkg:write("\t}\n")
     pkg:write("}\n")
     pkg:close()
+
+    filesList:write("- `" .. packageJsonPath .. "`\n")
 
     print(" • Created " .. API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT)
     return true
@@ -1651,7 +1670,7 @@ local function generateSnippets(api, outPath)
     end
 
     writeSnippetFiles(outPath, apiData)
-    writePackageJson(outPath, apiData)
+    writePackage(outPath, apiData)
     printStatistics(apiData)
 end
 
