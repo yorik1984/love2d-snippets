@@ -34,6 +34,28 @@ The `snippets/` folder contains prepared snippet JSON files for all LÖVE module
 
 For full instructions, see [USAGE.md](./USAGE.md).
 
+## Indentation in Snippets
+
+This snippet collection uses **tab characters (`\t`)** for indentation, not spaces.
+
+### Why Tabs?
+
+Using tabs for indentation offers several key benefits:
+
+1. **Personalization** – Every developer can configure their editor to display tabs at their preferred width (2, 4, 8 spaces, etc.) without changing the actual file. What you see as 2 spaces, another developer can see as 8 spaces — the same file works for everyone.
+2. **Portability** – Tabs work consistently across different editors, operating systems, and team environments. Copy-pasting code between projects doesn't break indentation.
+3. **Clean diffs** – Since the number of tab characters doesn't change when someone adjusts their display settings, version control diffs remain clean and readable.
+4. **File size** – One tab character takes less space than 2-4 spaces, which adds up in large codebases.
+
+### The Golden Rule
+
+**Tabs for indentation, spaces for alignment**.
+
+- Use **tabs** at the beginning of lines to indicate nesting levels.
+- Use **spaces** to align elements within a line (e.g., continuing a statement, aligning comments).
+
+This separation ensures that indentation adapts to individual preferences while alignment remains visually consistent for everyone.
+
 ## 📦 Installations
 
 Use the plugins listed below to integrate these snippets into your editor (IDE), or connect the snippets directory according to your editor's requirements.
@@ -62,6 +84,28 @@ Or search for `love2d-snippets` in the Extensions view (`Ctrl+Shift+X`).
         require("luasnip.loaders.from_vscode").lazy_load()
     end
 }
+```
+
+#### Example settings
+
+> File: `after/ftplugin/lua.lua`
+```lua
+vim.opt_local.tabstop    = 4    -- Sets the number of spaces a tab character counts for in the editor's display.
+vim.opt_local.shiftwidth = 4    -- Sets the number of spaces used for each step of (auto)indentation
+vim.opt_local.expandtab  = true -- When enabled (`true`), pressing `Tab` inserts spaces. When disabled (`false`), it inserts a tab character.
+
+-- Auto-convert tabs to spaces on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+    buffer = 0,
+    callback = function()
+        local cursor = vim.api.nvim_win_get_cursor(0)
+        -- Convert tabs to spaces (or vice versa) preserving cursor position
+        -- | setlocal expandtab → enable space insertion (disable for tabs) for current buffer
+        -- | retab              → convert existing tabs/spaces
+        vim.cmd("setlocal expandtab | retab")
+        vim.api.nvim_win_set_cursor(0, cursor)
+    end,
+})
 ```
 
 ## 🔄 Rebuilding the API
