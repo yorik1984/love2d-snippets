@@ -1718,9 +1718,6 @@ local function writePackage(outPath, apiData)
                     filename
                 )
             )
-            if debugMode then
-                print("    - " .. basePath .. filename)
-            end
         end
 
         statsFile:write("* **Extension manifest:**\n  - `" .. packageJsonPath .. "`\n")
