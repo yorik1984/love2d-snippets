@@ -9,6 +9,7 @@ USAGE:
 
 OPTIONS:
     DEBUG             - Show debug information
+    STATS             - Add  statistics to `STATS.md`
     HELP              - Display this help message
 
 COMMANDS:
@@ -37,6 +38,7 @@ USAGE:
 
 OPTIONS:
     DEBUG             - Show debug information
+    STATS             - Add  statistics to `STATS.md`
     HELP              - Display this help message
 
 COMMANDS:
@@ -75,7 +77,6 @@ local API = {
     ENGINE_NAME     = "LÖVE",
     FILE            = "love_api",
     FILE_EXT        = "lua",
-    FILES_LIST      = "FILES.md",
     NAME            = "love",
     OUTPUT_DIR      = "snippets",
     PREF_GET        = "get",
@@ -83,6 +84,7 @@ local API = {
     PREF_NEW        = "new",
     SNIP_FILE_EXT   = "json",
     SNIP_PACKAGE    = "package",
+    STATS_FILE      = "STATS.md",
     TARGET_FILE_EXT = "lua",
 }
 
@@ -213,11 +215,20 @@ local function debugPrint(...)
     end
 end
 
+local function errorPrint(...)
+    io.stderr:write("\n  ❌ Error: ", ...)
+    io.stderr:write("\n")
+    os.exit(1)
+end
+
+local statsMode = false
 local outputDir = API.OUTPUT_DIR
 for i = 1, #arg do
     local a = arg[i]
     if a == "DEBUG" then
         debugMode = true
+    elseif a == "STATS" then
+        statsMode = true
     elseif a == "HELP" then
         io.write(HELP_TEXT, "\n")
         os.exit(0)
@@ -233,8 +244,8 @@ local ok, apiRequire = pcall(function()
 end)
 
 if not ok then
-    io.stderr:write(
-        " ❌ Error: could not require '"
+    errorPrint(
+        "could not require '"
         .. API.FILE
         .. "'. Make sure "
         .. API.FILE
@@ -242,7 +253,6 @@ if not ok then
         .. API.FILE_EXT
         .. " is present in the current directory\n"
     )
-    os.exit(1)
 elseif debugMode then
     print("\n ✅ Successfully loaded " .. API.FILE .. API.FILE_EXT .. "\n")
 end
@@ -607,7 +617,7 @@ local function collectConstructors(api)
     scanModule(api, API.NAME)
 
     if debugMode and #nonNewConstructors > 0 then
-        print("\n 🔧 DEBUG: Constructors not starting with 'new' (" .. #nonNewConstructors .. "):")
+        debugPrint("Constructors not starting with 'new' (" .. #nonNewConstructors .. "):")
         for _, c in ipairs(nonNewConstructors) do
             print(" • " .. c.fullName .. " -> returns " .. c.returns)
         end
@@ -1459,6 +1469,94 @@ local function generateConf(fields)
 end
 
 --------------------------------------------------------------------------------
+-- Statistics
+--------------------------------------------------------------------------------
+local function formatStatistics(apiData, rule)
+    rule = rule or "txt"
+    local format = {
+        ["md"]  = {
+            header = "## ",
+            bullet = "* ",
+            colon = ": ",
+        },
+        ["txt"] = {
+            header = " ",
+            bullet = " • ",
+            colon = ": ",
+        },
+    }
+    local header = format[rule].header
+    local bullet = format[rule].bullet
+    local colon = format[rule].colon
+
+    local function countSnippetsInTable(t)
+        local count = 0
+        for _, value in pairs(t) do
+            if type(value) == "table" then
+                if isValidSnippet(value) then
+                    count = count + 1
+                else
+                    count = count + countSnippetsInTable(value)
+                end
+            end
+        end
+        return count
+    end
+
+    local lines = {}
+    table.insert(lines, header .. "📊 Statistics:")
+
+    -- detect markdown header
+    if header:match("^#") then
+        table.insert(lines, "")
+    end
+
+    local total = 0
+    local fileCount = 0
+
+    for _, field in pairs(apiData) do
+        if field.snippet and field.snippet ~= false then
+            local count = 0
+
+            if type(field.snippet) == "table" then
+                count = countSnippetsInTable(field.snippet)
+            elseif type(field.snippet) == "number" then
+                count = field.snippet
+            end
+
+            if count > 0 then
+                fileCount = fileCount + 1
+            end
+            total = total + count
+            table.insert(lines, string.format(bullet .. "%s" .. colon .. "%d", field.label, count))
+        elseif field.api and field.api ~= false then
+            local apiCount = 0
+            if type(field.api) == "table" then
+                apiCount = countSnippetsInTable(field.api)
+            else
+                apiCount = #field.api
+            end
+            table.insert(lines, string.format(bullet .. "%s" .. colon .. "%d", field.label, apiCount))
+            total = total + apiCount
+        end
+    end
+    local bold = ""
+    if rule == "md" then
+        bold = "**"
+    end
+    table.insert(lines, string.format(bullet .. "Total snippets generated: " .. bold .. "%d" .. bold, total))
+    if rule == "md" then
+        table.insert(lines, "\n" .. header .. "🗂 Output Files\n")
+    end
+    table.insert(lines, string.format(bullet .. bold .. "Snippets files(%d):" .. bold, fileCount))
+    if rule == "md" then
+        table.insert(lines, "")
+    end
+
+    return table.concat(lines, "\n")
+end
+
+--------------------------------------------------------------------------------
 -- File Writers
 --------------------------------------------------------------------------------
 -- Write a single JSON file
@@ -1475,7 +1573,7 @@ local function writeJSONFile(filePath, snippets)
 
     local file = io.open(filePath, "w")
     if not file then
-        print("   ❌ Error: Could not create " .. filePath)
+        errorPrint("Could not create " .. filePath)
         return 0
     end
 
@@ -1526,15 +1624,12 @@ local function writeSnippetFiles(outPath, apiData)
     if apiData.gettersSetters.snippet then
         for moduleName, moduleSnips in pairs(apiData.gettersSetters.snippet) do
             for key, snip in pairs(moduleSnips) do
-                if flatGetterSetter[key] and debugMode then
-                    debugPrint("⚠️ Warning: Duplicate key '" .. key .. "' from module '" .. moduleName .. "'")
+                if flatGetterSetter[key] then
+                    print(" ⚠️ Warning: Duplicate key '" .. key .. "' from module '" .. moduleName .. "'")
                 end
                 flatGetterSetter[key] = snip
             end
         end
-    end
-    if debugMode then
-        print("")
     end
     for name, field in pairs(apiData) do
         if field.snippet and field.filename then
@@ -1544,13 +1639,7 @@ local function writeSnippetFiles(outPath, apiData)
             end
 
             if snippets and next(snippets) then
-                local count = writeJSONFile(snippetsDir .. "/" .. field.filename, snippets)
-                if count > 0 then
-                    stats.files = stats.files + 1
-                    stats.snippets = stats.snippets + count
-                    print(" • Created " ..
-                        outputDir .. "/" .. API.ENGINE .. "/" .. field.filename .. " with " .. count .. " snippets")
-                end
+                writeJSONFile(snippetsDir .. "/" .. field.filename, snippets)
             end
         end
     end
@@ -1560,21 +1649,15 @@ end
 
 -- Write package.json file
 local function writePackage(outPath, apiData)
-    local packageJsonPath  = API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT
-    local packageFilesList = API.FILES_LIST
-
-    local pkg              = io.open(packageJsonPath, "w")
-    local filesList        = io.open(packageFilesList, "w")
+    local packageJsonPath = API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT
+    local pkg             = io.open(packageJsonPath, "w")
 
     if not pkg then
-        print(" • Warning: Could not create " .. packageJsonPath)
+        errorPrint("Could not create " .. packageJsonPath)
         return false
     end
 
-    if not filesList then
-        print(" • Warning: Could not create " .. packageFilesList)
-        return false
-    end
+    print(formatStatistics(apiData))
 
     pkg:write("{\n")
     pkg:write(string.format('\t"name": "%s-snippets",\n', API.ENGINE))
@@ -1589,7 +1672,8 @@ local function writePackage(outPath, apiData)
     end
     table.sort(files)
 
-    local basePath = "./" .. outPath .. "/" .. API.ENGINE
+    local basePath = outPath .. "/" .. API.ENGINE
+    local fullPath = "./" .. basePath
 
     for i, filename in ipairs(files) do
         local comma = (i < #files) and "," or ""
@@ -1597,18 +1681,14 @@ local function writePackage(outPath, apiData)
             string.format(
                 '\t\t\t{ "language": "%s", "path": "%s/%s" }%s\n',
                 API.TARGET_FILE_EXT,
-                basePath,
+                fullPath,
                 filename,
                 comma
             )
         )
-        filesList:write(
-            string.format(
-                "- `%s/%s`\n",
-                basePath,
-                filename
-            )
-        )
+        if debugMode then
+            print("    - " .. basePath .. filename)
+        end
     end
 
     pkg:write("\t\t ]\n")
@@ -1616,64 +1696,38 @@ local function writePackage(outPath, apiData)
     pkg:write("}\n")
     pkg:close()
 
-    filesList:write("- `" .. packageJsonPath .. "`\n")
+    if debugMode then
+        print(" • Extension manifest:\n    - " .. packageJsonPath)
+    end
 
-    print(" • Created " .. API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT)
+    if statsMode then
+        local statsFileName = API.STATS_FILE
+        local statsFile = io.open(statsFileName, "w")
+        if not statsFile then
+            errorPrint("Could not create " .. statsFileName)
+            return false
+        end
+
+        statsFile:write(formatStatistics(apiData, "md"))
+
+        for _, filename in ipairs(files) do
+            statsFile:write(
+                string.format(
+                    "  - `%s/%s`\n",
+                    fullPath,
+                    filename
+                )
+            )
+            if debugMode then
+                print("    - " .. basePath .. filename)
+            end
+        end
+
+        statsFile:write("* **Extension manifest:**\n  - `" .. packageJsonPath .. "`\n")
+        statsFile:close()
+    end
+
     return true
-end
-
---------------------------------------------------------------------------------
--- Statistics
---------------------------------------------------------------------------------
-local function printStatistics(apiData)
-    local function countSnippetsInTable(t)
-        local count = 0
-        for _, value in pairs(t) do
-            if type(value) == "table" then
-                if isValidSnippet(value) then
-                    count = count + 1
-                else
-                    count = count + countSnippetsInTable(value)
-                end
-            end
-        end
-        return count
-    end
-
-    print("\n 📊 Statistics:")
-
-    local total = 0
-    local fileCount = 0
-
-    for _, field in pairs(apiData) do
-        if field.snippet and field.snippet ~= false then
-            local count = 0
-
-            if type(field.snippet) == "table" then
-                count = countSnippetsInTable(field.snippet)
-            elseif type(field.snippet) == "number" then
-                count = field.snippet
-            end
-
-            if count > 0 then
-                fileCount = fileCount + 1
-            end
-            total = total + count
-            print(string.format(" • %s: %d", field.label, count))
-        elseif field.api and field.api ~= false then
-            local apiCount = 0
-            if type(field.api) == "table" then
-                apiCount = countSnippetsInTable(field.api)
-            else
-                apiCount = #field.api
-            end
-            print(string.format(" • %s: %d", field.label, apiCount))
-            total = total + apiCount
-        end
-    end
-
-    print(string.format(" • Snippets generated: %d", total))
-    print(string.format(" • Files created: %d", fileCount))
 end
 
 --------------------------------------------------------------------------------
@@ -1735,7 +1789,6 @@ local function generateSnippets(api, outPath)
 
     writeSnippetFiles(outPath, apiData)
     writePackage(outPath, apiData)
-    printStatistics(apiData)
 end
 
 --------------------------------------------------------------------------------

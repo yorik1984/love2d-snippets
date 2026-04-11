@@ -1,8 +1,0 @@
-- `./snippets/love2d/callbacks.json`
-- `./snippets/love2d/conf.json`
-- `./snippets/love2d/constructors.json`
-- `./snippets/love2d/enums.json`
-- `./snippets/love2d/functions.json`
-- `./snippets/love2d/getters-setters.json`
-- `./snippets/love2d/modules.json`
-- `package.json`
