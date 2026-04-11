@@ -74,8 +74,8 @@ jobs:
       - name: Generate snippets
         run: |
           echo "🔧 Generating LÖVE snippets..."
-          # Run generator (default output is snippets/)
-          lua genLOVEsnippets.lua
+          # Run generator with STATS.md (default output is snippets/)
+          lua genLOVEsnippets.lua STATS
           # Count generated snippet JSON files under snippets/love2d/
           if [ -d "snippets/love2d" ]; then
             SNIPPET_COUNT=$(find snippets/love2d -type f -name "*.json" | wc -l | tr -d '[:space:]')

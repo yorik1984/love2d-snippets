@@ -130,9 +130,9 @@ The workflow automatically:
 - A `package.json` that contributes the snippet files for editors or for packaging into an extension.
 - Generated snippet scope: `lua`.
 
-### Typical output files:
+### Full stats and output files:
 
-For a complete list of generated files, see [FILES.md](./FILES.md).
+For a complete statistics and list of generated files, see [STATS.md](./STATS.md).
 
 ### ✋ Manual Generation (Optional)
 
@@ -166,6 +166,9 @@ lua genLOVEsnippets.lua DEBUG "my_snippets"
 
 # Show help
 lua genLOVEsnippets.lua HELP
+
+# Add  statistics to `STATS.md`, create if not present
+lua genLOVEsnippets.lua STATS
 ```
 
 If custom directory is not provided, the default output directory is `snippets/`.
