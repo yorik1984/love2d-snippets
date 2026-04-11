@@ -189,6 +189,9 @@ local function isConstructorName(name)
     return name:match("^" .. API.PREF_NEW) ~= nil
 end
 
+local function isValidSnippet(s)
+    return s.prefix and s.body and type(s.body) == "table" and #s.body > 0
+end
 --------------------------------------------------------------------------------
 -- CLI
 --------------------------------------------------------------------------------
@@ -865,15 +868,49 @@ local function generateCallbacks(callbacks)
 
     for _, cb in ipairs(callbacks) do
         local paramsString = cb.paramsString(nextIdx)
-        local body = {
-            string.format("function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:%s(%s)", cb.name, paramsString),
-            "\t${0:}",
-            "end",
-        }
         local key = API.NAME .. "." .. cb.name .. "()"
+
+        -- 1. love.load()
         snippets[key] = createSnippet(
             cb.name,
-            body,
+            {
+                string.format("function " .. API.NAME .. ".%s()", cb.name),
+                "\t${0:}",
+                "end",
+            },
+            firstSentence(cb.description)
+        )
+
+        -- 2. function love.load(parameters)
+        snippets[key .. "_param"] = createSnippet(
+            "p" .. cb.name,
+            {
+                string.format("function " .. API.NAME .. ".%s(%s)", cb.name, paramsString),
+                "\t${0:}",
+                "end",
+            },
+            firstSentence(cb.description)
+        )
+
+        -- 3. Class:load()
+        snippets[key .. "_method"] = createSnippet(
+            "m" .. cb.name,
+            {
+                string.format("function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:%s()", cb.name),
+                "\t${0:}",
+                "end",
+            },
+            firstSentence(cb.description)
+        )
+
+        -- 4. Class:load(parameters)
+        snippets[key .. "_method_param"] = createSnippet(
+            "mp" .. cb.name,
+            {
+                string.format("function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:%s(%s)", cb.name, paramsString),
+                "\t${0:}",
+                "end",
+            },
             firstSentence(cb.description)
         )
 
@@ -930,14 +967,14 @@ local function generateGettersSetters(pairs)
     local snippets = {}
 
     for _, pair in ipairs(pairs) do
-        local module     = pair.modulePath                          -- "love.graphics"
-        local moduleName = module:gsub("^" .. API.NAME .. "%.", "") -- graphics
-        local baseName   = pair.baseName                            -- "Color"
-        local varName    = toVariableName(baseName)                 -- "color"
-        local getterName = pair.getter.name                         -- "getColor"
-        local setterName = pair.setter.name                         -- "setColor"
-        local getterCall = pair.getter.fullName                     -- "love.graphics.getColor"
-        local getKey     = getterCall .. "()"                       -- "love.graphics.getColor()"
+        local module     = pair.modulePath                              -- "love.graphics"
+        local moduleName = module:match("^" .. API.NAME .. "%.([^.]+)") -- graphics
+        local baseName   = pair.baseName                                -- "Color"
+        local varName    = toVariableName(baseName)                     -- "color"
+        local getterName = pair.getter.name                             -- "getColor"
+        local setterName = pair.setter.name                             -- "setColor"
+        local getterCall = pair.getter.fullName                         -- "love.graphics.getColor"
+        local getKey     = getterCall .. "()"                           -- "love.graphics.getColor()"
 
         if not snippets[module] then
             snippets[module] = {}
@@ -973,7 +1010,7 @@ local function generateGettersSetters(pairs)
                 if pair.isMethod then
                     local objPlaceholder = "${1:" .. toVariableName(pair.typeName) .. "}"
                     currentGetterCall    = objPlaceholder .. ":" .. getterName
-                    currentGetKey        = pair.typeName .. ":" .. getterName .. "()"
+                    currentGetKey        = pair.typeName .. ":" .. getterName .. "()" .. "_" .. moduleName
                     if vIdx > 1 then
                         currentGetKey = currentGetKey .. "_overload" .. vIdx
                     end
@@ -1007,7 +1044,7 @@ local function generateGettersSetters(pairs)
                 local objPlaceholder = "${1:" .. toVariableName(typeName) .. "}"
 
                 local currentSetterCall = objPlaceholder .. ":" .. setterName
-                local currentSetKey = typeName .. ":" .. setterName .. "()"
+                local currentSetKey = typeName .. ":" .. setterName .. "()" .. "_" .. moduleName
 
                 local prefix = API.PREF_SET .. baseName .. "_" .. typeName
                 if vIdx > 1 then
@@ -1084,8 +1121,21 @@ local function generateGettersSetters(pairs)
 
             print(" • " .. name .. nameSpaces .. getter .. getterSpaces .. " <-> " .. setter)
         end
+        local totalKeys = 0
+        local validKeys = 0
+        for moduleName, moduleSnippets in next, snippets do
+            for key, snip in next, moduleSnippets do
+                totalKeys = totalKeys + 1
+                if isValidSnippet(snip) then
+                    validKeys = validKeys + 1
+                else
+                    debugPrint("Invalid snippet in " .. moduleName .. ", key:" .. key .. ", value:" .. snip)
+                end
+            end
+        end
+        debugPrint("Total keys in getters-setters: " .. totalKeys)
+        debugPrint("Valid snippets: " .. validKeys)
     end
-
     return snippets
 end
 
@@ -1474,13 +1524,18 @@ local function writeSnippetFiles(outPath, apiData)
 
     local flatGetterSetter = {}
     if apiData.gettersSetters.snippet then
-        for _, moduleSnips in pairs(apiData.gettersSetters.snippet) do
+        for moduleName, moduleSnips in pairs(apiData.gettersSetters.snippet) do
             for key, snip in pairs(moduleSnips) do
+                if flatGetterSetter[key] and debugMode then
+                    debugPrint("⚠️ Warning: Duplicate key '" .. key .. "' from module '" .. moduleName .. "'")
+                end
                 flatGetterSetter[key] = snip
             end
         end
     end
-
+    if debugMode then
+        print("")
+    end
     for name, field in pairs(apiData) do
         if field.snippet and field.filename then
             local snippets = field.snippet
@@ -1508,8 +1563,8 @@ local function writePackage(outPath, apiData)
     local packageJsonPath  = API.SNIP_PACKAGE .. "." .. API.SNIP_FILE_EXT
     local packageFilesList = API.FILES_LIST
 
-    local pkg       = io.open(packageJsonPath, "w")
-    local filesList = io.open(packageFilesList, "w")
+    local pkg              = io.open(packageJsonPath, "w")
+    local filesList        = io.open(packageFilesList, "w")
 
     if not pkg then
         print(" • Warning: Could not create " .. packageJsonPath)
@@ -1571,6 +1626,20 @@ end
 -- Statistics
 --------------------------------------------------------------------------------
 local function printStatistics(apiData)
+    local function countSnippetsInTable(t)
+        local count = 0
+        for _, value in pairs(t) do
+            if type(value) == "table" then
+                if isValidSnippet(value) then
+                    count = count + 1
+                else
+                    count = count + countSnippetsInTable(value)
+                end
+            end
+        end
+        return count
+    end
+
     print("\n 📊 Statistics:")
 
     local total = 0
@@ -1579,27 +1648,22 @@ local function printStatistics(apiData)
     for _, field in pairs(apiData) do
         if field.snippet and field.snippet ~= false then
             local count = 0
+
             if type(field.snippet) == "table" then
-                for _ in pairs(field.snippet) do
-                    count = count + 1
-                end
-                if count > 0 then
-                    fileCount = fileCount + 1
-                end
+                count = countSnippetsInTable(field.snippet)
             elseif type(field.snippet) == "number" then
                 count = field.snippet
-                if count > 0 then
-                    fileCount = fileCount + 1
-                end
+            end
+
+            if count > 0 then
+                fileCount = fileCount + 1
             end
             total = total + count
             print(string.format(" • %s: %d", field.label, count))
         elseif field.api and field.api ~= false then
             local apiCount = 0
             if type(field.api) == "table" then
-                for _ in pairs(field.api) do
-                    apiCount = apiCount + 1
-                end
+                apiCount = countSnippetsInTable(field.api)
             else
                 apiCount = #field.api
             end

@@ -1,5 +1,5 @@
 {
-	"BackgroundColor:setBackgroundColor()": {
+	"BackgroundColor:setBackgroundColor()_graphics": {
 		"prefix": "setBackgroundColor_BackgroundColor",
 		"scope": "lua",
 		"body": [
@@ -8,7 +8,7 @@
 		],
 		"description": "Sets the background color."
 	},
-	"BackgroundColor:setBackgroundColor()_overload2": {
+	"BackgroundColor:setBackgroundColor()_graphics_overload2": {
 		"prefix": "setBackgroundColor_BackgroundColor2",
 		"scope": "lua",
 		"body": [
@@ -17,7 +17,7 @@
 		],
 		"description": "Sets the background color."
 	},
-	"BezierCurve:getControlPoint()": {
+	"BezierCurve:getControlPoint()_math": {
 		"prefix": "lgetControlPoint_BezierCurve",
 		"scope": "lua",
 		"body": [
@@ -26,7 +26,7 @@
 		],
 		"description": "Get coordinates of the i-th control point."
 	},
-	"BezierCurve:setControlPoint()": {
+	"BezierCurve:setControlPoint()_math": {
 		"prefix": "setControlPoint_BezierCurve",
 		"scope": "lua",
 		"body": [
@@ -35,7 +35,7 @@
 		],
 		"description": "Set coordinates of the i-th control point."
 	},
-	"BlendMode:setBlendMode()": {
+	"BlendMode:setBlendMode()_graphics": {
 		"prefix": "setBlendMode_BlendMode",
 		"scope": "lua",
 		"body": [
@@ -44,7 +44,7 @@
 		],
 		"description": "Sets the blending mode."
 	},
-	"BlendMode:setBlendMode()_overload2": {
+	"BlendMode:setBlendMode()_graphics_overload2": {
 		"prefix": "setBlendMode_BlendMode2",
 		"scope": "lua",
 		"body": [
@@ -53,7 +53,7 @@
 		],
 		"description": "The default 'alphamultiply' alpha mode should normally be preferred except when drawing content with pre-multiplied alpha."
 	},
-	"Body:getAngle()": {
+	"Body:getAngle()_physics": {
 		"prefix": "lgetAngle_Body",
 		"scope": "lua",
 		"body": [
@@ -62,7 +62,7 @@
 		],
 		"description": "Get the angle of the body."
 	},
-	"Body:getAngularDamping()": {
+	"Body:getAngularDamping()_physics": {
 		"prefix": "lgetAngularDamping_Body",
 		"scope": "lua",
 		"body": [
@@ -71,7 +71,7 @@
 		],
 		"description": "Gets the Angular damping of the Body\n"
 	},
-	"Body:getAngularVelocity()": {
+	"Body:getAngularVelocity()_physics": {
 		"prefix": "lgetAngularVelocity_Body",
 		"scope": "lua",
 		"body": [
@@ -80,7 +80,7 @@
 		],
 		"description": "Get the angular velocity of the Body."
 	},
-	"Body:getGravityScale()": {
+	"Body:getGravityScale()_physics": {
 		"prefix": "lgetGravityScale_Body",
 		"scope": "lua",
 		"body": [
@@ -89,7 +89,7 @@
 		],
 		"description": "Returns the gravity scale factor."
 	},
-	"Body:getInertia()": {
+	"Body:getInertia()_physics": {
 		"prefix": "lgetInertia_Body",
 		"scope": "lua",
 		"body": [
@@ -98,7 +98,7 @@
 		],
 		"description": "Gets the rotational inertia of the body."
 	},
-	"Body:getLinearDamping()": {
+	"Body:getLinearDamping()_physics": {
 		"prefix": "lgetLinearDamping_Body",
 		"scope": "lua",
 		"body": [
@@ -107,7 +107,7 @@
 		],
 		"description": "Gets the linear damping of the Body."
 	},
-	"Body:getLinearVelocity()": {
+	"Body:getLinearVelocity()_physics": {
 		"prefix": "lgetLinearVelocity_Body",
 		"scope": "lua",
 		"body": [
@@ -116,7 +116,7 @@
 		],
 		"description": "Gets the linear velocity of the Body from its center of mass."
 	},
-	"Body:getMass()": {
+	"Body:getMass()_physics": {
 		"prefix": "lgetMass_Body",
 		"scope": "lua",
 		"body": [
@@ -125,7 +125,7 @@
 		],
 		"description": "Get the mass of the body."
 	},
-	"Body:getMassData()": {
+	"Body:getMassData()_physics": {
 		"prefix": "lgetMassData_Body",
 		"scope": "lua",
 		"body": [
@@ -134,7 +134,7 @@
 		],
 		"description": "Returns the mass, its center, and the rotational inertia."
 	},
-	"Body:getPosition()": {
+	"Body:getPosition()_physics": {
 		"prefix": "lgetPosition_Body",
 		"scope": "lua",
 		"body": [
@@ -143,7 +143,7 @@
 		],
 		"description": "Get the position of the body."
 	},
-	"Body:getTransform()": {
+	"Body:getTransform()_physics": {
 		"prefix": "lgetTransform_Body",
 		"scope": "lua",
 		"body": [
@@ -152,7 +152,7 @@
 		],
 		"description": "Get the position and angle of the body."
 	},
-	"Body:getType()": {
+	"Body:getType()_physics": {
 		"prefix": "lgetType_Body",
 		"scope": "lua",
 		"body": [
@@ -161,7 +161,7 @@
 		],
 		"description": "Returns the type of the body."
 	},
-	"Body:getUserData()": {
+	"Body:getUserData()_physics": {
 		"prefix": "lgetUserData_Body",
 		"scope": "lua",
 		"body": [
@@ -170,7 +170,7 @@
 		],
 		"description": "Returns the Lua value associated with this Body."
 	},
-	"Body:getX()": {
+	"Body:getX()_physics": {
 		"prefix": "lgetX_Body",
 		"scope": "lua",
 		"body": [
@@ -179,7 +179,7 @@
 		],
 		"description": "Get the x position of the body in world coordinates."
 	},
-	"Body:getY()": {
+	"Body:getY()_physics": {
 		"prefix": "lgetY_Body",
 		"scope": "lua",
 		"body": [
@@ -188,7 +188,7 @@
 		],
 		"description": "Get the y position of the body in world coordinates."
 	},
-	"Body:setAngle()": {
+	"Body:setAngle()_physics": {
 		"prefix": "setAngle_Body",
 		"scope": "lua",
 		"body": [
@@ -197,7 +197,7 @@
 		],
 		"description": "Set the angle of the body."
 	},
-	"Body:setAngularDamping()": {
+	"Body:setAngularDamping()_physics": {
 		"prefix": "setAngularDamping_Body",
 		"scope": "lua",
 		"body": [
@@ -206,7 +206,7 @@
 		],
 		"description": "Sets the angular damping of a Body\n"
 	},
-	"Body:setAngularVelocity()": {
+	"Body:setAngularVelocity()_physics": {
 		"prefix": "setAngularVelocity_Body",
 		"scope": "lua",
 		"body": [
@@ -215,7 +215,7 @@
 		],
 		"description": "Sets the angular velocity of a Body."
 	},
-	"Body:setGravityScale()": {
+	"Body:setGravityScale()_physics": {
 		"prefix": "setGravityScale_Body",
 		"scope": "lua",
 		"body": [
@@ -224,7 +224,7 @@
 		],
 		"description": "Sets a new gravity scale factor for the body."
 	},
-	"Body:setInertia()": {
+	"Body:setInertia()_physics": {
 		"prefix": "setInertia_Body",
 		"scope": "lua",
 		"body": [
@@ -233,7 +233,7 @@
 		],
 		"description": "Set the inertia of a body."
 	},
-	"Body:setLinearDamping()": {
+	"Body:setLinearDamping()_physics": {
 		"prefix": "setLinearDamping_Body",
 		"scope": "lua",
 		"body": [
@@ -242,7 +242,7 @@
 		],
 		"description": "Sets the linear damping of a Body\n"
 	},
-	"Body:setLinearVelocity()": {
+	"Body:setLinearVelocity()_physics": {
 		"prefix": "setLinearVelocity_Body",
 		"scope": "lua",
 		"body": [
@@ -251,7 +251,7 @@
 		],
 		"description": "Sets a new linear velocity for the Body."
 	},
-	"Body:setMass()": {
+	"Body:setMass()_physics": {
 		"prefix": "setMass_Body",
 		"scope": "lua",
 		"body": [
@@ -260,7 +260,7 @@
 		],
 		"description": "Sets a new body mass."
 	},
-	"Body:setMassData()": {
+	"Body:setMassData()_physics": {
 		"prefix": "setMassData_Body",
 		"scope": "lua",
 		"body": [
@@ -269,7 +269,7 @@
 		],
 		"description": "Overrides the calculated mass data."
 	},
-	"Body:setPosition()": {
+	"Body:setPosition()_physics": {
 		"prefix": "setPosition_Body",
 		"scope": "lua",
 		"body": [
@@ -278,7 +278,7 @@
 		],
 		"description": "Set the position of the body."
 	},
-	"Body:setTransform()": {
+	"Body:setTransform()_physics": {
 		"prefix": "setTransform_Body",
 		"scope": "lua",
 		"body": [
@@ -287,7 +287,7 @@
 		],
 		"description": "Set the position and angle of the body."
 	},
-	"Body:setType()": {
+	"Body:setType()_physics": {
 		"prefix": "setType_Body",
 		"scope": "lua",
 		"body": [
@@ -296,7 +296,7 @@
 		],
 		"description": "Sets a new body type."
 	},
-	"Body:setUserData()": {
+	"Body:setUserData()_physics": {
 		"prefix": "setUserData_Body",
 		"scope": "lua",
 		"body": [
@@ -305,7 +305,7 @@
 		],
 		"description": "Associates a Lua value with the Body."
 	},
-	"Body:setX()": {
+	"Body:setX()_physics": {
 		"prefix": "setX_Body",
 		"scope": "lua",
 		"body": [
@@ -314,7 +314,7 @@
 		],
 		"description": "Set the x position of the body."
 	},
-	"Body:setY()": {
+	"Body:setY()_physics": {
 		"prefix": "setY_Body",
 		"scope": "lua",
 		"body": [
@@ -323,7 +323,7 @@
 		],
 		"description": "Set the y position of the body."
 	},
-	"CRequirePath:setCRequirePath()": {
+	"CRequirePath:setCRequirePath()_filesystem": {
 		"prefix": "setCRequirePath_CRequirePath",
 		"scope": "lua",
 		"body": [
@@ -332,7 +332,7 @@
 		],
 		"description": "The default paths string is '??', which makes require('cool') try to load cool."
 	},
-	"Canvas:setCanvas()": {
+	"Canvas:setCanvas()_graphics": {
 		"prefix": "setCanvas_Canvas",
 		"scope": "lua",
 		"body": [
@@ -341,7 +341,7 @@
 		],
 		"description": "Sets the render target to a specified stencil or depth testing with an active Canvas, the stencil buffer or depth buffer must be explicitly enabled in setCanvas via the variants below."
 	},
-	"Canvas:setCanvas()_overload2": {
+	"Canvas:setCanvas()_graphics_overload2": {
 		"prefix": "setCanvas_Canvas2",
 		"scope": "lua",
 		"body": [
@@ -350,7 +350,7 @@
 		],
 		"description": "Resets the render target to the screen, i."
 	},
-	"Canvas:setCanvas()_overload3": {
+	"Canvas:setCanvas()_graphics_overload3": {
 		"prefix": "setCanvas_Canvas3",
 		"scope": "lua",
 		"body": [
@@ -359,7 +359,7 @@
 		],
 		"description": "Sets the render target to multiple simultaneous 2D Canvases."
 	},
-	"Canvas:setCanvas()_overload4": {
+	"Canvas:setCanvas()_graphics_overload4": {
 		"prefix": "setCanvas_Canvas4",
 		"scope": "lua",
 		"body": [
@@ -368,7 +368,7 @@
 		],
 		"description": "Sets the render target to the specified layer/slice and mipmap level of the given non-2D Canvas."
 	},
-	"Canvas:setCanvas()_overload5": {
+	"Canvas:setCanvas()_graphics_overload5": {
 		"prefix": "setCanvas_Canvas5",
 		"scope": "lua",
 		"body": [
@@ -377,7 +377,7 @@
 		],
 		"description": "Sets the active render target(s) and active stencil and depth buffers based on the specified setup information."
 	},
-	"ChainShape:getNextVertex()": {
+	"ChainShape:getNextVertex()_physics": {
 		"prefix": "lgetNextVertex_ChainShape",
 		"scope": "lua",
 		"body": [
@@ -386,7 +386,7 @@
 		],
 		"description": "Gets the vertex that establishes a connection to the next shape."
 	},
-	"ChainShape:getPreviousVertex()": {
+	"ChainShape:getPreviousVertex()_physics": {
 		"prefix": "lgetPreviousVertex_ChainShape",
 		"scope": "lua",
 		"body": [
@@ -395,7 +395,7 @@
 		],
 		"description": "Gets the vertex that establishes a connection to the previous shape."
 	},
-	"ChainShape:setNextVertex()": {
+	"ChainShape:setNextVertex()_physics": {
 		"prefix": "setNextVertex_ChainShape",
 		"scope": "lua",
 		"body": [
@@ -404,7 +404,7 @@
 		],
 		"description": "Sets a vertex that establishes a connection to the next shape."
 	},
-	"ChainShape:setPreviousVertex()": {
+	"ChainShape:setPreviousVertex()_physics": {
 		"prefix": "setPreviousVertex_ChainShape",
 		"scope": "lua",
 		"body": [
@@ -413,7 +413,7 @@
 		],
 		"description": "Sets a vertex that establishes a connection to the previous shape."
 	},
-	"CircleShape:getPoint()": {
+	"CircleShape:getPoint()_physics": {
 		"prefix": "lgetPoint_CircleShape",
 		"scope": "lua",
 		"body": [
@@ -422,7 +422,7 @@
 		],
 		"description": "Gets the center point of the circle shape."
 	},
-	"CircleShape:getRadius()": {
+	"CircleShape:getRadius()_physics": {
 		"prefix": "lgetRadius_CircleShape",
 		"scope": "lua",
 		"body": [
@@ -431,7 +431,7 @@
 		],
 		"description": "Gets the radius of the circle shape."
 	},
-	"CircleShape:setPoint()": {
+	"CircleShape:setPoint()_physics": {
 		"prefix": "setPoint_CircleShape",
 		"scope": "lua",
 		"body": [
@@ -440,7 +440,7 @@
 		],
 		"description": "Sets the location of the center of the circle shape."
 	},
-	"CircleShape:setRadius()": {
+	"CircleShape:setRadius()_physics": {
 		"prefix": "setRadius_CircleShape",
 		"scope": "lua",
 		"body": [
@@ -449,7 +449,7 @@
 		],
 		"description": "Sets the radius of the circle."
 	},
-	"ClipboardText:setClipboardText()": {
+	"ClipboardText:setClipboardText()_system": {
 		"prefix": "setClipboardText_ClipboardText",
 		"scope": "lua",
 		"body": [
@@ -458,7 +458,7 @@
 		],
 		"description": "Puts text in the clipboard."
 	},
-	"Color:setColor()": {
+	"Color:setColor()_graphics": {
 		"prefix": "setColor_Color",
 		"scope": "lua",
 		"body": [
@@ -467,7 +467,7 @@
 		],
 		"description": "Sets the color used for drawing."
 	},
-	"Color:setColor()_overload2": {
+	"Color:setColor()_graphics_overload2": {
 		"prefix": "setColor_Color2",
 		"scope": "lua",
 		"body": [
@@ -476,7 +476,7 @@
 		],
 		"description": "Sets the color used for drawing."
 	},
-	"ColorMask:setColorMask()": {
+	"ColorMask:setColorMask()_graphics": {
 		"prefix": "setColorMask_ColorMask",
 		"scope": "lua",
 		"body": [
@@ -485,7 +485,7 @@
 		],
 		"description": "Enables color masking for the specified color components."
 	},
-	"ColorMask:setColorMask()_overload2": {
+	"ColorMask:setColorMask()_graphics_overload2": {
 		"prefix": "setColorMask_ColorMask2",
 		"scope": "lua",
 		"body": [
@@ -494,7 +494,7 @@
 		],
 		"description": "Disables color masking."
 	},
-	"Contact:getFriction()": {
+	"Contact:getFriction()_physics": {
 		"prefix": "lgetFriction_Contact",
 		"scope": "lua",
 		"body": [
@@ -503,7 +503,7 @@
 		],
 		"description": "Get the friction between two shapes that are in contact."
 	},
-	"Contact:getRestitution()": {
+	"Contact:getRestitution()_physics": {
 		"prefix": "lgetRestitution_Contact",
 		"scope": "lua",
 		"body": [
@@ -512,7 +512,7 @@
 		],
 		"description": "Get the restitution between two shapes that are in contact."
 	},
-	"Contact:setFriction()": {
+	"Contact:setFriction()_physics": {
 		"prefix": "setFriction_Contact",
 		"scope": "lua",
 		"body": [
@@ -521,7 +521,7 @@
 		],
 		"description": "Sets the contact friction."
 	},
-	"Contact:setRestitution()": {
+	"Contact:setRestitution()_physics": {
 		"prefix": "setRestitution_Contact",
 		"scope": "lua",
 		"body": [
@@ -530,7 +530,7 @@
 		],
 		"description": "Sets the contact restitution."
 	},
-	"Cursor:setCursor()": {
+	"Cursor:setCursor()_mouse": {
 		"prefix": "setCursor_Cursor",
 		"scope": "lua",
 		"body": [
@@ -539,7 +539,7 @@
 		],
 		"description": "Sets the current mouse cursor."
 	},
-	"Cursor:setCursor()_overload2": {
+	"Cursor:setCursor()_mouse_overload2": {
 		"prefix": "setCursor_Cursor2",
 		"scope": "lua",
 		"body": [
@@ -548,7 +548,7 @@
 		],
 		"description": "Resets the current mouse cursor to the default."
 	},
-	"DefaultFilter:setDefaultFilter()": {
+	"DefaultFilter:setDefaultFilter()_graphics": {
 		"prefix": "setDefaultFilter_DefaultFilter",
 		"scope": "lua",
 		"body": [
@@ -557,7 +557,7 @@
 		],
 		"description": "This function does not apply retroactively to loaded images."
 	},
-	"DepthMode:setDepthMode()": {
+	"DepthMode:setDepthMode()_graphics": {
 		"prefix": "setDepthMode_DepthMode",
 		"scope": "lua",
 		"body": [
@@ -566,7 +566,7 @@
 		],
 		"description": "Configures depth testing and writing to the depth buffer."
 	},
-	"DepthMode:setDepthMode()_overload2": {
+	"DepthMode:setDepthMode()_graphics_overload2": {
 		"prefix": "setDepthMode_DepthMode2",
 		"scope": "lua",
 		"body": [
@@ -575,7 +575,7 @@
 		],
 		"description": "Disables depth testing and depth writes."
 	},
-	"DistanceJoint:getDampingRatio()": {
+	"DistanceJoint:getDampingRatio()_physics": {
 		"prefix": "lgetDampingRatio_DistanceJoint",
 		"scope": "lua",
 		"body": [
@@ -584,7 +584,7 @@
 		],
 		"description": "Gets the damping ratio."
 	},
-	"DistanceJoint:getFrequency()": {
+	"DistanceJoint:getFrequency()_physics": {
 		"prefix": "lgetFrequency_DistanceJoint",
 		"scope": "lua",
 		"body": [
@@ -593,7 +593,7 @@
 		],
 		"description": "Gets the response speed."
 	},
-	"DistanceJoint:getLength()": {
+	"DistanceJoint:getLength()_physics": {
 		"prefix": "lgetLength_DistanceJoint",
 		"scope": "lua",
 		"body": [
@@ -602,7 +602,7 @@
 		],
 		"description": "Gets the equilibrium distance between the two Bodies."
 	},
-	"DistanceJoint:setDampingRatio()": {
+	"DistanceJoint:setDampingRatio()_physics": {
 		"prefix": "setDampingRatio_DistanceJoint",
 		"scope": "lua",
 		"body": [
@@ -611,7 +611,7 @@
 		],
 		"description": "Sets the damping ratio."
 	},
-	"DistanceJoint:setFrequency()": {
+	"DistanceJoint:setFrequency()_physics": {
 		"prefix": "setFrequency_DistanceJoint",
 		"scope": "lua",
 		"body": [
@@ -620,7 +620,7 @@
 		],
 		"description": "Sets the response speed."
 	},
-	"DistanceJoint:setLength()": {
+	"DistanceJoint:setLength()_physics": {
 		"prefix": "setLength_DistanceJoint",
 		"scope": "lua",
 		"body": [
@@ -629,7 +629,7 @@
 		],
 		"description": "Sets the equilibrium distance between the two Bodies."
 	},
-	"DistanceModel:setDistanceModel()": {
+	"DistanceModel:setDistanceModel()_audio": {
 		"prefix": "setDistanceModel_DistanceModel",
 		"scope": "lua",
 		"body": [
@@ -638,7 +638,7 @@
 		],
 		"description": "Sets the distance attenuation model."
 	},
-	"DopplerScale:setDopplerScale()": {
+	"DopplerScale:setDopplerScale()_audio": {
 		"prefix": "setDopplerScale_DopplerScale",
 		"scope": "lua",
 		"body": [
@@ -647,7 +647,7 @@
 		],
 		"description": "Sets a global scale factor for velocity-based doppler effects."
 	},
-	"EdgeShape:getNextVertex()": {
+	"EdgeShape:getNextVertex()_physics": {
 		"prefix": "lgetNextVertex_EdgeShape",
 		"scope": "lua",
 		"body": [
@@ -656,7 +656,7 @@
 		],
 		"description": "Gets the vertex that establishes a connection to the next shape."
 	},
-	"EdgeShape:getPreviousVertex()": {
+	"EdgeShape:getPreviousVertex()_physics": {
 		"prefix": "lgetPreviousVertex_EdgeShape",
 		"scope": "lua",
 		"body": [
@@ -665,7 +665,7 @@
 		],
 		"description": "Gets the vertex that establishes a connection to the previous shape."
 	},
-	"EdgeShape:setNextVertex()": {
+	"EdgeShape:setNextVertex()_physics": {
 		"prefix": "setNextVertex_EdgeShape",
 		"scope": "lua",
 		"body": [
@@ -674,7 +674,7 @@
 		],
 		"description": "Sets a vertex that establishes a connection to the next shape."
 	},
-	"EdgeShape:setPreviousVertex()": {
+	"EdgeShape:setPreviousVertex()_physics": {
 		"prefix": "setPreviousVertex_EdgeShape",
 		"scope": "lua",
 		"body": [
@@ -683,7 +683,7 @@
 		],
 		"description": "Sets a vertex that establishes a connection to the previous shape."
 	},
-	"Effect:setEffect()": {
+	"Effect:setEffect()_audio": {
 		"prefix": "setEffect_Effect",
 		"scope": "lua",
 		"body": [
@@ -692,7 +692,7 @@
 		],
 		"description": "Defines an effect that can be applied to a Source."
 	},
-	"Effect:setEffect()_overload2": {
+	"Effect:setEffect()_audio_overload2": {
 		"prefix": "setEffect_Effect2",
 		"scope": "lua",
 		"body": [
@@ -701,7 +701,7 @@
 		],
 		"description": "Defines an effect that can be applied to a Source."
 	},
-	"File:getBuffer()": {
+	"File:getBuffer()_filesystem": {
 		"prefix": "lgetBuffer_File",
 		"scope": "lua",
 		"body": [
@@ -710,7 +710,7 @@
 		],
 		"description": "Gets the buffer mode of a file."
 	},
-	"File:setBuffer()": {
+	"File:setBuffer()_filesystem": {
 		"prefix": "setBuffer_File",
 		"scope": "lua",
 		"body": [
@@ -719,7 +719,7 @@
 		],
 		"description": "Sets the buffer mode for a file opened for writing or appending."
 	},
-	"Fixture:getCategory()": {
+	"Fixture:getCategory()_physics": {
 		"prefix": "lgetCategory_Fixture",
 		"scope": "lua",
 		"body": [
@@ -728,7 +728,7 @@
 		],
 		"description": "Returns the categories the fixture belongs to."
 	},
-	"Fixture:getDensity()": {
+	"Fixture:getDensity()_physics": {
 		"prefix": "lgetDensity_Fixture",
 		"scope": "lua",
 		"body": [
@@ -737,7 +737,7 @@
 		],
 		"description": "Returns the density of the fixture."
 	},
-	"Fixture:getFilterData()": {
+	"Fixture:getFilterData()_physics": {
 		"prefix": "lgetFilterData_Fixture",
 		"scope": "lua",
 		"body": [
@@ -746,7 +746,7 @@
 		],
 		"description": "Returns the filter data of the fixture."
 	},
-	"Fixture:getFriction()": {
+	"Fixture:getFriction()_physics": {
 		"prefix": "lgetFriction_Fixture",
 		"scope": "lua",
 		"body": [
@@ -755,7 +755,7 @@
 		],
 		"description": "Returns the friction of the fixture."
 	},
-	"Fixture:getGroupIndex()": {
+	"Fixture:getGroupIndex()_physics": {
 		"prefix": "lgetGroupIndex_Fixture",
 		"scope": "lua",
 		"body": [
@@ -764,7 +764,7 @@
 		],
 		"description": "Returns the group the fixture belongs to."
 	},
-	"Fixture:getMask()": {
+	"Fixture:getMask()_physics": {
 		"prefix": "lgetMask_Fixture",
 		"scope": "lua",
 		"body": [
@@ -773,7 +773,7 @@
 		],
 		"description": "Returns which categories this fixture should '''NOT''' collide with."
 	},
-	"Fixture:getRestitution()": {
+	"Fixture:getRestitution()_physics": {
 		"prefix": "lgetRestitution_Fixture",
 		"scope": "lua",
 		"body": [
@@ -782,7 +782,7 @@
 		],
 		"description": "Returns the restitution of the fixture."
 	},
-	"Fixture:getUserData()": {
+	"Fixture:getUserData()_physics": {
 		"prefix": "lgetUserData_Fixture",
 		"scope": "lua",
 		"body": [
@@ -791,7 +791,7 @@
 		],
 		"description": "Returns the Lua value associated with this fixture."
 	},
-	"Fixture:setCategory()": {
+	"Fixture:setCategory()_physics": {
 		"prefix": "setCategory_Fixture",
 		"scope": "lua",
 		"body": [
@@ -800,7 +800,7 @@
 		],
 		"description": "Sets the categories the fixture belongs to."
 	},
-	"Fixture:setDensity()": {
+	"Fixture:setDensity()_physics": {
 		"prefix": "setDensity_Fixture",
 		"scope": "lua",
 		"body": [
@@ -809,7 +809,7 @@
 		],
 		"description": "Sets the density of the fixture."
 	},
-	"Fixture:setFilterData()": {
+	"Fixture:setFilterData()_physics": {
 		"prefix": "setFilterData_Fixture",
 		"scope": "lua",
 		"body": [
@@ -818,7 +818,7 @@
 		],
 		"description": "Sets the filter data of the fixture."
 	},
-	"Fixture:setFriction()": {
+	"Fixture:setFriction()_physics": {
 		"prefix": "setFriction_Fixture",
 		"scope": "lua",
 		"body": [
@@ -827,7 +827,7 @@
 		],
 		"description": "Sets the friction of the fixture."
 	},
-	"Fixture:setGroupIndex()": {
+	"Fixture:setGroupIndex()_physics": {
 		"prefix": "setGroupIndex_Fixture",
 		"scope": "lua",
 		"body": [
@@ -836,7 +836,7 @@
 		],
 		"description": "Sets the group the fixture belongs to."
 	},
-	"Fixture:setMask()": {
+	"Fixture:setMask()_physics": {
 		"prefix": "setMask_Fixture",
 		"scope": "lua",
 		"body": [
@@ -845,7 +845,7 @@
 		],
 		"description": "Sets the category mask of the fixture."
 	},
-	"Fixture:setRestitution()": {
+	"Fixture:setRestitution()_physics": {
 		"prefix": "setRestitution_Fixture",
 		"scope": "lua",
 		"body": [
@@ -854,7 +854,7 @@
 		],
 		"description": "Sets the restitution of the fixture."
 	},
-	"Fixture:setUserData()": {
+	"Fixture:setUserData()_physics": {
 		"prefix": "setUserData_Fixture",
 		"scope": "lua",
 		"body": [
@@ -863,7 +863,7 @@
 		],
 		"description": "Associates a Lua value with the fixture."
 	},
-	"Font:getFilter()": {
+	"Font:getFilter()_graphics": {
 		"prefix": "lgetFilter_Font",
 		"scope": "lua",
 		"body": [
@@ -872,7 +872,7 @@
 		],
 		"description": "Gets the filter mode for a font."
 	},
-	"Font:getLineHeight()": {
+	"Font:getLineHeight()_graphics": {
 		"prefix": "lgetLineHeight_Font",
 		"scope": "lua",
 		"body": [
@@ -881,7 +881,7 @@
 		],
 		"description": "Gets the line height."
 	},
-	"Font:setFilter()": {
+	"Font:setFilter()_graphics": {
 		"prefix": "setFilter_Font",
 		"scope": "lua",
 		"body": [
@@ -890,7 +890,7 @@
 		],
 		"description": "Sets the filter mode for a font."
 	},
-	"Font:setFont()": {
+	"Font:setFont()_graphics": {
 		"prefix": "setFont_Font",
 		"scope": "lua",
 		"body": [
@@ -899,7 +899,7 @@
 		],
 		"description": "Set an already-loaded Font as the current font or create and load a new one from the file and size."
 	},
-	"Font:setLineHeight()": {
+	"Font:setLineHeight()_graphics": {
 		"prefix": "setLineHeight_Font",
 		"scope": "lua",
 		"body": [
@@ -908,7 +908,7 @@
 		],
 		"description": "Sets the line height."
 	},
-	"FrictionJoint:getMaxForce()": {
+	"FrictionJoint:getMaxForce()_physics": {
 		"prefix": "lgetMaxForce_FrictionJoint",
 		"scope": "lua",
 		"body": [
@@ -917,7 +917,7 @@
 		],
 		"description": "Gets the maximum friction force in Newtons."
 	},
-	"FrictionJoint:getMaxTorque()": {
+	"FrictionJoint:getMaxTorque()_physics": {
 		"prefix": "lgetMaxTorque_FrictionJoint",
 		"scope": "lua",
 		"body": [
@@ -926,7 +926,7 @@
 		],
 		"description": "Gets the maximum friction torque in Newton-meters."
 	},
-	"FrictionJoint:setMaxForce()": {
+	"FrictionJoint:setMaxForce()_physics": {
 		"prefix": "setMaxForce_FrictionJoint",
 		"scope": "lua",
 		"body": [
@@ -935,7 +935,7 @@
 		],
 		"description": "Sets the maximum friction force in Newtons."
 	},
-	"FrictionJoint:setMaxTorque()": {
+	"FrictionJoint:setMaxTorque()_physics": {
 		"prefix": "setMaxTorque_FrictionJoint",
 		"scope": "lua",
 		"body": [
@@ -944,7 +944,7 @@
 		],
 		"description": "Sets the maximum friction torque in Newton-meters."
 	},
-	"FrontFaceWinding:setFrontFaceWinding()": {
+	"FrontFaceWinding:setFrontFaceWinding()_graphics": {
 		"prefix": "setFrontFaceWinding_FrontFaceWinding",
 		"scope": "lua",
 		"body": [
@@ -953,7 +953,7 @@
 		],
 		"description": "Sets whether triangles with clockwise- or counterclockwise-ordered vertices are considered front-facing."
 	},
-	"Fullscreen:setFullscreen()": {
+	"Fullscreen:setFullscreen()_window": {
 		"prefix": "setFullscreen_Fullscreen",
 		"scope": "lua",
 		"body": [
@@ -962,7 +962,7 @@
 		],
 		"description": "Enters or exits fullscreen."
 	},
-	"Fullscreen:setFullscreen()_overload2": {
+	"Fullscreen:setFullscreen()_window_overload2": {
 		"prefix": "setFullscreen_Fullscreen2",
 		"scope": "lua",
 		"body": [
@@ -971,7 +971,7 @@
 		],
 		"description": "If fullscreen mode is entered and the window size doesn't match one of the monitor's display modes (in normal fullscreen mode) or the window size doesn't match the desktop size (in 'desktop' fullscreen mode), the window will be resized appropriately."
 	},
-	"GearJoint:getRatio()": {
+	"GearJoint:getRatio()_physics": {
 		"prefix": "lgetRatio_GearJoint",
 		"scope": "lua",
 		"body": [
@@ -980,7 +980,7 @@
 		],
 		"description": "Get the ratio of a gear joint."
 	},
-	"GearJoint:setRatio()": {
+	"GearJoint:setRatio()_physics": {
 		"prefix": "setRatio_GearJoint",
 		"scope": "lua",
 		"body": [
@@ -989,7 +989,7 @@
 		],
 		"description": "Set the ratio of a gear joint."
 	},
-	"Icon:setIcon()": {
+	"Icon:setIcon()_window": {
 		"prefix": "setIcon_Icon",
 		"scope": "lua",
 		"body": [
@@ -998,7 +998,7 @@
 		],
 		"description": "Sets the window icon until the game is quit."
 	},
-	"Identity:setIdentity()": {
+	"Identity:setIdentity()_filesystem": {
 		"prefix": "setIdentity_Identity",
 		"scope": "lua",
 		"body": [
@@ -1007,7 +1007,7 @@
 		],
 		"description": "Sets the write directory for your game."
 	},
-	"Identity:setIdentity()_overload2": {
+	"Identity:setIdentity()_filesystem_overload2": {
 		"prefix": "setIdentity_Identity2",
 		"scope": "lua",
 		"body": [
@@ -1016,7 +1016,7 @@
 		],
 		"description": "Sets the write directory for your game."
 	},
-	"ImageData:getPixel()": {
+	"ImageData:getPixel()_image": {
 		"prefix": "lgetPixel_ImageData",
 		"scope": "lua",
 		"body": [
@@ -1025,7 +1025,7 @@
 		],
 		"description": "Gets the color of a pixel at a specific position in the image."
 	},
-	"ImageData:setPixel()": {
+	"ImageData:setPixel()_image": {
 		"prefix": "setPixel_ImageData",
 		"scope": "lua",
 		"body": [
@@ -1034,7 +1034,7 @@
 		],
 		"description": "Sets the color of a pixel at a specific position in the image."
 	},
-	"ImageData:setPixel()_overload2": {
+	"ImageData:setPixel()_image_overload2": {
 		"prefix": "setPixel_ImageData2",
 		"scope": "lua",
 		"body": [
@@ -1043,7 +1043,7 @@
 		],
 		"description": "Sets the color of a pixel at a specific position in the image."
 	},
-	"Joint:getUserData()": {
+	"Joint:getUserData()_physics": {
 		"prefix": "lgetUserData_Joint",
 		"scope": "lua",
 		"body": [
@@ -1052,7 +1052,7 @@
 		],
 		"description": "Returns the Lua value associated with this Joint."
 	},
-	"Joint:setUserData()": {
+	"Joint:setUserData()_physics": {
 		"prefix": "setUserData_Joint",
 		"scope": "lua",
 		"body": [
@@ -1061,7 +1061,7 @@
 		],
 		"description": "Associates a Lua value with the Joint."
 	},
-	"Joystick:getVibration()": {
+	"Joystick:getVibration()_joystick": {
 		"prefix": "lgetVibration_Joystick",
 		"scope": "lua",
 		"body": [
@@ -1070,7 +1070,7 @@
 		],
 		"description": "Gets the current vibration motor strengths on a Joystick with rumble support."
 	},
-	"Joystick:setVibration()": {
+	"Joystick:setVibration()_joystick": {
 		"prefix": "setVibration_Joystick",
 		"scope": "lua",
 		"body": [
@@ -1079,7 +1079,7 @@
 		],
 		"description": "Sets the vibration motor speeds on a Joystick with rumble support."
 	},
-	"Joystick:setVibration()_overload2": {
+	"Joystick:setVibration()_joystick_overload2": {
 		"prefix": "setVibration_Joystick2",
 		"scope": "lua",
 		"body": [
@@ -1088,7 +1088,7 @@
 		],
 		"description": "Disables vibration."
 	},
-	"Joystick:setVibration()_overload3": {
+	"Joystick:setVibration()_joystick_overload3": {
 		"prefix": "setVibration_Joystick3",
 		"scope": "lua",
 		"body": [
@@ -1097,7 +1097,7 @@
 		],
 		"description": "If the Joystick only has a single vibration motor, it will still work but it will use the largest value of the left and right parameters."
 	},
-	"LineJoin:setLineJoin()": {
+	"LineJoin:setLineJoin()_graphics": {
 		"prefix": "setLineJoin_LineJoin",
 		"scope": "lua",
 		"body": [
@@ -1106,7 +1106,7 @@
 		],
 		"description": "Sets the line join style."
 	},
-	"LineStyle:setLineStyle()": {
+	"LineStyle:setLineStyle()_graphics": {
 		"prefix": "setLineStyle_LineStyle",
 		"scope": "lua",
 		"body": [
@@ -1115,7 +1115,7 @@
 		],
 		"description": "Sets the line style."
 	},
-	"LineWidth:setLineWidth()": {
+	"LineWidth:setLineWidth()_graphics": {
 		"prefix": "setLineWidth_LineWidth",
 		"scope": "lua",
 		"body": [
@@ -1124,7 +1124,7 @@
 		],
 		"description": "Sets the line width."
 	},
-	"Mesh:getDrawMode()": {
+	"Mesh:getDrawMode()_graphics": {
 		"prefix": "lgetDrawMode_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1133,7 +1133,7 @@
 		],
 		"description": "Gets the mode used when drawing the Mesh."
 	},
-	"Mesh:getDrawRange()": {
+	"Mesh:getDrawRange()_graphics": {
 		"prefix": "lgetDrawRange_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1142,7 +1142,7 @@
 		],
 		"description": "If the Mesh's draw range has not been set previously with Mesh:setDrawRange, this function will return nil."
 	},
-	"Mesh:getTexture()": {
+	"Mesh:getTexture()_graphics": {
 		"prefix": "lgetTexture_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1151,7 +1151,7 @@
 		],
 		"description": "Gets the texture (Image or Canvas) used when drawing the Mesh."
 	},
-	"Mesh:getVertex()": {
+	"Mesh:getVertex()_graphics": {
 		"prefix": "lgetVertex_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1160,7 +1160,7 @@
 		],
 		"description": "The values are returned in the same order as the vertex attributes in the Mesh's vertex format."
 	},
-	"Mesh:getVertex()_overload2": {
+	"Mesh:getVertex()_graphics_overload2": {
 		"prefix": "lgetVertex_Mesh2",
 		"scope": "lua",
 		"body": [
@@ -1169,7 +1169,7 @@
 		],
 		"description": "Gets the vertex components of a Mesh that wasn't created with a custom vertex format."
 	},
-	"Mesh:getVertexAttribute()": {
+	"Mesh:getVertexAttribute()_graphics": {
 		"prefix": "lgetVertexAttribute_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1178,7 +1178,7 @@
 		],
 		"description": "Gets the properties of a specific attribute within a vertex in the Mesh."
 	},
-	"Mesh:getVertexMap()": {
+	"Mesh:getVertexMap()_graphics": {
 		"prefix": "lgetVertexMap_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1187,7 +1187,7 @@
 		],
 		"description": "Gets the vertex map for the Mesh."
 	},
-	"Mesh:setDrawMode()": {
+	"Mesh:setDrawMode()_graphics": {
 		"prefix": "setDrawMode_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1196,7 +1196,7 @@
 		],
 		"description": "Sets the mode used when drawing the Mesh."
 	},
-	"Mesh:setDrawRange()": {
+	"Mesh:setDrawRange()_graphics": {
 		"prefix": "setDrawRange_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1205,7 +1205,7 @@
 		],
 		"description": "Restricts the drawn vertices of the Mesh to a subset of the total."
 	},
-	"Mesh:setDrawRange()_overload2": {
+	"Mesh:setDrawRange()_graphics_overload2": {
 		"prefix": "setDrawRange_Mesh2",
 		"scope": "lua",
 		"body": [
@@ -1214,7 +1214,7 @@
 		],
 		"description": "Allows all vertices in the Mesh to be drawn."
 	},
-	"Mesh:setTexture()": {
+	"Mesh:setTexture()_graphics": {
 		"prefix": "setTexture_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1223,7 +1223,7 @@
 		],
 		"description": "Sets the texture (Image or Canvas) used when drawing the Mesh."
 	},
-	"Mesh:setTexture()_overload2": {
+	"Mesh:setTexture()_graphics_overload2": {
 		"prefix": "setTexture_Mesh2",
 		"scope": "lua",
 		"body": [
@@ -1232,7 +1232,7 @@
 		],
 		"description": "Disables any texture from being used when drawing the Mesh."
 	},
-	"Mesh:setVertex()": {
+	"Mesh:setVertex()_graphics": {
 		"prefix": "setVertex_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1241,7 +1241,7 @@
 		],
 		"description": "The arguments are in the same order as the vertex attributes in the Mesh's vertex format."
 	},
-	"Mesh:setVertex()_overload2": {
+	"Mesh:setVertex()_graphics_overload2": {
 		"prefix": "setVertex_Mesh2",
 		"scope": "lua",
 		"body": [
@@ -1250,7 +1250,7 @@
 		],
 		"description": "The table indices are in the same order as the vertex attributes in the Mesh's vertex format."
 	},
-	"Mesh:setVertex()_overload3": {
+	"Mesh:setVertex()_graphics_overload3": {
 		"prefix": "setVertex_Mesh3",
 		"scope": "lua",
 		"body": [
@@ -1259,7 +1259,7 @@
 		],
 		"description": "Sets the vertex components of a Mesh that wasn't created with a custom vertex format."
 	},
-	"Mesh:setVertex()_overload4": {
+	"Mesh:setVertex()_graphics_overload4": {
 		"prefix": "setVertex_Mesh4",
 		"scope": "lua",
 		"body": [
@@ -1268,7 +1268,7 @@
 		],
 		"description": "Sets the vertex components of a Mesh that wasn't created with a custom vertex format."
 	},
-	"Mesh:setVertexAttribute()": {
+	"Mesh:setVertexAttribute()_graphics": {
 		"prefix": "setVertexAttribute_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1277,7 +1277,7 @@
 		],
 		"description": "Attribute components which exist within the attribute but are not specified as arguments default to 0 for attributes with the float data type, and 255 for the byte data type."
 	},
-	"Mesh:setVertexMap()": {
+	"Mesh:setVertexMap()_graphics": {
 		"prefix": "setVertexMap_Mesh",
 		"scope": "lua",
 		"body": [
@@ -1286,7 +1286,7 @@
 		],
 		"description": "Sets the vertex map for the Mesh."
 	},
-	"Mesh:setVertexMap()_overload2": {
+	"Mesh:setVertexMap()_graphics_overload2": {
 		"prefix": "setVertexMap_Mesh2",
 		"scope": "lua",
 		"body": [
@@ -1295,7 +1295,7 @@
 		],
 		"description": "Sets the vertex map for the Mesh."
 	},
-	"Mesh:setVertexMap()_overload3": {
+	"Mesh:setVertexMap()_graphics_overload3": {
 		"prefix": "setVertexMap_Mesh3",
 		"scope": "lua",
 		"body": [
@@ -1304,7 +1304,7 @@
 		],
 		"description": "Sets the vertex map for the Mesh."
 	},
-	"MeshCullMode:setMeshCullMode()": {
+	"MeshCullMode:setMeshCullMode()_graphics": {
 		"prefix": "setMeshCullMode_MeshCullMode",
 		"scope": "lua",
 		"body": [
@@ -1313,7 +1313,7 @@
 		],
 		"description": "Sets whether back-facing triangles in a Mesh are culled."
 	},
-	"Meter:setMeter()": {
+	"Meter:setMeter()_physics": {
 		"prefix": "setMeter_Meter",
 		"scope": "lua",
 		"body": [
@@ -1322,7 +1322,7 @@
 		],
 		"description": "Sets the pixels to meter scale factor."
 	},
-	"Mode:setMode()": {
+	"Mode:setMode()_window": {
 		"prefix": "setMode_Mode",
 		"scope": "lua",
 		"body": [
@@ -1331,7 +1331,7 @@
 		],
 		"description": "* If fullscreen is enabled and the width or height is not supported (see resize event will be triggered."
 	},
-	"MotorJoint:getAngularOffset()": {
+	"MotorJoint:getAngularOffset()_physics": {
 		"prefix": "lgetAngularOffset_MotorJoint",
 		"scope": "lua",
 		"body": [
@@ -1340,7 +1340,7 @@
 		],
 		"description": "Gets the target angular offset between the two Bodies the Joint is attached to."
 	},
-	"MotorJoint:getLinearOffset()": {
+	"MotorJoint:getLinearOffset()_physics": {
 		"prefix": "lgetLinearOffset_MotorJoint",
 		"scope": "lua",
 		"body": [
@@ -1349,7 +1349,7 @@
 		],
 		"description": "Gets the target linear offset between the two Bodies the Joint is attached to."
 	},
-	"MotorJoint:setAngularOffset()": {
+	"MotorJoint:setAngularOffset()_physics": {
 		"prefix": "setAngularOffset_MotorJoint",
 		"scope": "lua",
 		"body": [
@@ -1358,7 +1358,7 @@
 		],
 		"description": "Sets the target angluar offset between the two Bodies the Joint is attached to."
 	},
-	"MotorJoint:setLinearOffset()": {
+	"MotorJoint:setLinearOffset()_physics": {
 		"prefix": "setLinearOffset_MotorJoint",
 		"scope": "lua",
 		"body": [
@@ -1367,7 +1367,7 @@
 		],
 		"description": "Sets the target linear offset between the two Bodies the Joint is attached to."
 	},
-	"MouseJoint:getDampingRatio()": {
+	"MouseJoint:getDampingRatio()_physics": {
 		"prefix": "lgetDampingRatio_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1376,7 +1376,7 @@
 		],
 		"description": "Returns the damping ratio."
 	},
-	"MouseJoint:getFrequency()": {
+	"MouseJoint:getFrequency()_physics": {
 		"prefix": "lgetFrequency_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1385,7 +1385,7 @@
 		],
 		"description": "Returns the frequency."
 	},
-	"MouseJoint:getMaxForce()": {
+	"MouseJoint:getMaxForce()_physics": {
 		"prefix": "lgetMaxForce_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1394,7 +1394,7 @@
 		],
 		"description": "Gets the highest allowed force."
 	},
-	"MouseJoint:getTarget()": {
+	"MouseJoint:getTarget()_physics": {
 		"prefix": "lgetTarget_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1403,7 +1403,7 @@
 		],
 		"description": "Gets the target point."
 	},
-	"MouseJoint:setDampingRatio()": {
+	"MouseJoint:setDampingRatio()_physics": {
 		"prefix": "setDampingRatio_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1412,7 +1412,7 @@
 		],
 		"description": "Sets a new damping ratio."
 	},
-	"MouseJoint:setFrequency()": {
+	"MouseJoint:setFrequency()_physics": {
 		"prefix": "setFrequency_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1421,7 +1421,7 @@
 		],
 		"description": "Sets a new frequency."
 	},
-	"MouseJoint:setMaxForce()": {
+	"MouseJoint:setMaxForce()_physics": {
 		"prefix": "setMaxForce_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1430,7 +1430,7 @@
 		],
 		"description": "Sets the highest allowed force."
 	},
-	"MouseJoint:setTarget()": {
+	"MouseJoint:setTarget()_physics": {
 		"prefix": "setTarget_MouseJoint",
 		"scope": "lua",
 		"body": [
@@ -1439,7 +1439,7 @@
 		],
 		"description": "Sets the target point."
 	},
-	"Orientation:setOrientation()": {
+	"Orientation:setOrientation()_audio": {
 		"prefix": "setOrientation_Orientation",
 		"scope": "lua",
 		"body": [
@@ -1448,7 +1448,7 @@
 		],
 		"description": "Sets the orientation of the listener."
 	},
-	"ParticleSystem:getBufferSize()": {
+	"ParticleSystem:getBufferSize()_graphics": {
 		"prefix": "lgetBufferSize_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1457,7 +1457,7 @@
 		],
 		"description": "Gets the maximum number of particles the ParticleSystem can have at once."
 	},
-	"ParticleSystem:getColors()": {
+	"ParticleSystem:getColors()_graphics": {
 		"prefix": "lgetColors_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1466,7 +1466,7 @@
 		],
 		"description": "Gets the series of colors applied to the particle sprite."
 	},
-	"ParticleSystem:getDirection()": {
+	"ParticleSystem:getDirection()_graphics": {
 		"prefix": "lgetDirection_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1475,7 +1475,7 @@
 		],
 		"description": "Gets the direction of the particle emitter (in radians)."
 	},
-	"ParticleSystem:getEmissionArea()": {
+	"ParticleSystem:getEmissionArea()_graphics": {
 		"prefix": "lgetEmissionArea_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1484,7 +1484,7 @@
 		],
 		"description": "Gets the area-based spawn parameters for the particles."
 	},
-	"ParticleSystem:getEmissionRate()": {
+	"ParticleSystem:getEmissionRate()_graphics": {
 		"prefix": "lgetEmissionRate_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1493,7 +1493,7 @@
 		],
 		"description": "Gets the amount of particles emitted per second."
 	},
-	"ParticleSystem:getEmitterLifetime()": {
+	"ParticleSystem:getEmitterLifetime()_graphics": {
 		"prefix": "lgetEmitterLifetime_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1502,7 +1502,7 @@
 		],
 		"description": "Gets how long the particle system will emit particles (if -1 then it emits particles forever)."
 	},
-	"ParticleSystem:getInsertMode()": {
+	"ParticleSystem:getInsertMode()_graphics": {
 		"prefix": "lgetInsertMode_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1511,7 +1511,7 @@
 		],
 		"description": "Gets the mode used when the ParticleSystem adds new particles."
 	},
-	"ParticleSystem:getLinearAcceleration()": {
+	"ParticleSystem:getLinearAcceleration()_graphics": {
 		"prefix": "lgetLinearAcceleration_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1520,7 +1520,7 @@
 		],
 		"description": "Gets the linear acceleration (acceleration along the x and y axes) for particles."
 	},
-	"ParticleSystem:getLinearDamping()": {
+	"ParticleSystem:getLinearDamping()_graphics": {
 		"prefix": "lgetLinearDamping_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1529,7 +1529,7 @@
 		],
 		"description": "Gets the amount of linear damping (constant deceleration) for particles."
 	},
-	"ParticleSystem:getOffset()": {
+	"ParticleSystem:getOffset()_graphics": {
 		"prefix": "lgetOffset_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1538,7 +1538,7 @@
 		],
 		"description": "Gets the particle image's draw offset."
 	},
-	"ParticleSystem:getParticleLifetime()": {
+	"ParticleSystem:getParticleLifetime()_graphics": {
 		"prefix": "lgetParticleLifetime_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1547,7 +1547,7 @@
 		],
 		"description": "Gets the lifetime of the particles."
 	},
-	"ParticleSystem:getPosition()": {
+	"ParticleSystem:getPosition()_graphics": {
 		"prefix": "lgetPosition_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1556,7 +1556,7 @@
 		],
 		"description": "Gets the position of the emitter."
 	},
-	"ParticleSystem:getQuads()": {
+	"ParticleSystem:getQuads()_graphics": {
 		"prefix": "lgetQuads_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1565,7 +1565,7 @@
 		],
 		"description": "Gets the series of Quads used for the particle sprites."
 	},
-	"ParticleSystem:getRadialAcceleration()": {
+	"ParticleSystem:getRadialAcceleration()_graphics": {
 		"prefix": "lgetRadialAcceleration_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1574,7 +1574,7 @@
 		],
 		"description": "Gets the radial acceleration (away from the emitter)."
 	},
-	"ParticleSystem:getRotation()": {
+	"ParticleSystem:getRotation()_graphics": {
 		"prefix": "lgetRotation_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1583,7 +1583,7 @@
 		],
 		"description": "Gets the rotation of the image upon particle creation (in radians)."
 	},
-	"ParticleSystem:getSizeVariation()": {
+	"ParticleSystem:getSizeVariation()_graphics": {
 		"prefix": "lgetSizeVariation_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1592,7 +1592,7 @@
 		],
 		"description": "Gets the amount of size variation (0 meaning no variation and 1 meaning full variation between start and end)."
 	},
-	"ParticleSystem:getSizes()": {
+	"ParticleSystem:getSizes()_graphics": {
 		"prefix": "lgetSizes_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1601,7 +1601,7 @@
 		],
 		"description": "Gets the series of sizes by which the sprite is scaled."
 	},
-	"ParticleSystem:getSpeed()": {
+	"ParticleSystem:getSpeed()_graphics": {
 		"prefix": "lgetSpeed_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1610,7 +1610,7 @@
 		],
 		"description": "Gets the speed of the particles."
 	},
-	"ParticleSystem:getSpin()": {
+	"ParticleSystem:getSpin()_graphics": {
 		"prefix": "lgetSpin_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1619,7 +1619,7 @@
 		],
 		"description": "Gets the spin of the sprite."
 	},
-	"ParticleSystem:getSpinVariation()": {
+	"ParticleSystem:getSpinVariation()_graphics": {
 		"prefix": "lgetSpinVariation_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1628,7 +1628,7 @@
 		],
 		"description": "Gets the amount of spin variation (0 meaning no variation and 1 meaning full variation between start and end)."
 	},
-	"ParticleSystem:getSpread()": {
+	"ParticleSystem:getSpread()_graphics": {
 		"prefix": "lgetSpread_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1637,7 +1637,7 @@
 		],
 		"description": "Gets the amount of directional spread of the particle emitter (in radians)."
 	},
-	"ParticleSystem:getTangentialAcceleration()": {
+	"ParticleSystem:getTangentialAcceleration()_graphics": {
 		"prefix": "lgetTangentialAcceleration_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1646,7 +1646,7 @@
 		],
 		"description": "Gets the tangential acceleration (acceleration perpendicular to the particle's direction)."
 	},
-	"ParticleSystem:getTexture()": {
+	"ParticleSystem:getTexture()_graphics": {
 		"prefix": "lgetTexture_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1655,7 +1655,7 @@
 		],
 		"description": "Gets the texture (Image or Canvas) used for the particles."
 	},
-	"ParticleSystem:setBufferSize()": {
+	"ParticleSystem:setBufferSize()_graphics": {
 		"prefix": "setBufferSize_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1664,7 +1664,7 @@
 		],
 		"description": "Sets the size of the buffer (the max allowed amount of particles in the system)."
 	},
-	"ParticleSystem:setColors()": {
+	"ParticleSystem:setColors()_graphics": {
 		"prefix": "setColors_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1673,7 +1673,7 @@
 		],
 		"description": "Sets a series of colors to apply to the particle sprite."
 	},
-	"ParticleSystem:setColors()_overload2": {
+	"ParticleSystem:setColors()_graphics_overload2": {
 		"prefix": "setColors_ParticleSystem2",
 		"scope": "lua",
 		"body": [
@@ -1682,7 +1682,7 @@
 		],
 		"description": "Sets a series of colors to apply to the particle sprite."
 	},
-	"ParticleSystem:setDirection()": {
+	"ParticleSystem:setDirection()_graphics": {
 		"prefix": "setDirection_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1691,7 +1691,7 @@
 		],
 		"description": "Sets the direction the particles will be emitted in."
 	},
-	"ParticleSystem:setEmissionArea()": {
+	"ParticleSystem:setEmissionArea()_graphics": {
 		"prefix": "setEmissionArea_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1700,7 +1700,7 @@
 		],
 		"description": "Sets area-based spawn parameters for the particles."
 	},
-	"ParticleSystem:setEmissionRate()": {
+	"ParticleSystem:setEmissionRate()_graphics": {
 		"prefix": "setEmissionRate_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1709,7 +1709,7 @@
 		],
 		"description": "Sets the amount of particles emitted per second."
 	},
-	"ParticleSystem:setEmitterLifetime()": {
+	"ParticleSystem:setEmitterLifetime()_graphics": {
 		"prefix": "setEmitterLifetime_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1718,7 +1718,7 @@
 		],
 		"description": "Sets how long the particle system should emit particles (if -1 then it emits particles forever)."
 	},
-	"ParticleSystem:setInsertMode()": {
+	"ParticleSystem:setInsertMode()_graphics": {
 		"prefix": "setInsertMode_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1727,7 +1727,7 @@
 		],
 		"description": "Sets the mode to use when the ParticleSystem adds new particles."
 	},
-	"ParticleSystem:setLinearAcceleration()": {
+	"ParticleSystem:setLinearAcceleration()_graphics": {
 		"prefix": "setLinearAcceleration_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1736,7 +1736,7 @@
 		],
 		"description": "Sets the linear acceleration (acceleration along the x and y axes) for particles."
 	},
-	"ParticleSystem:setLinearDamping()": {
+	"ParticleSystem:setLinearDamping()_graphics": {
 		"prefix": "setLinearDamping_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1745,7 +1745,7 @@
 		],
 		"description": "Sets the amount of linear damping (constant deceleration) for particles."
 	},
-	"ParticleSystem:setOffset()": {
+	"ParticleSystem:setOffset()_graphics": {
 		"prefix": "setOffset_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1754,7 +1754,7 @@
 		],
 		"description": "Set the offset position which the particle sprite is rotated around."
 	},
-	"ParticleSystem:setParticleLifetime()": {
+	"ParticleSystem:setParticleLifetime()_graphics": {
 		"prefix": "setParticleLifetime_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1763,7 +1763,7 @@
 		],
 		"description": "Sets the lifetime of the particles."
 	},
-	"ParticleSystem:setPosition()": {
+	"ParticleSystem:setPosition()_graphics": {
 		"prefix": "setPosition_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1772,7 +1772,7 @@
 		],
 		"description": "Sets the position of the emitter."
 	},
-	"ParticleSystem:setQuads()": {
+	"ParticleSystem:setQuads()_graphics": {
 		"prefix": "setQuads_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1781,7 +1781,7 @@
 		],
 		"description": "Sets a series of Quads to use for the particle sprites."
 	},
-	"ParticleSystem:setQuads()_overload2": {
+	"ParticleSystem:setQuads()_graphics_overload2": {
 		"prefix": "setQuads_ParticleSystem2",
 		"scope": "lua",
 		"body": [
@@ -1790,7 +1790,7 @@
 		],
 		"description": "Sets a series of Quads to use for the particle sprites."
 	},
-	"ParticleSystem:setRadialAcceleration()": {
+	"ParticleSystem:setRadialAcceleration()_graphics": {
 		"prefix": "setRadialAcceleration_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1799,7 +1799,7 @@
 		],
 		"description": "Set the radial acceleration (away from the emitter)."
 	},
-	"ParticleSystem:setRotation()": {
+	"ParticleSystem:setRotation()_graphics": {
 		"prefix": "setRotation_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1808,7 +1808,7 @@
 		],
 		"description": "Sets the rotation of the image upon particle creation (in radians)."
 	},
-	"ParticleSystem:setSizeVariation()": {
+	"ParticleSystem:setSizeVariation()_graphics": {
 		"prefix": "setSizeVariation_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1817,7 +1817,7 @@
 		],
 		"description": "Sets the amount of size variation (0 meaning no variation and 1 meaning full variation between start and end)."
 	},
-	"ParticleSystem:setSizes()": {
+	"ParticleSystem:setSizes()_graphics": {
 		"prefix": "setSizes_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1826,7 +1826,7 @@
 		],
 		"description": "Sets a series of sizes by which to scale a particle sprite."
 	},
-	"ParticleSystem:setSpeed()": {
+	"ParticleSystem:setSpeed()_graphics": {
 		"prefix": "setSpeed_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1835,7 +1835,7 @@
 		],
 		"description": "Sets the speed of the particles."
 	},
-	"ParticleSystem:setSpin()": {
+	"ParticleSystem:setSpin()_graphics": {
 		"prefix": "setSpin_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1844,7 +1844,7 @@
 		],
 		"description": "Sets the spin of the sprite."
 	},
-	"ParticleSystem:setSpinVariation()": {
+	"ParticleSystem:setSpinVariation()_graphics": {
 		"prefix": "setSpinVariation_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1853,7 +1853,7 @@
 		],
 		"description": "Sets the amount of spin variation (0 meaning no variation and 1 meaning full variation between start and end)."
 	},
-	"ParticleSystem:setSpread()": {
+	"ParticleSystem:setSpread()_graphics": {
 		"prefix": "setSpread_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1862,7 +1862,7 @@
 		],
 		"description": "Sets the amount of spread for the system."
 	},
-	"ParticleSystem:setTangentialAcceleration()": {
+	"ParticleSystem:setTangentialAcceleration()_graphics": {
 		"prefix": "setTangentialAcceleration_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1871,7 +1871,7 @@
 		],
 		"description": "Sets the tangential acceleration (acceleration perpendicular to the particle's direction)."
 	},
-	"ParticleSystem:setTexture()": {
+	"ParticleSystem:setTexture()_graphics": {
 		"prefix": "setTexture_ParticleSystem",
 		"scope": "lua",
 		"body": [
@@ -1880,7 +1880,7 @@
 		],
 		"description": "Sets the texture (Image or Canvas) to be used for the particles."
 	},
-	"PointSize:setPointSize()": {
+	"PointSize:setPointSize()_graphics": {
 		"prefix": "setPointSize_PointSize",
 		"scope": "lua",
 		"body": [
@@ -1889,7 +1889,7 @@
 		],
 		"description": "Sets the point size."
 	},
-	"Position:setPosition()": {
+	"Position:setPosition()_audio": {
 		"prefix": "setPosition_Position",
 		"scope": "lua",
 		"body": [
@@ -1898,7 +1898,25 @@
 		],
 		"description": "Sets the position of the listener, which determines how sounds play."
 	},
-	"PrismaticJoint:getLimits()": {
+	"Position:setPosition()_mouse": {
+		"prefix": "setPosition_Position",
+		"scope": "lua",
+		"body": [
+			"${1:position}:setPosition(${2:x}, ${3:y})",
+			"${0:}"
+		],
+		"description": "Sets the current position of the mouse."
+	},
+	"Position:setPosition()_window": {
+		"prefix": "setPosition_Position",
+		"scope": "lua",
+		"body": [
+			"${1:position}:setPosition(${2:x}, ${3:y}, ${4:1})",
+			"${0:}"
+		],
+		"description": "Sets the position of the window on the screen."
+	},
+	"PrismaticJoint:getLimits()_physics": {
 		"prefix": "lgetLimits_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1907,7 +1925,7 @@
 		],
 		"description": "Gets the joint limits."
 	},
-	"PrismaticJoint:getLowerLimit()": {
+	"PrismaticJoint:getLowerLimit()_physics": {
 		"prefix": "lgetLowerLimit_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1916,7 +1934,7 @@
 		],
 		"description": "Gets the lower limit."
 	},
-	"PrismaticJoint:getMaxMotorForce()": {
+	"PrismaticJoint:getMaxMotorForce()_physics": {
 		"prefix": "lgetMaxMotorForce_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1925,7 +1943,7 @@
 		],
 		"description": "Gets the maximum motor force."
 	},
-	"PrismaticJoint:getMotorSpeed()": {
+	"PrismaticJoint:getMotorSpeed()_physics": {
 		"prefix": "lgetMotorSpeed_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1934,7 +1952,7 @@
 		],
 		"description": "Gets the motor speed."
 	},
-	"PrismaticJoint:getUpperLimit()": {
+	"PrismaticJoint:getUpperLimit()_physics": {
 		"prefix": "lgetUpperLimit_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1943,7 +1961,7 @@
 		],
 		"description": "Gets the upper limit."
 	},
-	"PrismaticJoint:setLimits()": {
+	"PrismaticJoint:setLimits()_physics": {
 		"prefix": "setLimits_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1952,7 +1970,7 @@
 		],
 		"description": "Sets the limits."
 	},
-	"PrismaticJoint:setLowerLimit()": {
+	"PrismaticJoint:setLowerLimit()_physics": {
 		"prefix": "setLowerLimit_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1961,7 +1979,7 @@
 		],
 		"description": "Sets the lower limit."
 	},
-	"PrismaticJoint:setMaxMotorForce()": {
+	"PrismaticJoint:setMaxMotorForce()_physics": {
 		"prefix": "setMaxMotorForce_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1970,7 +1988,7 @@
 		],
 		"description": "Set the maximum motor force."
 	},
-	"PrismaticJoint:setMotorSpeed()": {
+	"PrismaticJoint:setMotorSpeed()_physics": {
 		"prefix": "setMotorSpeed_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1979,7 +1997,7 @@
 		],
 		"description": "Sets the motor speed."
 	},
-	"PrismaticJoint:setUpperLimit()": {
+	"PrismaticJoint:setUpperLimit()_physics": {
 		"prefix": "setUpperLimit_PrismaticJoint",
 		"scope": "lua",
 		"body": [
@@ -1988,7 +2006,7 @@
 		],
 		"description": "Sets the upper limit."
 	},
-	"PulleyJoint:getConstant()": {
+	"PulleyJoint:getConstant()_physics": {
 		"prefix": "lgetConstant_PulleyJoint",
 		"scope": "lua",
 		"body": [
@@ -1997,7 +2015,7 @@
 		],
 		"description": "Get the total length of the rope."
 	},
-	"PulleyJoint:getMaxLengths()": {
+	"PulleyJoint:getMaxLengths()_physics": {
 		"prefix": "lgetMaxLengths_PulleyJoint",
 		"scope": "lua",
 		"body": [
@@ -2006,7 +2024,7 @@
 		],
 		"description": "Get the maximum lengths of the rope segments."
 	},
-	"PulleyJoint:getRatio()": {
+	"PulleyJoint:getRatio()_physics": {
 		"prefix": "lgetRatio_PulleyJoint",
 		"scope": "lua",
 		"body": [
@@ -2015,7 +2033,7 @@
 		],
 		"description": "Get the pulley ratio."
 	},
-	"PulleyJoint:setConstant()": {
+	"PulleyJoint:setConstant()_physics": {
 		"prefix": "setConstant_PulleyJoint",
 		"scope": "lua",
 		"body": [
@@ -2024,7 +2042,7 @@
 		],
 		"description": "Set the total length of the rope."
 	},
-	"PulleyJoint:setMaxLengths()": {
+	"PulleyJoint:setMaxLengths()_physics": {
 		"prefix": "setMaxLengths_PulleyJoint",
 		"scope": "lua",
 		"body": [
@@ -2033,7 +2051,7 @@
 		],
 		"description": "Set the maximum lengths of the rope segments."
 	},
-	"PulleyJoint:setRatio()": {
+	"PulleyJoint:setRatio()_physics": {
 		"prefix": "setRatio_PulleyJoint",
 		"scope": "lua",
 		"body": [
@@ -2042,7 +2060,7 @@
 		],
 		"description": "Set the pulley ratio."
 	},
-	"Quad:getViewport()": {
+	"Quad:getViewport()_graphics": {
 		"prefix": "lgetViewport_Quad",
 		"scope": "lua",
 		"body": [
@@ -2051,7 +2069,7 @@
 		],
 		"description": "Gets the current viewport of this Quad."
 	},
-	"Quad:setViewport()": {
+	"Quad:setViewport()_graphics": {
 		"prefix": "setViewport_Quad",
 		"scope": "lua",
 		"body": [
@@ -2060,7 +2078,7 @@
 		],
 		"description": "Sets the texture coordinates according to a viewport."
 	},
-	"RandomGenerator:getSeed()": {
+	"RandomGenerator:getSeed()_math": {
 		"prefix": "lgetSeed_RandomGenerator",
 		"scope": "lua",
 		"body": [
@@ -2069,7 +2087,7 @@
 		],
 		"description": "Gets the seed of the random number generator object."
 	},
-	"RandomGenerator:getState()": {
+	"RandomGenerator:getState()_math": {
 		"prefix": "lgetState_RandomGenerator",
 		"scope": "lua",
 		"body": [
@@ -2078,7 +2096,7 @@
 		],
 		"description": "The value of the state string does not depend on the current operating system."
 	},
-	"RandomGenerator:setSeed()": {
+	"RandomGenerator:setSeed()_math": {
 		"prefix": "setSeed_RandomGenerator",
 		"scope": "lua",
 		"body": [
@@ -2087,7 +2105,7 @@
 		],
 		"description": "Due to Lua's use of double-precision floating point numbers, values above 2^53 cannot be accurately represented."
 	},
-	"RandomGenerator:setSeed()_overload2": {
+	"RandomGenerator:setSeed()_math_overload2": {
 		"prefix": "setSeed_RandomGenerator2",
 		"scope": "lua",
 		"body": [
@@ -2096,7 +2114,7 @@
 		],
 		"description": "Combines two 32-bit integer numbers into a 64-bit integer value and sets the seed of the random number generator using the value."
 	},
-	"RandomGenerator:setState()": {
+	"RandomGenerator:setState()_math": {
 		"prefix": "setState_RandomGenerator",
 		"scope": "lua",
 		"body": [
@@ -2105,7 +2123,7 @@
 		],
 		"description": "The effect of the state string does not depend on the current operating system."
 	},
-	"RandomSeed:setRandomSeed()": {
+	"RandomSeed:setRandomSeed()_math": {
 		"prefix": "setRandomSeed_RandomSeed",
 		"scope": "lua",
 		"body": [
@@ -2114,7 +2132,7 @@
 		],
 		"description": "Due to Lua's use of double-precision floating point numbers, integer values above 2^53 cannot be accurately represented."
 	},
-	"RandomSeed:setRandomSeed()_overload2": {
+	"RandomSeed:setRandomSeed()_math_overload2": {
 		"prefix": "setRandomSeed_RandomSeed2",
 		"scope": "lua",
 		"body": [
@@ -2123,7 +2141,7 @@
 		],
 		"description": "Combines two 32-bit integer numbers into a 64-bit integer value and sets the seed of the random number generator using the value."
 	},
-	"RandomState:setRandomState()": {
+	"RandomState:setRandomState()_math": {
 		"prefix": "setRandomState_RandomState",
 		"scope": "lua",
 		"body": [
@@ -2132,7 +2150,7 @@
 		],
 		"description": "The effect of the state string does not depend on the current operating system."
 	},
-	"RelativeMode:setRelativeMode()": {
+	"RelativeMode:setRelativeMode()_mouse": {
 		"prefix": "setRelativeMode_RelativeMode",
 		"scope": "lua",
 		"body": [
@@ -2141,7 +2159,7 @@
 		],
 		"description": "Sets whether relative mode is enabled for the mouse."
 	},
-	"RequirePath:setRequirePath()": {
+	"RequirePath:setRequirePath()_filesystem": {
 		"prefix": "setRequirePath_RequirePath",
 		"scope": "lua",
 		"body": [
@@ -2150,7 +2168,7 @@
 		],
 		"description": "The default paths string is '?."
 	},
-	"RevoluteJoint:getLimits()": {
+	"RevoluteJoint:getLimits()_physics": {
 		"prefix": "lgetLimits_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2159,7 +2177,7 @@
 		],
 		"description": "Gets the joint limits."
 	},
-	"RevoluteJoint:getLowerLimit()": {
+	"RevoluteJoint:getLowerLimit()_physics": {
 		"prefix": "lgetLowerLimit_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2168,7 +2186,7 @@
 		],
 		"description": "Gets the lower limit."
 	},
-	"RevoluteJoint:getMaxMotorTorque()": {
+	"RevoluteJoint:getMaxMotorTorque()_physics": {
 		"prefix": "lgetMaxMotorTorque_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2177,7 +2195,7 @@
 		],
 		"description": "Gets the maximum motor force."
 	},
-	"RevoluteJoint:getMotorSpeed()": {
+	"RevoluteJoint:getMotorSpeed()_physics": {
 		"prefix": "lgetMotorSpeed_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2186,7 +2204,7 @@
 		],
 		"description": "Gets the motor speed."
 	},
-	"RevoluteJoint:getUpperLimit()": {
+	"RevoluteJoint:getUpperLimit()_physics": {
 		"prefix": "lgetUpperLimit_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2195,7 +2213,7 @@
 		],
 		"description": "Gets the upper limit."
 	},
-	"RevoluteJoint:setLimits()": {
+	"RevoluteJoint:setLimits()_physics": {
 		"prefix": "setLimits_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2204,7 +2222,7 @@
 		],
 		"description": "Sets the limits."
 	},
-	"RevoluteJoint:setLowerLimit()": {
+	"RevoluteJoint:setLowerLimit()_physics": {
 		"prefix": "setLowerLimit_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2213,7 +2231,7 @@
 		],
 		"description": "Sets the lower limit."
 	},
-	"RevoluteJoint:setMaxMotorTorque()": {
+	"RevoluteJoint:setMaxMotorTorque()_physics": {
 		"prefix": "setMaxMotorTorque_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2222,7 +2240,7 @@
 		],
 		"description": "Set the maximum motor force."
 	},
-	"RevoluteJoint:setMotorSpeed()": {
+	"RevoluteJoint:setMotorSpeed()_physics": {
 		"prefix": "setMotorSpeed_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2231,7 +2249,7 @@
 		],
 		"description": "Sets the motor speed."
 	},
-	"RevoluteJoint:setUpperLimit()": {
+	"RevoluteJoint:setUpperLimit()_physics": {
 		"prefix": "setUpperLimit_RevoluteJoint",
 		"scope": "lua",
 		"body": [
@@ -2240,7 +2258,7 @@
 		],
 		"description": "Sets the upper limit."
 	},
-	"RopeJoint:getMaxLength()": {
+	"RopeJoint:getMaxLength()_physics": {
 		"prefix": "lgetMaxLength_RopeJoint",
 		"scope": "lua",
 		"body": [
@@ -2249,7 +2267,7 @@
 		],
 		"description": "Gets the maximum length of a RopeJoint."
 	},
-	"RopeJoint:setMaxLength()": {
+	"RopeJoint:setMaxLength()_physics": {
 		"prefix": "setMaxLength_RopeJoint",
 		"scope": "lua",
 		"body": [
@@ -2258,7 +2276,7 @@
 		],
 		"description": "Sets the maximum length of a RopeJoint."
 	},
-	"Scissor:setScissor()": {
+	"Scissor:setScissor()_graphics": {
 		"prefix": "setScissor_Scissor",
 		"scope": "lua",
 		"body": [
@@ -2267,7 +2285,7 @@
 		],
 		"description": "Limits the drawing area to a specified rectangle."
 	},
-	"Scissor:setScissor()_overload2": {
+	"Scissor:setScissor()_graphics_overload2": {
 		"prefix": "setScissor_Scissor2",
 		"scope": "lua",
 		"body": [
@@ -2276,7 +2294,7 @@
 		],
 		"description": "Disables scissor."
 	},
-	"Shader:setShader()": {
+	"Shader:setShader()_graphics": {
 		"prefix": "setShader_Shader",
 		"scope": "lua",
 		"body": [
@@ -2285,7 +2303,7 @@
 		],
 		"description": "Sets the current shader to a specified Shader."
 	},
-	"Shader:setShader()_overload2": {
+	"Shader:setShader()_graphics_overload2": {
 		"prefix": "setShader_Shader2",
 		"scope": "lua",
 		"body": [
@@ -2294,7 +2312,7 @@
 		],
 		"description": "Disables shaders, allowing unfiltered drawing operations."
 	},
-	"SoundData:getSample()": {
+	"SoundData:getSample()_sound": {
 		"prefix": "lgetSample_SoundData",
 		"scope": "lua",
 		"body": [
@@ -2303,7 +2321,7 @@
 		],
 		"description": "Gets the value of the sample-point at the specified position."
 	},
-	"SoundData:getSample()_overload2": {
+	"SoundData:getSample()_sound_overload2": {
 		"prefix": "lgetSample_SoundData2",
 		"scope": "lua",
 		"body": [
@@ -2312,7 +2330,7 @@
 		],
 		"description": "Gets the value of a sample using an explicit sample index instead of interleaving them in the sample position parameter."
 	},
-	"SoundData:setSample()": {
+	"SoundData:setSample()_sound": {
 		"prefix": "setSample_SoundData",
 		"scope": "lua",
 		"body": [
@@ -2321,7 +2339,7 @@
 		],
 		"description": "Sets the value of the sample-point at the specified position."
 	},
-	"SoundData:setSample()_overload2": {
+	"SoundData:setSample()_sound_overload2": {
 		"prefix": "setSample_SoundData2",
 		"scope": "lua",
 		"body": [
@@ -2330,7 +2348,7 @@
 		],
 		"description": "Sets the value of a sample using an explicit sample index instead of interleaving them in the sample position parameter."
 	},
-	"Source:getAirAbsorption()": {
+	"Source:getAirAbsorption()_audio": {
 		"prefix": "lgetAirAbsorption_Source",
 		"scope": "lua",
 		"body": [
@@ -2339,7 +2357,7 @@
 		],
 		"description": "Audio air absorption functionality is not supported on iOS."
 	},
-	"Source:getAttenuationDistances()": {
+	"Source:getAttenuationDistances()_audio": {
 		"prefix": "lgetAttenuationDistances_Source",
 		"scope": "lua",
 		"body": [
@@ -2348,7 +2366,7 @@
 		],
 		"description": "Gets the reference and maximum attenuation distances of the Source."
 	},
-	"Source:getCone()": {
+	"Source:getCone()_audio": {
 		"prefix": "lgetCone_Source",
 		"scope": "lua",
 		"body": [
@@ -2357,7 +2375,7 @@
 		],
 		"description": "Gets the Source's directional volume cones."
 	},
-	"Source:getDirection()": {
+	"Source:getDirection()_audio": {
 		"prefix": "lgetDirection_Source",
 		"scope": "lua",
 		"body": [
@@ -2366,7 +2384,7 @@
 		],
 		"description": "Gets the direction of the Source."
 	},
-	"Source:getEffect()": {
+	"Source:getEffect()_audio": {
 		"prefix": "lgetEffect_Source",
 		"scope": "lua",
 		"body": [
@@ -2375,7 +2393,7 @@
 		],
 		"description": "Gets the filter settings associated to a specific effect."
 	},
-	"Source:getFilter()": {
+	"Source:getFilter()_audio": {
 		"prefix": "lgetFilter_Source",
 		"scope": "lua",
 		"body": [
@@ -2384,7 +2402,7 @@
 		],
 		"description": "Gets the filter settings currently applied to the Source."
 	},
-	"Source:getPitch()": {
+	"Source:getPitch()_audio": {
 		"prefix": "lgetPitch_Source",
 		"scope": "lua",
 		"body": [
@@ -2393,7 +2411,7 @@
 		],
 		"description": "Gets the current pitch of the Source."
 	},
-	"Source:getPosition()": {
+	"Source:getPosition()_audio": {
 		"prefix": "lgetPosition_Source",
 		"scope": "lua",
 		"body": [
@@ -2402,7 +2420,7 @@
 		],
 		"description": "Gets the position of the Source."
 	},
-	"Source:getRolloff()": {
+	"Source:getRolloff()_audio": {
 		"prefix": "lgetRolloff_Source",
 		"scope": "lua",
 		"body": [
@@ -2411,7 +2429,7 @@
 		],
 		"description": "Returns the rolloff factor of the source."
 	},
-	"Source:getVelocity()": {
+	"Source:getVelocity()_audio": {
 		"prefix": "lgetVelocity_Source",
 		"scope": "lua",
 		"body": [
@@ -2420,7 +2438,7 @@
 		],
 		"description": "Gets the velocity of the Source."
 	},
-	"Source:getVolume()": {
+	"Source:getVolume()_audio": {
 		"prefix": "lgetVolume_Source",
 		"scope": "lua",
 		"body": [
@@ -2429,7 +2447,7 @@
 		],
 		"description": "Gets the current volume of the Source."
 	},
-	"Source:getVolumeLimits()": {
+	"Source:getVolumeLimits()_audio": {
 		"prefix": "lgetVolumeLimits_Source",
 		"scope": "lua",
 		"body": [
@@ -2438,7 +2456,7 @@
 		],
 		"description": "Returns the volume limits of the source."
 	},
-	"Source:setAirAbsorption()": {
+	"Source:setAirAbsorption()_audio": {
 		"prefix": "setAirAbsorption_Source",
 		"scope": "lua",
 		"body": [
@@ -2447,7 +2465,7 @@
 		],
 		"description": "Audio air absorption functionality is not supported on iOS."
 	},
-	"Source:setAttenuationDistances()": {
+	"Source:setAttenuationDistances()_audio": {
 		"prefix": "setAttenuationDistances_Source",
 		"scope": "lua",
 		"body": [
@@ -2456,7 +2474,7 @@
 		],
 		"description": "Sets the reference and maximum attenuation distances of the Source."
 	},
-	"Source:setCone()": {
+	"Source:setCone()_audio": {
 		"prefix": "setCone_Source",
 		"scope": "lua",
 		"body": [
@@ -2465,7 +2483,7 @@
 		],
 		"description": "Sets the Source's directional volume cones."
 	},
-	"Source:setDirection()": {
+	"Source:setDirection()_audio": {
 		"prefix": "setDirection_Source",
 		"scope": "lua",
 		"body": [
@@ -2474,7 +2492,7 @@
 		],
 		"description": "Sets the direction vector of the Source."
 	},
-	"Source:setEffect()": {
+	"Source:setEffect()_audio": {
 		"prefix": "setEffect_Source",
 		"scope": "lua",
 		"body": [
@@ -2483,7 +2501,7 @@
 		],
 		"description": "Applies the given previously defined effect to this Source."
 	},
-	"Source:setEffect()_overload2": {
+	"Source:setEffect()_audio_overload2": {
 		"prefix": "setEffect_Source2",
 		"scope": "lua",
 		"body": [
@@ -2492,7 +2510,7 @@
 		],
 		"description": "Applies the given previously defined effect to this Source, and applies a filter to the Source which affects the sound fed into the effect."
 	},
-	"Source:setFilter()": {
+	"Source:setFilter()_audio": {
 		"prefix": "setFilter_Source",
 		"scope": "lua",
 		"body": [
@@ -2501,7 +2519,7 @@
 		],
 		"description": "Sets a low-pass, high-pass, or band-pass filter to apply when playing the Source."
 	},
-	"Source:setFilter()_overload2": {
+	"Source:setFilter()_audio_overload2": {
 		"prefix": "setFilter_Source2",
 		"scope": "lua",
 		"body": [
@@ -2510,7 +2528,7 @@
 		],
 		"description": "Disables filtering on this Source."
 	},
-	"Source:setPitch()": {
+	"Source:setPitch()_audio": {
 		"prefix": "setPitch_Source",
 		"scope": "lua",
 		"body": [
@@ -2519,7 +2537,7 @@
 		],
 		"description": "Sets the pitch of the Source."
 	},
-	"Source:setPosition()": {
+	"Source:setPosition()_audio": {
 		"prefix": "setPosition_Source",
 		"scope": "lua",
 		"body": [
@@ -2528,7 +2546,7 @@
 		],
 		"description": "Sets the position of the Source."
 	},
-	"Source:setRolloff()": {
+	"Source:setRolloff()_audio": {
 		"prefix": "setRolloff_Source",
 		"scope": "lua",
 		"body": [
@@ -2537,7 +2555,7 @@
 		],
 		"description": "Sets the rolloff factor which affects the strength of the used distance attenuation."
 	},
-	"Source:setVelocity()": {
+	"Source:setVelocity()_audio": {
 		"prefix": "setVelocity_Source",
 		"scope": "lua",
 		"body": [
@@ -2546,7 +2564,7 @@
 		],
 		"description": "Sets the velocity of the Source."
 	},
-	"Source:setVolume()": {
+	"Source:setVolume()_audio": {
 		"prefix": "setVolume_Source",
 		"scope": "lua",
 		"body": [
@@ -2555,7 +2573,7 @@
 		],
 		"description": "Sets the current volume of the Source."
 	},
-	"Source:setVolumeLimits()": {
+	"Source:setVolumeLimits()_audio": {
 		"prefix": "setVolumeLimits_Source",
 		"scope": "lua",
 		"body": [
@@ -2564,7 +2582,7 @@
 		],
 		"description": "Sets the volume limits of the source."
 	},
-	"SpriteBatch:getColor()": {
+	"SpriteBatch:getColor()_graphics": {
 		"prefix": "lgetColor_SpriteBatch",
 		"scope": "lua",
 		"body": [
@@ -2573,7 +2591,7 @@
 		],
 		"description": "Gets the color that will be used for the next add and set operations."
 	},
-	"SpriteBatch:getTexture()": {
+	"SpriteBatch:getTexture()_graphics": {
 		"prefix": "lgetTexture_SpriteBatch",
 		"scope": "lua",
 		"body": [
@@ -2582,7 +2600,7 @@
 		],
 		"description": "Gets the texture (Image or Canvas) used by the SpriteBatch."
 	},
-	"SpriteBatch:setColor()": {
+	"SpriteBatch:setColor()_graphics": {
 		"prefix": "setColor_SpriteBatch",
 		"scope": "lua",
 		"body": [
@@ -2591,7 +2609,7 @@
 		],
 		"description": "Sets the color that will be used for the next add and set operations."
 	},
-	"SpriteBatch:setColor()_overload2": {
+	"SpriteBatch:setColor()_graphics_overload2": {
 		"prefix": "setColor_SpriteBatch2",
 		"scope": "lua",
 		"body": [
@@ -2600,7 +2618,7 @@
 		],
 		"description": "Disables all per-sprite colors for this SpriteBatch."
 	},
-	"SpriteBatch:setTexture()": {
+	"SpriteBatch:setTexture()_graphics": {
 		"prefix": "setTexture_SpriteBatch",
 		"scope": "lua",
 		"body": [
@@ -2609,7 +2627,7 @@
 		],
 		"description": "Sets the texture (Image or Canvas) used for the sprites in the batch, when drawing."
 	},
-	"StencilTest:setStencilTest()": {
+	"StencilTest:setStencilTest()_graphics": {
 		"prefix": "setStencilTest_StencilTest",
 		"scope": "lua",
 		"body": [
@@ -2618,7 +2636,7 @@
 		],
 		"description": "Configures or disables stencil testing."
 	},
-	"StencilTest:setStencilTest()_overload2": {
+	"StencilTest:setStencilTest()_graphics_overload2": {
 		"prefix": "setStencilTest_StencilTest2",
 		"scope": "lua",
 		"body": [
@@ -2627,7 +2645,7 @@
 		],
 		"description": "Disables stencil testing."
 	},
-	"Text:getFont()": {
+	"Text:getFont()_graphics": {
 		"prefix": "lgetFont_Text",
 		"scope": "lua",
 		"body": [
@@ -2636,7 +2654,7 @@
 		],
 		"description": "Gets the Font used with the Text object."
 	},
-	"Text:setFont()": {
+	"Text:setFont()_graphics": {
 		"prefix": "setFont_Text",
 		"scope": "lua",
 		"body": [
@@ -2645,7 +2663,7 @@
 		],
 		"description": "Replaces the Font used with the text."
 	},
-	"Texture:getDepthSampleMode()": {
+	"Texture:getDepthSampleMode()_graphics": {
 		"prefix": "lgetDepthSampleMode_Texture",
 		"scope": "lua",
 		"body": [
@@ -2654,7 +2672,7 @@
 		],
 		"description": "Gets the comparison mode used when sampling from a depth texture in a shader."
 	},
-	"Texture:getFilter()": {
+	"Texture:getFilter()_graphics": {
 		"prefix": "lgetFilter_Texture",
 		"scope": "lua",
 		"body": [
@@ -2663,7 +2681,7 @@
 		],
 		"description": "Gets the filter mode of the Texture."
 	},
-	"Texture:getMipmapFilter()": {
+	"Texture:getMipmapFilter()_graphics": {
 		"prefix": "lgetMipmapFilter_Texture",
 		"scope": "lua",
 		"body": [
@@ -2672,7 +2690,7 @@
 		],
 		"description": "Gets the mipmap filter mode for a Texture."
 	},
-	"Texture:getWrap()": {
+	"Texture:getWrap()_graphics": {
 		"prefix": "lgetWrap_Texture",
 		"scope": "lua",
 		"body": [
@@ -2681,7 +2699,7 @@
 		],
 		"description": "Gets the wrapping properties of a Texture."
 	},
-	"Texture:setDepthSampleMode()": {
+	"Texture:setDepthSampleMode()_graphics": {
 		"prefix": "setDepthSampleMode_Texture",
 		"scope": "lua",
 		"body": [
@@ -2690,7 +2708,7 @@
 		],
 		"description": "Sets the comparison mode used when sampling from a depth texture in a shader."
 	},
-	"Texture:setFilter()": {
+	"Texture:setFilter()_graphics": {
 		"prefix": "setFilter_Texture",
 		"scope": "lua",
 		"body": [
@@ -2699,7 +2717,7 @@
 		],
 		"description": "Sets the filter mode of the Texture."
 	},
-	"Texture:setMipmapFilter()": {
+	"Texture:setMipmapFilter()_graphics": {
 		"prefix": "setMipmapFilter_Texture",
 		"scope": "lua",
 		"body": [
@@ -2708,7 +2726,7 @@
 		],
 		"description": "On mobile devices (Android and iOS), the sharpness parameter is not supported and will do nothing."
 	},
-	"Texture:setMipmapFilter()_overload2": {
+	"Texture:setMipmapFilter()_graphics_overload2": {
 		"prefix": "setMipmapFilter_Texture2",
 		"scope": "lua",
 		"body": [
@@ -2717,7 +2735,7 @@
 		],
 		"description": "Disables mipmap filtering."
 	},
-	"Texture:setWrap()": {
+	"Texture:setWrap()_graphics": {
 		"prefix": "setWrap_Texture",
 		"scope": "lua",
 		"body": [
@@ -2726,7 +2744,7 @@
 		],
 		"description": "Sets the wrapping properties of a Texture."
 	},
-	"Title:setTitle()": {
+	"Title:setTitle()_window": {
 		"prefix": "setTitle_Title",
 		"scope": "lua",
 		"body": [
@@ -2735,7 +2753,7 @@
 		],
 		"description": "Sets the window title."
 	},
-	"Transform:getMatrix()": {
+	"Transform:getMatrix()_math": {
 		"prefix": "lgetMatrix_Transform",
 		"scope": "lua",
 		"body": [
@@ -2744,7 +2762,7 @@
 		],
 		"description": "Gets the internal 4x4 transformation matrix stored by this Transform."
 	},
-	"Transform:setMatrix()": {
+	"Transform:setMatrix()_math": {
 		"prefix": "setMatrix_Transform",
 		"scope": "lua",
 		"body": [
@@ -2753,7 +2771,7 @@
 		],
 		"description": "Directly sets the Transform's internal 4x4 transformation matrix."
 	},
-	"Transform:setMatrix()_overload2": {
+	"Transform:setMatrix()_math_overload2": {
 		"prefix": "setMatrix_Transform2",
 		"scope": "lua",
 		"body": [
@@ -2762,7 +2780,7 @@
 		],
 		"description": "Directly sets the Transform's internal 4x4 transformation matrix."
 	},
-	"Transform:setMatrix()_overload3": {
+	"Transform:setMatrix()_math_overload3": {
 		"prefix": "setMatrix_Transform3",
 		"scope": "lua",
 		"body": [
@@ -2771,7 +2789,7 @@
 		],
 		"description": "Directly sets the Transform's internal 4x4 transformation matrix."
 	},
-	"Transform:setMatrix()_overload4": {
+	"Transform:setMatrix()_math_overload4": {
 		"prefix": "setMatrix_Transform4",
 		"scope": "lua",
 		"body": [
@@ -2780,7 +2798,7 @@
 		],
 		"description": "Directly sets the Transform's internal 4x4 transformation matrix."
 	},
-	"VSync:setVSync()": {
+	"VSync:setVSync()_window": {
 		"prefix": "setVSync_VSync",
 		"scope": "lua",
 		"body": [
@@ -2789,7 +2807,7 @@
 		],
 		"description": "* Not all graphics drivers support adaptive vsync (-1 value)."
 	},
-	"Velocity:setVelocity()": {
+	"Velocity:setVelocity()_audio": {
 		"prefix": "setVelocity_Velocity",
 		"scope": "lua",
 		"body": [
@@ -2798,7 +2816,7 @@
 		],
 		"description": "Sets the velocity of the listener."
 	},
-	"Video:getFilter()": {
+	"Video:getFilter()_graphics": {
 		"prefix": "lgetFilter_Video",
 		"scope": "lua",
 		"body": [
@@ -2807,7 +2825,7 @@
 		],
 		"description": "Gets the scaling filters used when drawing the Video."
 	},
-	"Video:getSource()": {
+	"Video:getSource()_graphics": {
 		"prefix": "lgetSource_Video",
 		"scope": "lua",
 		"body": [
@@ -2816,7 +2834,7 @@
 		],
 		"description": "Gets the audio Source used for playing back the video's audio."
 	},
-	"Video:setFilter()": {
+	"Video:setFilter()_graphics": {
 		"prefix": "setFilter_Video",
 		"scope": "lua",
 		"body": [
@@ -2825,7 +2843,7 @@
 		],
 		"description": "Sets the scaling filters used when drawing the Video."
 	},
-	"Video:setSource()": {
+	"Video:setSource()_graphics": {
 		"prefix": "setSource_Video",
 		"scope": "lua",
 		"body": [
@@ -2834,7 +2852,7 @@
 		],
 		"description": "Sets the audio Source used for playing back the video's audio."
 	},
-	"Volume:setVolume()": {
+	"Volume:setVolume()_audio": {
 		"prefix": "setVolume_Volume",
 		"scope": "lua",
 		"body": [
@@ -2843,7 +2861,7 @@
 		],
 		"description": "Sets the master volume."
 	},
-	"WeldJoint:getDampingRatio()": {
+	"WeldJoint:getDampingRatio()_physics": {
 		"prefix": "lgetDampingRatio_WeldJoint",
 		"scope": "lua",
 		"body": [
@@ -2852,7 +2870,7 @@
 		],
 		"description": "Returns the damping ratio of the joint."
 	},
-	"WeldJoint:getFrequency()": {
+	"WeldJoint:getFrequency()_physics": {
 		"prefix": "lgetFrequency_WeldJoint",
 		"scope": "lua",
 		"body": [
@@ -2861,7 +2879,7 @@
 		],
 		"description": "Returns the frequency."
 	},
-	"WeldJoint:setDampingRatio()": {
+	"WeldJoint:setDampingRatio()_physics": {
 		"prefix": "setDampingRatio_WeldJoint",
 		"scope": "lua",
 		"body": [
@@ -2870,7 +2888,7 @@
 		],
 		"description": "Sets a new damping ratio."
 	},
-	"WeldJoint:setFrequency()": {
+	"WeldJoint:setFrequency()_physics": {
 		"prefix": "setFrequency_WeldJoint",
 		"scope": "lua",
 		"body": [
@@ -2879,7 +2897,7 @@
 		],
 		"description": "Sets a new frequency."
 	},
-	"WheelJoint:getMaxMotorTorque()": {
+	"WheelJoint:getMaxMotorTorque()_physics": {
 		"prefix": "lgetMaxMotorTorque_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2888,7 +2906,7 @@
 		],
 		"description": "Returns the maximum motor torque."
 	},
-	"WheelJoint:getMotorSpeed()": {
+	"WheelJoint:getMotorSpeed()_physics": {
 		"prefix": "lgetMotorSpeed_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2897,7 +2915,7 @@
 		],
 		"description": "Returns the speed of the motor."
 	},
-	"WheelJoint:getSpringDampingRatio()": {
+	"WheelJoint:getSpringDampingRatio()_physics": {
 		"prefix": "lgetSpringDampingRatio_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2906,7 +2924,7 @@
 		],
 		"description": "Returns the damping ratio."
 	},
-	"WheelJoint:getSpringFrequency()": {
+	"WheelJoint:getSpringFrequency()_physics": {
 		"prefix": "lgetSpringFrequency_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2915,7 +2933,7 @@
 		],
 		"description": "Returns the spring frequency."
 	},
-	"WheelJoint:setMaxMotorTorque()": {
+	"WheelJoint:setMaxMotorTorque()_physics": {
 		"prefix": "setMaxMotorTorque_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2924,7 +2942,7 @@
 		],
 		"description": "Sets a new maximum motor torque."
 	},
-	"WheelJoint:setMotorSpeed()": {
+	"WheelJoint:setMotorSpeed()_physics": {
 		"prefix": "setMotorSpeed_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2933,7 +2951,7 @@
 		],
 		"description": "Sets a new speed for the motor."
 	},
-	"WheelJoint:setSpringDampingRatio()": {
+	"WheelJoint:setSpringDampingRatio()_physics": {
 		"prefix": "setSpringDampingRatio_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2942,7 +2960,7 @@
 		],
 		"description": "Sets a new damping ratio."
 	},
-	"WheelJoint:setSpringFrequency()": {
+	"WheelJoint:setSpringFrequency()_physics": {
 		"prefix": "setSpringFrequency_WheelJoint",
 		"scope": "lua",
 		"body": [
@@ -2951,7 +2969,7 @@
 		],
 		"description": "Sets a new spring frequency."
 	},
-	"World:getCallbacks()": {
+	"World:getCallbacks()_physics": {
 		"prefix": "lgetCallbacks_World",
 		"scope": "lua",
 		"body": [
@@ -2960,7 +2978,7 @@
 		],
 		"description": "Returns functions for the callbacks during the world update."
 	},
-	"World:getContactFilter()": {
+	"World:getContactFilter()_physics": {
 		"prefix": "lgetContactFilter_World",
 		"scope": "lua",
 		"body": [
@@ -2969,7 +2987,7 @@
 		],
 		"description": "Returns the function for collision filtering."
 	},
-	"World:getGravity()": {
+	"World:getGravity()_physics": {
 		"prefix": "lgetGravity_World",
 		"scope": "lua",
 		"body": [
@@ -2978,7 +2996,7 @@
 		],
 		"description": "Get the gravity of the world."
 	},
-	"World:setCallbacks()": {
+	"World:setCallbacks()_physics": {
 		"prefix": "setCallbacks_World",
 		"scope": "lua",
 		"body": [
@@ -2987,7 +3005,7 @@
 		],
 		"description": "Sets functions for the collision callbacks during the world update."
 	},
-	"World:setContactFilter()": {
+	"World:setContactFilter()_physics": {
 		"prefix": "setContactFilter_World",
 		"scope": "lua",
 		"body": [
@@ -2996,7 +3014,7 @@
 		],
 		"description": "Sets a function for collision filtering."
 	},
-	"World:setGravity()": {
+	"World:setGravity()_physics": {
 		"prefix": "setGravity_World",
 		"scope": "lua",
 		"body": [
@@ -3005,7 +3023,7 @@
 		],
 		"description": "Set the gravity of the world."
 	},
-	"X:setX()": {
+	"X:setX()_mouse": {
 		"prefix": "setX_X",
 		"scope": "lua",
 		"body": [
@@ -3014,7 +3032,7 @@
 		],
 		"description": "Sets the current X position of the mouse."
 	},
-	"Y:setY()": {
+	"Y:setY()_mouse": {
 		"prefix": "setY_Y",
 		"scope": "lua",
 		"body": [

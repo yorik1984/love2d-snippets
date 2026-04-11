@@ -161,28 +161,76 @@ The full module name (e.g., `love.graphics`) also works as a prefix.
 
 Snippets for LÖVE callback functions — special functions that LÖVE calls automatically when certain events occur (e.g., when the game starts, when a key is pressed, when a directory is dropped).
 
-These snippets generate a complete function definition. The prefix is the **function name without parentheses**.
+These snippets generate **four variants** for each callback:
 
-| Placeholder | Meaning |
-| ----------- | ------- |
-| `${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}` | Inserts the current filename (capitalized) as the default name for the function's owner — useful for classes or modules |
-| `${2:path}` | The parameter passed by LÖVE (e.g., the dropped directory path) |
-| `${0}` | Final cursor position after pressing `Tab` through all placeholders |
+| Variant                           | Prefix               | Output                            | Use case                         |
+| --------------------------------- | -------------------- | --------------------------------- | -------------------------------- |
+| **Global function (no params)**   | function name        | `function love.callback()`        | Simple scripts, beginners        |
+| **Global function (with params)** | `p` + function name  | `function love.callback(params)`  | When you need callback arguments |
+| **Class method (no params)**      | `m` + function name  | `function Class:callback()`       | Object-oriented programming      |
+| **Class method (with params)**    | `mp` + function name | `function Class:callback(params)` | OOP with callback arguments      |
+
+### Example for `load` callback
+
+| Prefix   | Output                                          |
+| -------- | ----------------------------------------------- |
+| `load`   | `function love.load() end`                      |
+| `pload`  | `function love.load(arg, unfilteredArg) end`    |
+| `mload`  | `function MyClass:load() end`                   |
+| `mpload` | `function MyClass:load(arg, unfilteredArg) end` |
+
+### Placeholders
+
+| Placeholder                                       | Meaning                                                                                             |
+| ------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}` | Inserts the current filename (capitalized) as the default name for the function's owner — OOP style |
+| `${2:arg}, ${3:unfilteredArg}`                    | The parameters passed by LÖVE                                                                       |
+| `${0}`                                            | Final cursor position after pressing `Tab` through all placeholders                                 |
 
 <details>
-<summary><b>Example snippet:</b></summary>
+<summary><b>Example snippets:</b></summary>
 
 ```json
 {
-    "love.directorydropped()": {
-        "prefix": "directorydropped",
+    "love.load()": {
+        "prefix": "load",
         "scope": "lua",
         "body": [
-            "function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:directorydropped(${2:path})",
+            "function love.load()",
             "\t${0:}",
             "end"
         ],
-        "description": "Callback function triggered when a directory is dragged and dropped onto the window."
+        "description": "This function is called exactly once at the beginning of the game."
+    },
+    "love.load()_param": {
+        "prefix": "pload",
+        "scope": "lua",
+        "body": [
+            "function love.load(${2:arg}, ${3:unfilteredArg})",
+            "\t${0:}",
+            "end"
+        ],
+        "description": "This function is called exactly once at the beginning of the game."
+    },
+    "love.load()_method": {
+        "prefix": "mload",
+        "scope": "lua",
+        "body": [
+            "function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:load()",
+            "\t${0:}",
+            "end"
+        ],
+        "description": "This function is called exactly once at the beginning of the game."
+    },
+    "love.load()_method_param": {
+        "prefix": "mpload",
+        "scope": "lua",
+        "body": [
+            "function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:load(${2:arg}, ${3:unfilteredArg})",
+            "\t${0:}",
+            "end"
+        ],
+        "description": "This function is called exactly once at the beginning of the game."
     }
 }
 ```
@@ -315,7 +363,7 @@ Snippets for getter and setter methods of LÖVE objects.
         ],
         "description": "Gets the point size."
     },
-    "BezierCurve:getControlPoint()": {
+    "BezierCurve:getControlPoint()_math": {
         "prefix": "lgetControlPoint_BezierCurve",
         "scope": "lua",
         "body": [
@@ -324,7 +372,7 @@ Snippets for getter and setter methods of LÖVE objects.
         ],
         "description": "Get coordinates of the i-th control point."
     },
-    "BackgroundColor:setBackgroundColor()": {
+    "BackgroundColor:setBackgroundColor()_graphics": {
         "prefix": "setBackgroundColor_BackgroundColor",
         "scope": "lua",
         "body": [
