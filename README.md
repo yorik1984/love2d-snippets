@@ -58,55 +58,7 @@ This separation ensures that indentation adapts to individual preferences while 
 
 ## 📦 Installations
 
-Use the plugins listed below to integrate these snippets into your editor (IDE), or connect the snippets directory according to your editor's requirements.
-
-### [VS Code](https://code.visualstudio.com/)
-
-This is actually link to the VS Code extension. You can install it from the VS Code Marketplace.
-
-[![Install from VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-Install-blue)](https://marketplace.visualstudio.com/items?itemName=yorik1984.love2d-snippets)
-
-Or search for `love2d-snippets` in the Extensions view (`Ctrl+Shift+X`).
-
-### [Neovim](https://neovim.io/) and [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-
-#### [lazy.nvim](https://github.com/folke/lazy.nvim)
-
-```lua
-{
-    "yorik1984/love2d-snippets",
-    branch = "main", -- default or `branch = "11.5"` for special API version
-    ft = "lua",
-    dependencies = {
-        "L3MON4D3/LuaSnip",
-    },
-    config = function()
-        require("luasnip.loaders.from_vscode").lazy_load()
-    end
-}
-```
-
-#### Example settings
-
-> File: `after/ftplugin/lua.lua`
-```lua
-vim.opt_local.tabstop    = 4    -- Sets the number of spaces a tab character counts for in the editor's display.
-vim.opt_local.shiftwidth = 4    -- Sets the number of spaces used for each step of (auto)indentation
-vim.opt_local.expandtab  = true -- When enabled (`true`), pressing `Tab` inserts spaces. When disabled (`false`), it inserts a tab character.
-
--- Auto-convert tabs to spaces on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-    buffer = 0,
-    callback = function()
-        local cursor = vim.api.nvim_win_get_cursor(0)
-        -- Convert tabs to spaces (or vice versa) preserving cursor position
-        -- | setlocal expandtab → enable space insertion (disable for tabs) for current buffer
-        -- | retab              → convert existing tabs/spaces
-        vim.cmd("setlocal expandtab | retab")
-        vim.api.nvim_win_set_cursor(0, cursor)
-    end,
-})
-```
+For detailed installation instructions, see the [Wiki](https://github.com/yorik1984/love2d-snippets/wiki).
 
 ## 🔄 Rebuilding the API
 
