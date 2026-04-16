@@ -246,8 +246,8 @@ This section includes all LÖVE API functions **except callbacks and constructor
 **Includes:**
 
 - Module functions (e.g., `love.graphics.circle()`)
-- Type methods (e.g., `love.Data:clone()`)
-- Getters and setters (e.g., `love.physics.Body:getX()`)
+- Type methods (e.g., `Body:getX()`)
+- Getters and setters (e.g., `Body:getX()`)
 
 **Excludes:**
 
@@ -256,7 +256,7 @@ This section includes all LÖVE API functions **except callbacks and constructor
 
 **Prefix rules:**
 
-- The prefix is the function or method name (e.g., `clone`, `getActiveEffects`)
+- The prefix format is `<method_name>_<module_or_type>` (e.g., `circle_graphics`, `getX_Body`)
 - For overloaded functions, a number is appended to the prefix
 
 <details>
@@ -265,33 +265,33 @@ This section includes all LÖVE API functions **except callbacks and constructor
 ```json
 {
     "love.graphics.circle()": {
-        "prefix": "circle",
+        "prefix": "circle_graphics",
         "scope": "lua",
         "body": [
             "love.graphics.circle(${1|\"fill\",\"line\"|}, ${2:x}, ${3:y}, ${4:radius})$0"
         ],
         "description": "Draws a circle."
     },
-    "love.Data:clone()": {
-        "prefix": "clone",
+    "Data:clone()": {
+        "prefix": "clone_Data",
         "scope": "lua",
         "body": [
-            "love.Data:clone()$0"
+            "${1:data}:clone()$0"
         ],
         "description": "Creates a new copy of the Data object."
     },
-    "love.physics.Body:getX()": {
-        "prefix": "getX",
+    "Body:getX()_physics": {
+        "prefix": "getX_Body",
         "scope": "lua",
         "body": [
-            "love.physics.Body:getX()$0"
+            "${1:body}:getX()$0"
         ],
         "description": "Get the x position of the body in world coordinates."
     }
 }
 ```
 
-</details>
+ </details>
 
 ### Constructors
 

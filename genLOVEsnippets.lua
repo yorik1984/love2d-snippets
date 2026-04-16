@@ -1204,16 +1204,19 @@ local function generateFunctions(api)
 
     local processArgument = createArgumentProcessor(getEnumConstantsFunc)
 
-    local function generateParamStringWithEnums(arguments)
-        return generateParamString(arguments, processArgument)
+    local function generateParamStringWithEnums(arguments, startIdx)
+        startIdx = startIdx or 1
+        return generateParamString(arguments, function(arg, idx)
+            return processArgument(arg, idx + startIdx - 1)
+        end)
     end
 
-    local function addSnippet(fullName, func, variant, vIdx, paramsString)
+    local function addSnippet(fullName, func, variant, vIdx, snippetBody, postfix, moduleKey)
         local body = {}
-        table.insert(body, fullName .. "(" .. paramsString .. ")$0")
+        table.insert(body, snippetBody)
 
-        local key = fullName .. "()"
-        local prefix = func.name
+        local key    = fullName .. "()" .. moduleKey
+        local prefix = func.name .. postfix
         if vIdx > 1 then
             key = key .. "_overload" .. vIdx
             prefix = prefix .. vIdx
@@ -1230,15 +1233,20 @@ local function generateFunctions(api)
         if not module then
             return
         end
-        modulePath = modulePath or API.NAME
-
+        modulePath    = modulePath or API.NAME
+        local postfix = ""
+        if modulePath ~= API.NAME then
+            local moduleName = modulePath:match("^" .. API.NAME .. "%.(.+)$")
+            postfix = "_" .. moduleName
+        end
         if module.functions then
             for _, func in ipairs(module.functions) do
                 for vIdx, variant in ipairs(func.variants or {}) do
-                    local arguments = expandParameters(variant.arguments or {})
+                    local arguments       = expandParameters(variant.arguments or {})
                     local paramsString, _ = generateParamStringWithEnums(arguments)
-                    local fullName = modulePath .. "." .. func.name
-                    addSnippet(fullName, func, variant, vIdx, paramsString)
+                    local fullName        = modulePath .. "." .. func.name
+                    local body            = fullName .. "(" .. paramsString .. ")$0"
+                    addSnippet(fullName, func, variant, vIdx, body, postfix, "")
                 end
             end
         end
@@ -1248,10 +1256,13 @@ local function generateFunctions(api)
                 if typ.functions then
                     for _, func in ipairs(typ.functions) do
                         for vIdx, variant in ipairs(func.variants or {}) do
-                            local arguments = expandParameters(variant.arguments or {})
-                            local paramsString, _ = generateParamStringWithEnums(arguments)
-                            local fullName = modulePath .. "." .. typ.name .. ":" .. func.name
-                            addSnippet(fullName, func, variant, vIdx, paramsString)
+                            local arguments       = expandParameters(variant.arguments or {})
+                            local paramsString, _ = generateParamStringWithEnums(arguments, 2)
+                            local fullName        = typ.name .. ":" .. func.name
+                            local body            = "${1:" ..
+                                toVariableName(typ.name) .. "}:" .. func.name .. "(" .. paramsString .. ")$0"
+                            local modulePostfix   = "_" .. typ.name
+                            addSnippet(fullName, func, variant, vIdx, body, modulePostfix, postfix)
                         end
                     end
                 end
