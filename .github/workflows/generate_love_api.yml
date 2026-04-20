@@ -156,7 +156,6 @@ jobs:
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           BRANCH="${{ steps.branch.outputs.branch }}"
           API_VER="${{ steps.api_version.outputs.api_version }}"
@@ -201,7 +200,6 @@ jobs:
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           CURRENT_BRANCH="${{ steps.branch.outputs.branch }}"
           OTHER_BRANCH=$([ "$CURRENT_BRANCH" = "develop" ] && echo "main" || echo "develop")
@@ -240,7 +238,6 @@ jobs:
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           CURRENT_BRANCH="${{ steps.branch.outputs.branch }}"
           API_VER="${{ steps.api_version.outputs.api_version }}"
