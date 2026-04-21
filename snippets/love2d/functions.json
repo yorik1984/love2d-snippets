@@ -69,7 +69,7 @@
 		"body": [
 			"${1:bezierCurve}:render(${2:5})$0"
 		],
-		"description": "Get a list of coordinates to be used with love."
+		"description": "Get a list of coordinates to be used with love.graphics.line."
 	},
 	"BezierCurve:renderSegment()_math": {
 		"prefix": "renderSegment_BezierCurve",
@@ -77,7 +77,7 @@
 		"body": [
 			"${1:bezierCurve}:renderSegment(${2:startpoint}, ${3:endpoint}, ${4:5})$0"
 		],
-		"description": "Get a list of coordinates on a specific part of the curve, to be used with love."
+		"description": "Get a list of coordinates on a specific part of the curve, to be used with love.graphics.line."
 	},
 	"BezierCurve:rotate()_math": {
 		"prefix": "rotate_BezierCurve",
@@ -181,7 +181,7 @@
 		"body": [
 			"${1:body}:getAngularDamping()$0"
 		],
-		"description": "Gets the Angular damping of the Body\n"
+		"description": "Gets the Angular damping of the Body"
 	},
 	"Body:getAngularVelocity()_physics": {
 		"prefix": "getAngularVelocity_Body",
@@ -485,7 +485,7 @@
 		"body": [
 			"${1:body}:setAngularDamping(${2:damping})$0"
 		],
-		"description": "Sets the angular damping of a Body\n"
+		"description": "Sets the angular damping of a Body"
 	},
 	"Body:setAngularVelocity()_physics": {
 		"prefix": "setAngularVelocity_Body",
@@ -541,7 +541,7 @@
 		"body": [
 			"${1:body}:setLinearDamping(${2:ld})$0"
 		],
-		"description": "Sets the linear damping of a Body\n"
+		"description": "Sets the linear damping of a Body"
 	},
 	"Body:setLinearVelocity()_physics": {
 		"prefix": "setLinearVelocity_Body",
@@ -1357,7 +1357,7 @@
 		"body": [
 			"${1:file}:write(${2:data}, ${3:all})$0"
 		],
-		"description": "'''Writing to multiple lines''': In Windows, some text editors (e."
+		"description": "'''Writing to multiple lines''': In Windows, some text editors (e.g. Notepad before Windows 10 1809) only treat CRLF ('\\r\\n') as a new line."
 	},
 	"FileData:getExtension()_filesystem": {
 		"prefix": "getExtension_FileData",
@@ -1709,7 +1709,7 @@
 		"body": [
 			"${1:font}:setFallbacks(${2:fallbackfont1}, ...)$0"
 		],
-		"description": "If this is called it should be before love."
+		"description": "If this is called it should be before love.graphics.print, Font:getWrap, and other Font methods which use glyph positioning information are called."
 	},
 	"Font:setFilter()_graphics": {
 		"prefix": "setFilter_Font",
@@ -2093,7 +2093,7 @@
 		"body": [
 			"${1:joystick}:getDeviceInfo()$0"
 		],
-		"description": "Some Linux distribution may not ship with SDL 2."
+		"description": "Some Linux distribution may not ship with SDL 2.0.6 or later, in which case this function will returns 0 for all the three values."
 	},
 	"Joystick:getGUID()_joystick": {
 		"prefix": "getGUID_Joystick",
@@ -2333,7 +2333,7 @@
 		"body": [
 			"${1:mesh}:getVertexFormat()$0"
 		],
-		"description": "If a Mesh wasn't created with a custom vertex format, it will have the following vertex format:\n"
+		"description": "If a Mesh wasn't created with a custom vertex format, it will have the following vertex format:"
 	},
 	"Mesh:getVertexMap()_graphics": {
 		"prefix": "getVertexMap_Mesh",
@@ -3341,7 +3341,7 @@
 		"body": [
 			"${1:quad}:getTextureDimensions()$0"
 		],
-		"description": "Gets reference texture dimensions initially specified in love."
+		"description": "Gets reference texture dimensions initially specified in love.graphics.newQuad."
 	},
 	"Quad:getViewport()_graphics": {
 		"prefix": "getViewport_Quad",
@@ -3765,7 +3765,7 @@
 		"body": [
 			"${1:shader}:send(${2:name}, ${3:number}, ...)$0"
 		],
-		"description": "Because all numbers in Lua are floating point, in versions prior to 0."
+		"description": "Because all numbers in Lua are floating point, in versions prior to 0.10.2 you must use the function Shader:sendInt to send values to uniform int variables in the shader's code."
 	},
 	"Shader:send()_graphics_overload2": {
 		"prefix": "send_Shader2",
@@ -4517,7 +4517,7 @@
 		"body": [
 			"${1:text}:add({ color1 = ${2:}, string1 = ${3:}, color2 = ${4:}, string2 = ${5:} }, ${3:0}, ${4:0}, ${5:0}, ${6:1}, ${7:sx}, ${8:0}, ${9:0}, ${10:0}, ${11:0})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text, when drawing the Text object."
 	},
 	"Text:addf()_graphics": {
 		"prefix": "addf_Text",
@@ -4533,7 +4533,7 @@
 		"body": [
 			"${1:text}:addf({ color1 = ${2:}, string1 = ${3:}, color2 = ${4:}, string2 = ${5:} }, ${3:wraplimit}, ${4|\"center\",\"left\",\"right\",\"justify\"|}, ${5:x}, ${6:y}, ${7:0}, ${8:1}, ${9:sx}, ${10:0}, ${11:0}, ${12:0}, ${13:0})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text, when drawing the Text object."
 	},
 	"Text:clear()_graphics": {
 		"prefix": "clear_Text",
@@ -4613,7 +4613,7 @@
 		"body": [
 			"${1:text}:set({ color1 = ${2:}, string1 = ${3:}, color2 = ${4:}, string2 = ${5:} })$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text, when drawing the Text object."
 	},
 	"Text:setFont()_graphics": {
 		"prefix": "setFont_Text",
@@ -4637,7 +4637,7 @@
 		"body": [
 			"${1:text}:setf({ color1 = ${2:}, string1 = ${3:}, color2 = ${4:}, string2 = ${5:} }, ${3:wraplimit}, ${4|\"center\",\"left\",\"right\",\"justify\"|})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text, when drawing the Text object."
 	},
 	"Texture:getDPIScale()_graphics": {
 		"prefix": "getDPIScale_Texture",
@@ -4845,7 +4845,7 @@
 		"body": [
 			"${1:thread}:start(...)$0"
 		],
-		"description": "Arguments passed to Thread:start are accessible in the thread's main file via '''."
+		"description": "Arguments passed to Thread:start are accessible in the thread's main file via '''...''' (the vararg expression.)"
 	},
 	"Thread:wait()_thread": {
 		"prefix": "wait_Thread",
@@ -5429,7 +5429,7 @@
 		"body": [
 			"${1:world}:rayCast(${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:callback})$0"
 		],
-		"description": "There is a bug in LÖVE 0."
+		"description": "There is a bug in LÖVE 0.8.0 where the normal vector passed to the callback function gets scaled by love.physics.getMeter."
 	},
 	"World:setCallbacks()_physics": {
 		"prefix": "setCallbacks_World",
@@ -5557,7 +5557,7 @@
 		"body": [
 			"love.audio.getRecordingDevices()$0"
 		],
-		"description": "Audio recording for Android is supported since 11."
+		"description": "Audio recording for Android is supported since 11.3."
 	},
 	"love.audio.getVelocity()": {
 		"prefix": "getVelocity_audio",
@@ -5877,7 +5877,7 @@
 		"body": [
 			"love.data.hash(${1|\"md5\",\"sha1\",\"sha224\",\"sha256\",\"sha384\",\"sha512\"|}, ${2:data})$0"
 		],
-		"description": "To return the hex string representation of the hash, use love."
+		"description": "To return the hex string representation of the hash, use love.data.encode"
 	},
 	"love.data.newByteData()": {
 		"prefix": "newByteData_data",
@@ -5917,7 +5917,7 @@
 		"body": [
 			"love.data.pack(${1|\"data\",\"string\"|}, ${2:format}, ${3:v1}, ...)$0"
 		],
-		"description": "Packing integers with values greater than 2^52 is not supported, as Lua 5."
+		"description": "Packing integers with values greater than 2^52 is not supported, as Lua 5.1 cannot represent those values in its number type."
 	},
 	"love.data.unpack()": {
 		"prefix": "unpack_data",
@@ -5933,7 +5933,7 @@
 		"body": [
 			"love.data.unpack(${1:format}, ${2:data}, ${3:1})$0"
 		],
-		"description": "Unpacking integers with values greater than 2^52 is not supported, as Lua 5."
+		"description": "Unpacking integers with values greater than 2^52 is not supported, as Lua 5.1 cannot represent those values in its number type."
 	},
 	"love.event.clear()": {
 		"prefix": "clear_event",
@@ -5989,7 +5989,7 @@
 		"body": [
 			"love.event.wait()$0"
 		],
-		"description": "Like love."
+		"description": "Like love.event.poll(), but blocks until there is an event in the queue."
 	},
 	"love.filesystem.append()": {
 		"prefix": "append_filesystem",
@@ -6013,7 +6013,7 @@
 		"body": [
 			"love.filesystem.areSymlinksEnabled()$0"
 		],
-		"description": "Gets whether love."
+		"description": "Gets whether love.filesystem follows symbolic links."
 	},
 	"love.filesystem.createDirectory()": {
 		"prefix": "createDirectory_filesystem",
@@ -6037,7 +6037,7 @@
 		"body": [
 			"love.filesystem.getCRequirePath()$0"
 		],
-		"description": "The default paths string is '??', which makes require('cool') try to load cool."
+		"description": "The default paths string is '??', which makes require('cool') try to load cool.dll, or cool.so depending on the platform."
 	},
 	"love.filesystem.getDirectoryItems()": {
 		"prefix": "getDirectoryItems_filesystem",
@@ -6101,7 +6101,7 @@
 		"body": [
 			"love.filesystem.getRequirePath()$0"
 		],
-		"description": "The default paths string is '?."
+		"description": "The default paths string is '?.lua;?/init.lua', which makes require('cool') try to load cool.lua and then try cool/init.lua if cool.lua doesn't exist."
 	},
 	"love.filesystem.getSaveDirectory()": {
 		"prefix": "getSaveDirectory_filesystem",
@@ -6117,7 +6117,7 @@
 		"body": [
 			"love.filesystem.getSource()$0"
 		],
-		"description": "Returns the full path to the the ."
+		"description": "Returns the full path to the the .love file or directory."
 	},
 	"love.filesystem.getSourceBaseDirectory()": {
 		"prefix": "getSourceBaseDirectory_filesystem",
@@ -6125,7 +6125,7 @@
 		"body": [
 			"love.filesystem.getSourceBaseDirectory()$0"
 		],
-		"description": "Returns the full path to the directory containing the ."
+		"description": "Returns the full path to the directory containing the .love file."
 	},
 	"love.filesystem.getUserDirectory()": {
 		"prefix": "getUserDirectory_filesystem",
@@ -6149,7 +6149,7 @@
 		"body": [
 			"love.filesystem.init(${1:appname})$0"
 		],
-		"description": "Initializes love."
+		"description": "Initializes love.filesystem, will be called internally, so should not be used explicitly."
 	},
 	"love.filesystem.isFused()": {
 		"prefix": "isFused_filesystem",
@@ -6205,7 +6205,7 @@
 		"body": [
 			"love.filesystem.newFile(${1:filename})$0"
 		],
-		"description": "Please note that this function will not return any error message (e."
+		"description": "Please note that this function will not return any error message (e.g. if you use an invalid filename) because it just creates the File Object."
 	},
 	"love.filesystem.newFile()_overload2": {
 		"prefix": "newFile_filesystem2",
@@ -6269,7 +6269,7 @@
 		"body": [
 			"love.filesystem.setCRequirePath(${1:paths})$0"
 		],
-		"description": "The default paths string is '??', which makes require('cool') try to load cool."
+		"description": "The default paths string is '??', which makes require('cool') try to load cool.dll, or cool.so depending on the platform."
 	},
 	"love.filesystem.setIdentity()": {
 		"prefix": "setIdentity_filesystem",
@@ -6293,7 +6293,7 @@
 		"body": [
 			"love.filesystem.setRequirePath(${1:paths})$0"
 		],
-		"description": "The default paths string is '?."
+		"description": "The default paths string is '?.lua;?/init.lua', which makes require('cool') try to load cool.lua and then try cool/init.lua if cool.lua doesn't exist."
 	},
 	"love.filesystem.setSource()": {
 		"prefix": "setSource_filesystem",
@@ -6309,7 +6309,7 @@
 		"body": [
 			"love.filesystem.setSymlinksEnabled(${1:enable})$0"
 		],
-		"description": "Sets whether love."
+		"description": "Sets whether love.filesystem follows symbolic links."
 	},
 	"love.filesystem.unmount()": {
 		"prefix": "unmount_filesystem",
@@ -6317,7 +6317,7 @@
 		"body": [
 			"love.filesystem.unmount(${1:archive})$0"
 		],
-		"description": "Unmounts a zip file or folder previously mounted for reading with love."
+		"description": "Unmounts a zip file or folder previously mounted for reading with love.filesystem.mount."
 	},
 	"love.filesystem.write()": {
 		"prefix": "write_filesystem",
@@ -6453,7 +6453,7 @@
 		"body": [
 			"love.getVersion()$0"
 		],
-		"description": "For LÖVE versions below 0."
+		"description": "For LÖVE versions below 0.9.1, the following variables can be used instead (and still work in 0.9.2 and newer):"
 	},
 	"love.graphics.applyTransform()": {
 		"prefix": "applyTransform_graphics",
@@ -6525,7 +6525,7 @@
 		"body": [
 			"love.graphics.clear()$0"
 		],
-		"description": "Clears the screen to the background color in 0."
+		"description": "Clears the screen to the background color in 0.9.2 and earlier, or to transparent black (0, 0, 0, 0) in LÖVE 0.10.0 and newer."
 	},
 	"love.graphics.clear()_overload2": {
 		"prefix": "clear_graphics2",
@@ -6541,7 +6541,7 @@
 		"body": [
 			"love.graphics.clear(${1:color}, ..., ${2|true,false|}, ${3|true,false|})$0"
 		],
-		"description": "Clears multiple active Canvases to different colors, if multiple Canvases are active at once via love."
+		"description": "Clears multiple active Canvases to different colors, if multiple Canvases are active at once via love.graphics.setCanvas."
 	},
 	"love.graphics.clear()_overload4": {
 		"prefix": "clear_graphics4",
@@ -6733,7 +6733,7 @@
 		"body": [
 			"love.graphics.getDPIScale()$0"
 		],
-		"description": "The units of love."
+		"description": "The units of love.graphics.getWidth, love.graphics.getHeight, love.mouse.getPosition, mouse events, love.touch.getPosition, and touch events are always in DPI-scaled units rather than pixels."
 	},
 	"love.graphics.getDefaultFilter()": {
 		"prefix": "getDefaultFilter_graphics",
@@ -6813,7 +6813,7 @@
 		"body": [
 			"love.graphics.getLineWidth()$0"
 		],
-		"description": "This function does not work in 0."
+		"description": "This function does not work in 0.8.0, but has been fixed in version 0.9.0."
 	},
 	"love.graphics.getMeshCullMode()": {
 		"prefix": "getMeshCullMode_graphics",
@@ -6925,7 +6925,7 @@
 		"body": [
 			"love.graphics.getSystemLimits()$0"
 		],
-		"description": "Gets the system-dependent maximum values for love."
+		"description": "Gets the system-dependent maximum values for love.graphics features."
 	},
 	"love.graphics.getTextureTypes()": {
 		"prefix": "getTextureTypes_graphics",
@@ -6973,7 +6973,7 @@
 		"body": [
 			"love.graphics.isGammaCorrect()$0"
 		],
-		"description": "When gamma-correct rendering is enabled, many functions and objects perform automatic color conversion between sRGB and linear RGB in order for blending and shader math to be mathematically correct (which they aren't if it's not enabled."
+		"description": "When gamma-correct rendering is enabled, many functions and objects perform automatic color conversion between sRGB and linear RGB in order for blending and shader math to be mathematically correct (which they aren't if it's not enabled.)"
 	},
 	"love.graphics.isWireframe()": {
 		"prefix": "isWireframe_graphics",
@@ -7141,7 +7141,7 @@
 		"body": [
 			"love.graphics.newImageFont(${1:filename}, ${2:glyphs}, ${3:extraspacing})$0"
 		],
-		"description": "Instead of using this function, consider using a BMFont generator such as bmfont, littera, or bmGlyph with love."
+		"description": "Instead of using this function, consider using a BMFont generator such as bmfont, littera, or bmGlyph with love.graphics.newFont."
 	},
 	"love.graphics.newMesh()": {
 		"prefix": "newMesh_graphics",
@@ -7381,7 +7381,7 @@
 		"body": [
 			"love.graphics.present()$0"
 		],
-		"description": "* If love."
+		"description": "* If love.window.setMode has vsync equal to true, this function can't run more frequently than the refresh rate (e.g. 60 Hz), and will halt the program until ready if necessary."
 	},
 	"love.graphics.print()": {
 		"prefix": "print_graphics",
@@ -7397,7 +7397,7 @@
 		"body": [
 			"love.graphics.print({ color1 = ${1:}, string1 = ${2:}, color2 = ${3:}, string2 = ${4:} }, ${2:0}, ${3:0}, ${4:0}, ${5:1}, ${6:sx}, ${7:0}, ${8:0}, ${9:0}, ${10:0})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text."
 	},
 	"love.graphics.print()_overload3": {
 		"prefix": "print_graphics3",
@@ -7413,7 +7413,7 @@
 		"body": [
 			"love.graphics.print({ color1 = ${1:}, string1 = ${2:}, color2 = ${3:}, string2 = ${4:} }, ${2:transform})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text."
 	},
 	"love.graphics.print()_overload5": {
 		"prefix": "print_graphics5",
@@ -7469,7 +7469,7 @@
 		"body": [
 			"love.graphics.printf({ color1 = ${1:}, string1 = ${2:}, color2 = ${3:}, string2 = ${4:} }, ${2:x}, ${3:y}, ${4:limit}, ${5|\"center\",\"left\",\"right\",\"justify\"|}, ${6:0}, ${7:1}, ${8:sx}, ${9:0}, ${10:0}, ${11:0}, ${12:0})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text."
 	},
 	"love.graphics.printf()_overload6": {
 		"prefix": "printf_graphics6",
@@ -7477,7 +7477,7 @@
 		"body": [
 			"love.graphics.printf({ color1 = ${1:}, string1 = ${2:}, color2 = ${3:}, string2 = ${4:} }, ${2:font}, ${3:x}, ${4:y}, ${5:limit}, ${6|\"center\",\"left\",\"right\",\"justify\"|}, ${7:0}, ${8:1}, ${9:sx}, ${10:0}, ${11:0}, ${12:0}, ${13:0})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text."
 	},
 	"love.graphics.printf()_overload7": {
 		"prefix": "printf_graphics7",
@@ -7485,7 +7485,7 @@
 		"body": [
 			"love.graphics.printf({ color1 = ${1:}, string1 = ${2:}, color2 = ${3:}, string2 = ${4:} }, ${2:transform}, ${3:limit}, ${4|\"center\",\"left\",\"right\",\"justify\"|})$0"
 		],
-		"description": "The color set by love."
+		"description": "The color set by love.graphics.setColor will be combined (multiplied) with the colors of the text."
 	},
 	"love.graphics.printf()_overload8": {
 		"prefix": "printf_graphics8",
@@ -7605,7 +7605,7 @@
 		"body": [
 			"love.graphics.setCanvas()$0"
 		],
-		"description": "Resets the render target to the screen, i."
+		"description": "Resets the render target to the screen, i.e."
 	},
 	"love.graphics.setCanvas()_overload3": {
 		"prefix": "setCanvas_graphics3",
@@ -7853,7 +7853,7 @@
 		"body": [
 			"love.graphics.stencil(${1:stencilfunction}, ${2|\"replace\",\"increment\",\"decrement\",\"incrementwrap\",\"decrementwrap\",\"invert\"|}, ${3:1}, ${4|false,true|})$0"
 		],
-		"description": "It is possible to draw to the screen and to the stencil values of pixels at the same time, by using love."
+		"description": "It is possible to draw to the screen and to the stencil values of pixels at the same time, by using love.graphics.setColorMask inside the stencil function to enable drawing to all color components."
 	},
 	"love.graphics.transformPoint()": {
 		"prefix": "transformPoint_graphics",
@@ -8149,7 +8149,7 @@
 		"body": [
 			"love.math.colorFromBytes(${1:rb}, ${2:gb}, ${3:bb}, ${4:nil})$0"
 		],
-		"description": "Here's implementation for 11."
+		"description": "Here's implementation for 11.2 and earlier."
 	},
 	"love.math.colorToBytes()": {
 		"prefix": "colorToBytes_math",
@@ -8157,7 +8157,7 @@
 		"body": [
 			"love.math.colorToBytes(${1:r}, ${2:g}, ${3:b}, ${4:nil})$0"
 		],
-		"description": "Here's implementation for 11."
+		"description": "Here's implementation for 11.2 and earlier."
 	},
 	"love.math.gammaToLinear()": {
 		"prefix": "gammaToLinear_math",
@@ -8317,7 +8317,7 @@
 		"body": [
 			"love.math.noise(${1:x}, ${2:y}, ${3:z})$0"
 		],
-		"description": "Generates Perlin noise (Simplex noise in version 0."
+		"description": "Generates Perlin noise (Simplex noise in version 0.9.2 and older) from 3 dimensions."
 	},
 	"love.math.noise()_overload4": {
 		"prefix": "noise_math4",
@@ -8325,7 +8325,7 @@
 		"body": [
 			"love.math.noise(${1:x}, ${2:y}, ${3:z}, ${4:w})$0"
 		],
-		"description": "Generates Perlin noise (Simplex noise in version 0."
+		"description": "Generates Perlin noise (Simplex noise in version 0.9.2 and older) from 4 dimensions."
 	},
 	"love.math.random()": {
 		"prefix": "random_math",
@@ -8909,7 +8909,7 @@
 		"body": [
 			"love.system.getOS()$0"
 		],
-		"description": "In LÖVE version 0."
+		"description": "In LÖVE version 0.8.0, the '''love._os''' string contains the current operating system."
 	},
 	"love.system.getPowerInfo()": {
 		"prefix": "getPowerInfo_system",
@@ -8941,7 +8941,7 @@
 		"body": [
 			"love.system.openURL(${1:url})$0"
 		],
-		"description": "Passing file:// scheme in Android 7."
+		"description": "Passing file:// scheme in Android 7.0 (Nougat) and later always result in failure."
 	},
 	"love.system.setClipboardText()": {
 		"prefix": "setClipboardText_system",
@@ -9053,7 +9053,7 @@
 		"body": [
 			"love.touch.getPosition(${1:id})$0"
 		],
-		"description": "The unofficial Android and iOS ports of LÖVE 0."
+		"description": "The unofficial Android and iOS ports of LÖVE 0.9.2 reported touch-press positions as normalized values in the range of 1, whereas this API reports positions in pixels."
 	},
 	"love.touch.getPressure()": {
 		"prefix": "getPressure_touch",
@@ -9069,7 +9069,7 @@
 		"body": [
 			"love.touch.getTouches()$0"
 		],
-		"description": "The id values are the same as those used as arguments to love."
+		"description": "The id values are the same as those used as arguments to love.touchpressed, love.touchmoved, and love.touchreleased."
 	},
 	"love.video.newVideoStream()": {
 		"prefix": "newVideoStream_video",
@@ -9109,7 +9109,7 @@
 		"body": [
 			"love.window.fromPixels(${1:px}, ${2:py})$0"
 		],
-		"description": "The units of love."
+		"description": "The units of love.graphics.getWidth, love.graphics.getHeight, love.mouse.getPosition, mouse events, love.touch.getPosition, and touch events are always in terms of pixels."
 	},
 	"love.window.getDPIScale()": {
 		"prefix": "getDPIScale_window",
@@ -9117,7 +9117,7 @@
 		"body": [
 			"love.window.getDPIScale()$0"
 		],
-		"description": "The units of love."
+		"description": "The units of love.graphics.getWidth, love.graphics.getHeight, love.mouse.getPosition, mouse events, love.touch.getPosition, and touch events are always in terms of pixels."
 	},
 	"love.window.getDesktopDimensions()": {
 		"prefix": "getDesktopDimensions_window",
@@ -9213,7 +9213,7 @@
 		"body": [
 			"love.window.getVSync()$0"
 		],
-		"description": "This can be less expensive alternative to love."
+		"description": "This can be less expensive alternative to love.window.getMode if you want to get current vsync status."
 	},
 	"love.window.hasFocus()": {
 		"prefix": "hasFocus_window",
@@ -9397,7 +9397,7 @@
 		"body": [
 			"love.window.toPixels(${1:x}, ${2:y})$0"
 		],
-		"description": "The units of love."
+		"description": "The units of love.graphics.getWidth, love.graphics.getHeight, love.mouse.getPosition, mouse events, love.touch.getPosition, and touch events are always in terms of pixels."
 	},
 	"love.window.updateMode()": {
 		"prefix": "updateMode_window",

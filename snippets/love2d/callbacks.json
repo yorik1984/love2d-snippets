@@ -967,7 +967,7 @@
 			"\t${0:}",
 			"end"
 		],
-		"description": "Called when the window is resized, for example if the user resizes the window, or if love."
+		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
 	},
 	"love.resize()_method": {
 		"prefix": "mresize",
@@ -977,7 +977,7 @@
 			"\t${0:}",
 			"end"
 		],
-		"description": "Called when the window is resized, for example if the user resizes the window, or if love."
+		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
 	},
 	"love.resize()_method_param": {
 		"prefix": "mpresize",
@@ -987,7 +987,7 @@
 			"\t${0:}",
 			"end"
 		],
-		"description": "Called when the window is resized, for example if the user resizes the window, or if love."
+		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
 	},
 	"love.resize()_param": {
 		"prefix": "presize",
@@ -997,7 +997,7 @@
 			"\t${0:}",
 			"end"
 		],
-		"description": "Called when the window is resized, for example if the user resizes the window, or if love."
+		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
 	},
 	"love.run()": {
 		"prefix": "run",
