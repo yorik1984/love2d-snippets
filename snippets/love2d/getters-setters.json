@@ -69,7 +69,7 @@
 			"local ${2:damping} = ${1:body}:getAngularDamping()",
 			"${0:}"
 		],
-		"description": "Gets the Angular damping of the Body\n"
+		"description": "Gets the Angular damping of the Body"
 	},
 	"Body:getAngularVelocity()_physics": {
 		"prefix": "lgetAngularVelocity_Body",
@@ -204,7 +204,7 @@
 			"${1:body}:setAngularDamping(${2:damping})",
 			"${0:}"
 		],
-		"description": "Sets the angular damping of a Body\n"
+		"description": "Sets the angular damping of a Body"
 	},
 	"Body:setAngularVelocity()_physics": {
 		"prefix": "setAngularVelocity_Body",
@@ -240,7 +240,7 @@
 			"${1:body}:setLinearDamping(${2:ld})",
 			"${0:}"
 		],
-		"description": "Sets the linear damping of a Body\n"
+		"description": "Sets the linear damping of a Body"
 	},
 	"Body:setLinearVelocity()_physics": {
 		"prefix": "setLinearVelocity_Body",
@@ -330,7 +330,7 @@
 			"${1:cRequirePath}:setCRequirePath(${2:paths})",
 			"${0:}"
 		],
-		"description": "The default paths string is '??', which makes require('cool') try to load cool."
+		"description": "The default paths string is '??', which makes require('cool') try to load cool.dll, or cool.so depending on the platform."
 	},
 	"Canvas:setCanvas()_graphics": {
 		"prefix": "setCanvas_Canvas",
@@ -348,7 +348,7 @@
 			"${1:canvas}:setCanvas()",
 			"${0:}"
 		],
-		"description": "Resets the render target to the screen, i."
+		"description": "Resets the render target to the screen, i.e."
 	},
 	"Canvas:setCanvas()_graphics_overload3": {
 		"prefix": "setCanvas_Canvas3",
@@ -2166,7 +2166,7 @@
 			"${1:requirePath}:setRequirePath(${2:paths})",
 			"${0:}"
 		],
-		"description": "The default paths string is '?."
+		"description": "The default paths string is '?.lua;?/init.lua', which makes require('cool') try to load cool.lua and then try cool/init.lua if cool.lua doesn't exist."
 	},
 	"RevoluteJoint:getLimits()_physics": {
 		"prefix": "lgetLimits_RevoluteJoint",
@@ -3111,7 +3111,7 @@
 			"local ${1:paths} = love.filesystem.getCRequirePath()",
 			"${0:}"
 		],
-		"description": "The default paths string is '??', which makes require('cool') try to load cool."
+		"description": "The default paths string is '??', which makes require('cool') try to load cool.dll, or cool.so depending on the platform."
 	},
 	"love.filesystem.getIdentity()": {
 		"prefix": "lgetIdentity_filesystem",
@@ -3129,7 +3129,7 @@
 			"local ${1:paths} = love.filesystem.getRequirePath()",
 			"${0:}"
 		],
-		"description": "The default paths string is '?."
+		"description": "The default paths string is '?.lua;?/init.lua', which makes require('cool') try to load cool.lua and then try cool/init.lua if cool.lua doesn't exist."
 	},
 	"love.graphics.getBackgroundColor()": {
 		"prefix": "lgetBackgroundColor_graphics",
@@ -3237,7 +3237,7 @@
 			"local ${1:width} = love.graphics.getLineWidth()",
 			"${0:}"
 		],
-		"description": "This function does not work in 0."
+		"description": "This function does not work in 0.8.0, but has been fixed in version 0.9.0."
 	},
 	"love.graphics.getMeshCullMode()": {
 		"prefix": "lgetMeshCullMode_graphics",
@@ -3417,6 +3417,6 @@
 			"local ${1:vsync} = love.window.getVSync()",
 			"${0:}"
 		],
-		"description": "This can be less expensive alternative to love."
+		"description": "This can be less expensive alternative to love.window.getMode if you want to get current vsync status."
 	}
 }
