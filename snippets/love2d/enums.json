@@ -133,7 +133,7 @@
 		"body": [
 			"${1|\"chorus\",\"compressor\",\"distortion\",\"echo\",\"equalizer\",\"flanger\",\"reverb\",\"ringmodulator\"|}"
 		],
-		"description": "The different types of effects supported by love."
+		"description": "The different types of effects supported by love.audio.setEffect."
 	},
 	"alias love.EffectWaveform": {
 		"prefix": "EffectWaveform",
@@ -157,7 +157,7 @@
 		"body": [
 			"${1|\"focus\",\"joystickpressed\",\"joystickreleased\",\"keypressed\",\"keyreleased\",\"mousepressed\",\"mousereleased\",\"quit\",\"resize\",\"visible\",\"mousefocus\",\"threaderror\",\"joystickadded\",\"joystickremoved\",\"joystickaxis\",\"joystickhat\",\"gamepadpressed\",\"gamepadreleased\",\"gamepadaxis\",\"textinput\",\"mousemoved\",\"lowmemory\",\"textedited\",\"wheelmoved\",\"touchpressed\",\"touchreleased\",\"touchmoved\",\"directorydropped\",\"filedropped\",\"jp\",\"jr\",\"kp\",\"kr\",\"mp\",\"mr\",\"q\",\"f\"|}"
 		],
-		"description": "Arguments to love."
+		"description": "Arguments to love.event.push() and the like."
 	},
 	"alias love.FileDecoder": {
 		"prefix": "FileDecoder",
@@ -229,7 +229,7 @@
 		"body": [
 			"${1|\"clampzero\",\"lighten\",\"multicanvasformats\",\"glsl3\",\"instancing\",\"fullnpot\",\"pixelshaderhighp\",\"shaderderivatives\"|}"
 		],
-		"description": "Graphics features that can be checked for with love."
+		"description": "Graphics features that can be checked for with love.graphics.getSupported."
 	},
 	"alias love.GraphicsLimit": {
 		"prefix": "GraphicsLimit",
@@ -237,7 +237,7 @@
 		"body": [
 			"${1|\"pointsize\",\"texturesize\",\"multicanvas\",\"canvasmsaa\",\"texturelayers\",\"volumetexturesize\",\"cubetexturesize\",\"anisotropy\"|}"
 		],
-		"description": "Types of system-dependent graphics limits checked for using love."
+		"description": "Types of system-dependent graphics limits checked for using love.graphics.getSystemLimits."
 	},
 	"alias love.HashFunction": {
 		"prefix": "HashFunction",
@@ -245,7 +245,7 @@
 		"body": [
 			"${1|\"md5\",\"sha1\",\"sha224\",\"sha256\",\"sha384\",\"sha512\"|}"
 		],
-		"description": "Hash algorithm of love."
+		"description": "Hash algorithm of love.data.hash."
 	},
 	"alias love.HintingMode": {
 		"prefix": "HintingMode",
@@ -413,7 +413,7 @@
 		"body": [
 			"${1|\"transform\",\"all\"|}"
 		],
-		"description": "Graphics state stack types used with love."
+		"description": "Graphics state stack types used with love.graphics.push."
 	},
 	"alias love.StencilAction": {
 		"prefix": "StencilAction",
@@ -429,7 +429,7 @@
 		"body": [
 			"${1|\"2d\",\"array\",\"cube\",\"volume\"|}"
 		],
-		"description": "Types of textures (2D, cubemap, etc."
+		"description": "Types of textures (2D, cubemap, etc.)"
 	},
 	"alias love.TimeUnit": {
 		"prefix": "TimeUnit",

@@ -130,10 +130,28 @@ local function firstSentence(s)
     if isEmpty(s) then
         return ""
     end
-    local pos = s:find("[\n.]")
-    if pos then
-        return s:sub(1, pos)
+
+    local function isE_G(pos)
+        local before = s:sub(math.max(1, pos - 3), pos - 1)
+        return before:match("e%.$") or before:match("e %.$") or before:match("e%.g$")
     end
+
+    local pos = 1
+    while pos <= #s do
+        local dot = s:find("%. ", pos)
+        local newline = s:find("[\n]", pos)
+
+        if not dot and not newline then break end
+
+        local p = dot and newline and math.min(dot, newline) or dot or newline
+
+        if s:sub(p, p) == "." and isE_G(p) then
+            pos = p + 1
+        else
+            return s:sub(1, p - (s:sub(p, p) == "\n" and 1 or 0))
+        end
+    end
+
     return s
 end
 
