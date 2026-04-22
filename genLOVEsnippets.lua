@@ -1688,10 +1688,11 @@ local function writePackage(outPath, apiData)
 
     print(formatStatistics(apiData))
 
+    -- package.json use two spaces
     pkg:write("{\n")
-    pkg:write(string.format('\t"name": "%s-snippets",\n', API.ENGINE))
-    pkg:write('\t"contributes": {\n')
-    pkg:write('\t\t"snippets": [\n')
+    pkg:write(string.format('  "name": "%s-snippets",\n', API.ENGINE))
+    pkg:write('  "contributes": {\n')
+    pkg:write('    "snippets": [\n')
 
     local files = {}
     for _, field in pairs(apiData) do
@@ -1708,7 +1709,12 @@ local function writePackage(outPath, apiData)
         local comma = (i < #files) and "," or ""
         pkg:write(
             string.format(
-                '\t\t\t{ "language": "%s", "path": "%s/%s" }%s\n',
+[[
+      {
+        "language": "%s",
+        "path": "%s/%s"
+      }%s
+]],
                 API.TARGET_FILE_EXT,
                 fullPath,
                 filename,
@@ -1720,8 +1726,8 @@ local function writePackage(outPath, apiData)
         end
     end
 
-    pkg:write("\t\t ]\n")
-    pkg:write("\t}\n")
+    pkg:write("    ]\n")
+    pkg:write("  }\n")
     pkg:write("}\n")
     pkg:close()
 
