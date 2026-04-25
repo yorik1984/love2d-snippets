@@ -4,7 +4,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.directorydropped()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a directory is dragged and dropped onto the window."
@@ -14,7 +14,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:directorydropped()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a directory is dragged and dropped onto the window."
@@ -24,7 +24,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:directorydropped(${2:path})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a directory is dragged and dropped onto the window."
@@ -34,7 +34,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.directorydropped(${2:path})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a directory is dragged and dropped onto the window."
@@ -44,7 +44,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.displayrotated()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the device display orientation changed, for example, user rotated their phone 180 degrees."
@@ -54,7 +54,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:displayrotated()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the device display orientation changed, for example, user rotated their phone 180 degrees."
@@ -64,7 +64,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:displayrotated(${2:index}, ${3|\"unknown\",\"landscape\",\"landscapeflipped\",\"portrait\",\"portraitflipped\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the device display orientation changed, for example, user rotated their phone 180 degrees."
@@ -74,7 +74,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.displayrotated(${2:index}, ${3|\"unknown\",\"landscape\",\"landscapeflipped\",\"portrait\",\"portraitflipped\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the device display orientation changed, for example, user rotated their phone 180 degrees."
@@ -84,7 +84,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.draw()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to draw on the screen every frame."
@@ -94,7 +94,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:draw()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to draw on the screen every frame."
@@ -104,7 +104,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:draw()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to draw on the screen every frame."
@@ -114,7 +114,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.draw()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to draw on the screen every frame."
@@ -124,7 +124,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.errorhandler()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The error handler, used to display error messages."
@@ -134,7 +134,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:errorhandler()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The error handler, used to display error messages."
@@ -144,7 +144,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:errorhandler(${2:msg})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The error handler, used to display error messages."
@@ -154,7 +154,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.errorhandler(${2:msg})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The error handler, used to display error messages."
@@ -164,7 +164,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.filedropped()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a file is dragged and dropped onto the window."
@@ -174,7 +174,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:filedropped()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a file is dragged and dropped onto the window."
@@ -184,7 +184,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:filedropped(${2:file})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a file is dragged and dropped onto the window."
@@ -194,7 +194,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.filedropped(${2:file})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a file is dragged and dropped onto the window."
@@ -204,7 +204,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.focus()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses focus."
@@ -214,7 +214,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:focus()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses focus."
@@ -224,7 +224,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:focus(${2:focus})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses focus."
@@ -234,7 +234,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.focus(${2:focus})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses focus."
@@ -244,7 +244,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.gamepadaxis()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad axis is moved."
@@ -254,7 +254,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:gamepadaxis()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad axis is moved."
@@ -264,7 +264,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:gamepadaxis(${2:joystick}, ${3|\"leftx\",\"lefty\",\"rightx\",\"righty\",\"triggerleft\",\"triggerright\"|}, ${4:value})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad axis is moved."
@@ -274,7 +274,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.gamepadaxis(${2:joystick}, ${3|\"leftx\",\"lefty\",\"rightx\",\"righty\",\"triggerleft\",\"triggerright\"|}, ${4:value})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad axis is moved."
@@ -284,7 +284,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.gamepadpressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is pressed."
@@ -294,7 +294,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:gamepadpressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is pressed."
@@ -304,7 +304,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:gamepadpressed(${2:joystick}, ${3|\"a\",\"b\",\"x\",\"y\",\"back\",\"guide\",\"start\",\"leftstick\",\"rightstick\",\"leftshoulder\",\"rightshoulder\",\"dpup\",\"dpdown\",\"dpleft\",\"dpright\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is pressed."
@@ -314,7 +314,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.gamepadpressed(${2:joystick}, ${3|\"a\",\"b\",\"x\",\"y\",\"back\",\"guide\",\"start\",\"leftstick\",\"rightstick\",\"leftshoulder\",\"rightshoulder\",\"dpup\",\"dpdown\",\"dpleft\",\"dpright\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is pressed."
@@ -324,7 +324,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.gamepadreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is released."
@@ -334,7 +334,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:gamepadreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is released."
@@ -344,7 +344,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:gamepadreleased(${2:joystick}, ${3|\"a\",\"b\",\"x\",\"y\",\"back\",\"guide\",\"start\",\"leftstick\",\"rightstick\",\"leftshoulder\",\"rightshoulder\",\"dpup\",\"dpdown\",\"dpleft\",\"dpright\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is released."
@@ -354,7 +354,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.gamepadreleased(${2:joystick}, ${3|\"a\",\"b\",\"x\",\"y\",\"back\",\"guide\",\"start\",\"leftstick\",\"rightstick\",\"leftshoulder\",\"rightshoulder\",\"dpup\",\"dpdown\",\"dpleft\",\"dpright\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick's virtual gamepad button is released."
@@ -364,7 +364,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickadded()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is connected."
@@ -374,7 +374,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickadded()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is connected."
@@ -384,7 +384,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickadded(${2:joystick})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is connected."
@@ -394,7 +394,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickadded(${2:joystick})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is connected."
@@ -404,7 +404,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickaxis()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick axis moves."
@@ -414,7 +414,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickaxis()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick axis moves."
@@ -424,7 +424,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickaxis(${2:joystick}, ${3:axis}, ${4:value})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick axis moves."
@@ -434,7 +434,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickaxis(${2:joystick}, ${3:axis}, ${4:value})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick axis moves."
@@ -444,7 +444,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickhat()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick hat direction changes."
@@ -454,7 +454,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickhat()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick hat direction changes."
@@ -464,7 +464,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickhat(${2:joystick}, ${3:hat}, ${4|\"c\",\"d\",\"l\",\"ld\",\"lu\",\"r\",\"rd\",\"ru\",\"u\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick hat direction changes."
@@ -474,7 +474,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickhat(${2:joystick}, ${3:hat}, ${4|\"c\",\"d\",\"l\",\"ld\",\"lu\",\"r\",\"rd\",\"ru\",\"u\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick hat direction changes."
@@ -484,7 +484,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickpressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is pressed."
@@ -494,7 +494,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickpressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is pressed."
@@ -504,7 +504,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickpressed(${2:joystick}, ${3:button})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is pressed."
@@ -514,7 +514,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickpressed(${2:joystick}, ${3:button})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is pressed."
@@ -524,7 +524,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is released."
@@ -534,7 +534,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is released."
@@ -544,7 +544,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickreleased(${2:joystick}, ${3:button})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is released."
@@ -554,7 +554,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickreleased(${2:joystick}, ${3:button})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a joystick button is released."
@@ -564,7 +564,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickremoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is disconnected."
@@ -574,7 +574,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickremoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is disconnected."
@@ -584,7 +584,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:joystickremoved(${2:joystick})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is disconnected."
@@ -594,7 +594,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.joystickremoved(${2:joystick})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when a Joystick is disconnected."
@@ -604,7 +604,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.keypressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a key is pressed."
@@ -614,7 +614,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:keypressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a key is pressed."
@@ -624,7 +624,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:keypressed(${2|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"space\",\"!\",\"\\\"\",\"#\",\"$\",\"&\",\"'\",\"(\",\")\",\"*\",\"+\",\"\\,\",\"-\",\".\",\"/\",\":\",\";\",\"<\",\"=\",\">\",\"?\",\"@\",\"[\",\"\\\\\",\"]\",\"^\",\"_\",\"`\",\"kp0\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp.\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kpenter\",\"kp=\",\"up\",\"down\",\"right\",\"left\",\"home\",\"end\",\"pageup\",\"pagedown\",\"insert\",\"backspace\",\"tab\",\"clear\",\"return\",\"delete\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"numlock\",\"capslock\",\"scrollock\",\"rshift\",\"lshift\",\"rctrl\",\"lctrl\",\"ralt\",\"lalt\",\"rmeta\",\"lmeta\",\"lsuper\",\"rsuper\",\"mode\",\"compose\",\"pause\",\"escape\",\"help\",\"print\",\"sysreq\",\"break\",\"menu\",\"power\",\"euro\",\"undo\",\"www\",\"mail\",\"calculator\",\"appsearch\",\"apphome\",\"appback\",\"appforward\",\"apprefresh\",\"appbookmarks\"|}, ${3|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"0\",\"return\",\"escape\",\"backspace\",\"tab\",\"space\",\"-\",\"=\",\"[\",\"]\",\"\\\\\",\"nonus#\",\";\",\"'\",\"`\",\"\\,\",\".\",\"/\",\"capslock\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"f16\",\"f17\",\"f18\",\"f19\",\"f20\",\"f21\",\"f22\",\"f23\",\"f24\",\"lctrl\",\"lshift\",\"lalt\",\"lgui\",\"rctrl\",\"rshift\",\"ralt\",\"rgui\",\"printscreen\",\"scrolllock\",\"pause\",\"insert\",\"home\",\"numlock\",\"pageup\",\"delete\",\"end\",\"pagedown\",\"right\",\"left\",\"down\",\"up\",\"nonusbackslash\",\"application\",\"execute\",\"help\",\"menu\",\"select\",\"stop\",\"again\",\"undo\",\"cut\",\"copy\",\"paste\",\"find\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kp=\",\"kpenter\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp0\",\"kp.\",\"international1\",\"international2\",\"international3\",\"international4\",\"international5\",\"international6\",\"international7\",\"international8\",\"international9\",\"lang1\",\"lang2\",\"lang3\",\"lang4\",\"lang5\",\"mute\",\"volumeup\",\"volumedown\",\"audionext\",\"audioprev\",\"audiostop\",\"audioplay\",\"audiomute\",\"mediaselect\",\"www\",\"mail\",\"calculator\",\"computer\",\"acsearch\",\"achome\",\"acback\",\"acforward\",\"acstop\",\"acrefresh\",\"acbookmarks\",\"power\",\"brightnessdown\",\"brightnessup\",\"displayswitch\",\"kbdillumtoggle\",\"kbdillumdown\",\"kbdillumup\",\"eject\",\"sleep\",\"alterase\",\"sysreq\",\"cancel\",\"clear\",\"prior\",\"return2\",\"separator\",\"out\",\"oper\",\"clearagain\",\"crsel\",\"exsel\",\"kp00\",\"kp000\",\"thsousandsseparator\",\"decimalseparator\",\"currencyunit\",\"currencysubunit\",\"app1\",\"app2\",\"unknown\"|}, ${4:isrepeat})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a key is pressed."
@@ -634,7 +634,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.keypressed(${2|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"space\",\"!\",\"\\\"\",\"#\",\"$\",\"&\",\"'\",\"(\",\")\",\"*\",\"+\",\"\\,\",\"-\",\".\",\"/\",\":\",\";\",\"<\",\"=\",\">\",\"?\",\"@\",\"[\",\"\\\\\",\"]\",\"^\",\"_\",\"`\",\"kp0\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp.\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kpenter\",\"kp=\",\"up\",\"down\",\"right\",\"left\",\"home\",\"end\",\"pageup\",\"pagedown\",\"insert\",\"backspace\",\"tab\",\"clear\",\"return\",\"delete\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"numlock\",\"capslock\",\"scrollock\",\"rshift\",\"lshift\",\"rctrl\",\"lctrl\",\"ralt\",\"lalt\",\"rmeta\",\"lmeta\",\"lsuper\",\"rsuper\",\"mode\",\"compose\",\"pause\",\"escape\",\"help\",\"print\",\"sysreq\",\"break\",\"menu\",\"power\",\"euro\",\"undo\",\"www\",\"mail\",\"calculator\",\"appsearch\",\"apphome\",\"appback\",\"appforward\",\"apprefresh\",\"appbookmarks\"|}, ${3|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"0\",\"return\",\"escape\",\"backspace\",\"tab\",\"space\",\"-\",\"=\",\"[\",\"]\",\"\\\\\",\"nonus#\",\";\",\"'\",\"`\",\"\\,\",\".\",\"/\",\"capslock\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"f16\",\"f17\",\"f18\",\"f19\",\"f20\",\"f21\",\"f22\",\"f23\",\"f24\",\"lctrl\",\"lshift\",\"lalt\",\"lgui\",\"rctrl\",\"rshift\",\"ralt\",\"rgui\",\"printscreen\",\"scrolllock\",\"pause\",\"insert\",\"home\",\"numlock\",\"pageup\",\"delete\",\"end\",\"pagedown\",\"right\",\"left\",\"down\",\"up\",\"nonusbackslash\",\"application\",\"execute\",\"help\",\"menu\",\"select\",\"stop\",\"again\",\"undo\",\"cut\",\"copy\",\"paste\",\"find\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kp=\",\"kpenter\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp0\",\"kp.\",\"international1\",\"international2\",\"international3\",\"international4\",\"international5\",\"international6\",\"international7\",\"international8\",\"international9\",\"lang1\",\"lang2\",\"lang3\",\"lang4\",\"lang5\",\"mute\",\"volumeup\",\"volumedown\",\"audionext\",\"audioprev\",\"audiostop\",\"audioplay\",\"audiomute\",\"mediaselect\",\"www\",\"mail\",\"calculator\",\"computer\",\"acsearch\",\"achome\",\"acback\",\"acforward\",\"acstop\",\"acrefresh\",\"acbookmarks\",\"power\",\"brightnessdown\",\"brightnessup\",\"displayswitch\",\"kbdillumtoggle\",\"kbdillumdown\",\"kbdillumup\",\"eject\",\"sleep\",\"alterase\",\"sysreq\",\"cancel\",\"clear\",\"prior\",\"return2\",\"separator\",\"out\",\"oper\",\"clearagain\",\"crsel\",\"exsel\",\"kp00\",\"kp000\",\"thsousandsseparator\",\"decimalseparator\",\"currencyunit\",\"currencysubunit\",\"app1\",\"app2\",\"unknown\"|}, ${4:isrepeat})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a key is pressed."
@@ -644,7 +644,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.keyreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a keyboard key is released."
@@ -654,7 +654,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:keyreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a keyboard key is released."
@@ -664,7 +664,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:keyreleased(${2|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"space\",\"!\",\"\\\"\",\"#\",\"$\",\"&\",\"'\",\"(\",\")\",\"*\",\"+\",\"\\,\",\"-\",\".\",\"/\",\":\",\";\",\"<\",\"=\",\">\",\"?\",\"@\",\"[\",\"\\\\\",\"]\",\"^\",\"_\",\"`\",\"kp0\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp.\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kpenter\",\"kp=\",\"up\",\"down\",\"right\",\"left\",\"home\",\"end\",\"pageup\",\"pagedown\",\"insert\",\"backspace\",\"tab\",\"clear\",\"return\",\"delete\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"numlock\",\"capslock\",\"scrollock\",\"rshift\",\"lshift\",\"rctrl\",\"lctrl\",\"ralt\",\"lalt\",\"rmeta\",\"lmeta\",\"lsuper\",\"rsuper\",\"mode\",\"compose\",\"pause\",\"escape\",\"help\",\"print\",\"sysreq\",\"break\",\"menu\",\"power\",\"euro\",\"undo\",\"www\",\"mail\",\"calculator\",\"appsearch\",\"apphome\",\"appback\",\"appforward\",\"apprefresh\",\"appbookmarks\"|}, ${3|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"0\",\"return\",\"escape\",\"backspace\",\"tab\",\"space\",\"-\",\"=\",\"[\",\"]\",\"\\\\\",\"nonus#\",\";\",\"'\",\"`\",\"\\,\",\".\",\"/\",\"capslock\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"f16\",\"f17\",\"f18\",\"f19\",\"f20\",\"f21\",\"f22\",\"f23\",\"f24\",\"lctrl\",\"lshift\",\"lalt\",\"lgui\",\"rctrl\",\"rshift\",\"ralt\",\"rgui\",\"printscreen\",\"scrolllock\",\"pause\",\"insert\",\"home\",\"numlock\",\"pageup\",\"delete\",\"end\",\"pagedown\",\"right\",\"left\",\"down\",\"up\",\"nonusbackslash\",\"application\",\"execute\",\"help\",\"menu\",\"select\",\"stop\",\"again\",\"undo\",\"cut\",\"copy\",\"paste\",\"find\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kp=\",\"kpenter\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp0\",\"kp.\",\"international1\",\"international2\",\"international3\",\"international4\",\"international5\",\"international6\",\"international7\",\"international8\",\"international9\",\"lang1\",\"lang2\",\"lang3\",\"lang4\",\"lang5\",\"mute\",\"volumeup\",\"volumedown\",\"audionext\",\"audioprev\",\"audiostop\",\"audioplay\",\"audiomute\",\"mediaselect\",\"www\",\"mail\",\"calculator\",\"computer\",\"acsearch\",\"achome\",\"acback\",\"acforward\",\"acstop\",\"acrefresh\",\"acbookmarks\",\"power\",\"brightnessdown\",\"brightnessup\",\"displayswitch\",\"kbdillumtoggle\",\"kbdillumdown\",\"kbdillumup\",\"eject\",\"sleep\",\"alterase\",\"sysreq\",\"cancel\",\"clear\",\"prior\",\"return2\",\"separator\",\"out\",\"oper\",\"clearagain\",\"crsel\",\"exsel\",\"kp00\",\"kp000\",\"thsousandsseparator\",\"decimalseparator\",\"currencyunit\",\"currencysubunit\",\"app1\",\"app2\",\"unknown\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a keyboard key is released."
@@ -674,7 +674,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.keyreleased(${2|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"space\",\"!\",\"\\\"\",\"#\",\"$\",\"&\",\"'\",\"(\",\")\",\"*\",\"+\",\"\\,\",\"-\",\".\",\"/\",\":\",\";\",\"<\",\"=\",\">\",\"?\",\"@\",\"[\",\"\\\\\",\"]\",\"^\",\"_\",\"`\",\"kp0\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp.\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kpenter\",\"kp=\",\"up\",\"down\",\"right\",\"left\",\"home\",\"end\",\"pageup\",\"pagedown\",\"insert\",\"backspace\",\"tab\",\"clear\",\"return\",\"delete\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"numlock\",\"capslock\",\"scrollock\",\"rshift\",\"lshift\",\"rctrl\",\"lctrl\",\"ralt\",\"lalt\",\"rmeta\",\"lmeta\",\"lsuper\",\"rsuper\",\"mode\",\"compose\",\"pause\",\"escape\",\"help\",\"print\",\"sysreq\",\"break\",\"menu\",\"power\",\"euro\",\"undo\",\"www\",\"mail\",\"calculator\",\"appsearch\",\"apphome\",\"appback\",\"appforward\",\"apprefresh\",\"appbookmarks\"|}, ${3|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"0\",\"return\",\"escape\",\"backspace\",\"tab\",\"space\",\"-\",\"=\",\"[\",\"]\",\"\\\\\",\"nonus#\",\";\",\"'\",\"`\",\"\\,\",\".\",\"/\",\"capslock\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"f16\",\"f17\",\"f18\",\"f19\",\"f20\",\"f21\",\"f22\",\"f23\",\"f24\",\"lctrl\",\"lshift\",\"lalt\",\"lgui\",\"rctrl\",\"rshift\",\"ralt\",\"rgui\",\"printscreen\",\"scrolllock\",\"pause\",\"insert\",\"home\",\"numlock\",\"pageup\",\"delete\",\"end\",\"pagedown\",\"right\",\"left\",\"down\",\"up\",\"nonusbackslash\",\"application\",\"execute\",\"help\",\"menu\",\"select\",\"stop\",\"again\",\"undo\",\"cut\",\"copy\",\"paste\",\"find\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kp=\",\"kpenter\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp0\",\"kp.\",\"international1\",\"international2\",\"international3\",\"international4\",\"international5\",\"international6\",\"international7\",\"international8\",\"international9\",\"lang1\",\"lang2\",\"lang3\",\"lang4\",\"lang5\",\"mute\",\"volumeup\",\"volumedown\",\"audionext\",\"audioprev\",\"audiostop\",\"audioplay\",\"audiomute\",\"mediaselect\",\"www\",\"mail\",\"calculator\",\"computer\",\"acsearch\",\"achome\",\"acback\",\"acforward\",\"acstop\",\"acrefresh\",\"acbookmarks\",\"power\",\"brightnessdown\",\"brightnessup\",\"displayswitch\",\"kbdillumtoggle\",\"kbdillumdown\",\"kbdillumup\",\"eject\",\"sleep\",\"alterase\",\"sysreq\",\"cancel\",\"clear\",\"prior\",\"return2\",\"separator\",\"out\",\"oper\",\"clearagain\",\"crsel\",\"exsel\",\"kp00\",\"kp000\",\"thsousandsseparator\",\"decimalseparator\",\"currencyunit\",\"currencysubunit\",\"app1\",\"app2\",\"unknown\"|})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a keyboard key is released."
@@ -684,7 +684,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.load()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "This function is called exactly once at the beginning of the game."
@@ -694,7 +694,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:load()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "This function is called exactly once at the beginning of the game."
@@ -704,7 +704,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:load(${2:arg}, ${3:unfilteredArg})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "This function is called exactly once at the beginning of the game."
@@ -714,7 +714,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.load(${2:arg}, ${3:unfilteredArg})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "This function is called exactly once at the beginning of the game."
@@ -724,7 +724,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.lowmemory()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the system is running out of memory on mobile devices."
@@ -734,7 +734,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:lowmemory()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the system is running out of memory on mobile devices."
@@ -744,7 +744,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:lowmemory()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the system is running out of memory on mobile devices."
@@ -754,7 +754,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.lowmemory()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the system is running out of memory on mobile devices."
@@ -764,7 +764,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousefocus()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses mouse focus."
@@ -774,7 +774,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousefocus()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses mouse focus."
@@ -784,7 +784,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousefocus(${2:focus})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses mouse focus."
@@ -794,7 +794,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousefocus(${2:focus})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window receives or loses mouse focus."
@@ -804,7 +804,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousemoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse is moved."
@@ -814,7 +814,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousemoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse is moved."
@@ -824,7 +824,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousemoved(${2:x}, ${3:y}, ${4:dx}, ${5:dy}, ${6:istouch})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse is moved."
@@ -834,7 +834,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousemoved(${2:x}, ${3:y}, ${4:dx}, ${5:dy}, ${6:istouch})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse is moved."
@@ -844,7 +844,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousepressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is pressed."
@@ -854,7 +854,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousepressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is pressed."
@@ -864,7 +864,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousepressed(${2:x}, ${3:y}, ${4:button}, ${5:istouch}, ${6:presses})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is pressed."
@@ -874,7 +874,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousepressed(${2:x}, ${3:y}, ${4:button}, ${5:istouch}, ${6:presses})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is pressed."
@@ -884,7 +884,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousereleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is released."
@@ -894,7 +894,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousereleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is released."
@@ -904,7 +904,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:mousereleased(${2:x}, ${3:y}, ${4:button}, ${5:istouch}, ${6:presses})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is released."
@@ -914,7 +914,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.mousereleased(${2:x}, ${3:y}, ${4:button}, ${5:istouch}, ${6:presses})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a mouse button is released."
@@ -924,7 +924,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.quit()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the game is closed."
@@ -934,7 +934,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:quit()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the game is closed."
@@ -944,7 +944,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:quit()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the game is closed."
@@ -954,7 +954,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.quit()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the game is closed."
@@ -964,7 +964,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.resize()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
@@ -974,7 +974,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:resize()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
@@ -984,7 +984,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:resize(${2:w}, ${3:h})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
@@ -994,7 +994,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.resize(${2:w}, ${3:h})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the window is resized, for example if the user resizes the window, or if love.window.setMode is called with an unsupported width or height in fullscreen and the window chooses the closest appropriate size."
@@ -1004,7 +1004,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.run()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The main function, containing the main loop."
@@ -1014,7 +1014,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:run()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The main function, containing the main loop."
@@ -1024,7 +1024,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:run()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The main function, containing the main loop."
@@ -1034,7 +1034,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.run()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "The main function, containing the main loop."
@@ -1044,7 +1044,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.textedited()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the candidate text for an IME (Input Method Editor) has changed."
@@ -1054,7 +1054,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:textedited()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the candidate text for an IME (Input Method Editor) has changed."
@@ -1064,7 +1064,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:textedited(${2:text}, ${3:start}, ${4:length})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the candidate text for an IME (Input Method Editor) has changed."
@@ -1074,7 +1074,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.textedited(${2:text}, ${3:start}, ${4:length})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when the candidate text for an IME (Input Method Editor) has changed."
@@ -1084,7 +1084,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.textinput()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when text has been entered by the user."
@@ -1094,7 +1094,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:textinput()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when text has been entered by the user."
@@ -1104,7 +1104,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:textinput(${2:text})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when text has been entered by the user."
@@ -1114,7 +1114,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.textinput(${2:text})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Called when text has been entered by the user."
@@ -1124,7 +1124,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.threaderror()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a Thread encounters an error."
@@ -1134,7 +1134,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:threaderror()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a Thread encounters an error."
@@ -1144,7 +1144,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:threaderror(${2:thread}, ${3:errorstr})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a Thread encounters an error."
@@ -1154,7 +1154,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.threaderror(${2:thread}, ${3:errorstr})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a Thread encounters an error."
@@ -1164,7 +1164,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.touchmoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a touch press moves inside the touch screen."
@@ -1174,7 +1174,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:touchmoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a touch press moves inside the touch screen."
@@ -1184,7 +1184,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:touchmoved(${2:id}, ${3:x}, ${4:y}, ${5:dx}, ${6:dy}, ${7:pressure})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a touch press moves inside the touch screen."
@@ -1194,7 +1194,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.touchmoved(${2:id}, ${3:x}, ${4:y}, ${5:dx}, ${6:dy}, ${7:pressure})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when a touch press moves inside the touch screen."
@@ -1204,7 +1204,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.touchpressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen is touched."
@@ -1214,7 +1214,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:touchpressed()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen is touched."
@@ -1224,7 +1224,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:touchpressed(${2:id}, ${3:x}, ${4:y}, ${5:dx}, ${6:dy}, ${7:pressure})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen is touched."
@@ -1234,7 +1234,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.touchpressed(${2:id}, ${3:x}, ${4:y}, ${5:dx}, ${6:dy}, ${7:pressure})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen is touched."
@@ -1244,7 +1244,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.touchreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen stops being touched."
@@ -1254,7 +1254,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:touchreleased()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen stops being touched."
@@ -1264,7 +1264,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:touchreleased(${2:id}, ${3:x}, ${4:y}, ${5:dx}, ${6:dy}, ${7:pressure})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen stops being touched."
@@ -1274,7 +1274,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.touchreleased(${2:id}, ${3:x}, ${4:y}, ${5:dx}, ${6:dy}, ${7:pressure})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the touch screen stops being touched."
@@ -1284,7 +1284,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.update()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to update the state of the game every frame."
@@ -1294,7 +1294,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:update()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to update the state of the game every frame."
@@ -1304,7 +1304,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:update(${2:dt})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to update the state of the game every frame."
@@ -1314,7 +1314,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.update(${2:dt})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function used to update the state of the game every frame."
@@ -1324,7 +1324,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.visible()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window is minimized/hidden or unminimized by the user."
@@ -1334,7 +1334,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:visible()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window is minimized/hidden or unminimized by the user."
@@ -1344,7 +1344,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:visible(${2:visible})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window is minimized/hidden or unminimized by the user."
@@ -1354,7 +1354,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.visible(${2:visible})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when window is minimized/hidden or unminimized by the user."
@@ -1364,7 +1364,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.wheelmoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse wheel is moved."
@@ -1374,7 +1374,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:wheelmoved()",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse wheel is moved."
@@ -1384,7 +1384,7 @@
 		"scope": "lua",
 		"body": [
 			"function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:wheelmoved(${2:x}, ${3:y})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse wheel is moved."
@@ -1394,7 +1394,7 @@
 		"scope": "lua",
 		"body": [
 			"function love.wheelmoved(${2:x}, ${3:y})",
-			"\t${0:}",
+			"\t${0}",
 			"end"
 		],
 		"description": "Callback function triggered when the mouse wheel is moved."
