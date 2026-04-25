@@ -903,7 +903,7 @@ local function generateCallbacks(callbacks)
             cb.name,
             {
                 string.format("function " .. API.NAME .. ".%s()", cb.name),
-                "\t${0:}",
+                "\t${0}",
                 "end",
             },
             firstSentence(cb.description)
@@ -914,7 +914,7 @@ local function generateCallbacks(callbacks)
             "p" .. cb.name,
             {
                 string.format("function " .. API.NAME .. ".%s(%s)", cb.name, paramsString),
-                "\t${0:}",
+                "\t${0}",
                 "end",
             },
             firstSentence(cb.description)
@@ -925,7 +925,7 @@ local function generateCallbacks(callbacks)
             "m" .. cb.name,
             {
                 string.format("function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:%s()", cb.name),
-                "\t${0:}",
+                "\t${0}",
                 "end",
             },
             firstSentence(cb.description)
@@ -936,7 +936,7 @@ local function generateCallbacks(callbacks)
             "mp" .. cb.name,
             {
                 string.format("function ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}:%s(%s)", cb.name, paramsString),
-                "\t${0:}",
+                "\t${0}",
                 "end",
             },
             firstSentence(cb.description)
@@ -966,7 +966,7 @@ local function generateConstructors(constructors)
 
         local body = {
             string.format("local ${1:%s} = %s(%s)", const.typeName, const.fullName, paramsString),
-            "${0:}",
+            "${0}",
         }
 
         local key = const.fullName .. "()"
@@ -1054,7 +1054,7 @@ local function generateGettersSetters(pairs)
                 local getterParam = #(variant.arguments or {}) ~= 0 and gettParams or ""
                 local getterline = string.format("%s%s(%s)", getterResultStr, currentGetterCall, getterParam)
 
-                local getBody = { getterline, "${0:}" }
+                local getBody = { getterline, "${0}" }
                 snippets[module][currentGetKey] = createSnippet(
                     prefix,
                     getBody,
@@ -1083,7 +1083,7 @@ local function generateGettersSetters(pairs)
                 local setterParam = #(variant.arguments or {}) ~= 0 and settParams or ""
                 local setterline = string.format("%s(%s)", currentSetterCall, setterParam)
 
-                local setBody = { setterline, "${0:}" }
+                local setBody = { setterline, "${0}" }
                 snippets[module][currentSetKey] = createSnippet(
                     prefix,
                     setBody,
@@ -1181,7 +1181,7 @@ local function generateEnums(enums)
         local enumKey = "alias " .. enum.fullName
         snippets[enumKey] = createSnippet(
             enum.name,
-            { ("${1|%s|}"):format(choiceString) },
+            { ("${1|%s|}${0}"):format(choiceString) },
             firstSentence(enum.description)
         )
     end
@@ -1263,7 +1263,7 @@ local function generateFunctions(api)
                     local arguments       = expandParameters(variant.arguments or {})
                     local paramsString, _ = generateParamStringWithEnums(arguments)
                     local fullName        = modulePath .. "." .. func.name
-                    local body            = fullName .. "(" .. paramsString .. ")$0"
+                    local body            = fullName .. "(" .. paramsString .. ")${0}"
                     addSnippet(fullName, func, variant, vIdx, body, postfix, "")
                 end
             end
@@ -1278,7 +1278,7 @@ local function generateFunctions(api)
                             local paramsString, _ = generateParamStringWithEnums(arguments, 2)
                             local fullName        = typ.name .. ":" .. func.name
                             local body            = "${1:" ..
-                                toVariableName(typ.name) .. "}:" .. func.name .. "(" .. paramsString .. ")$0"
+                                toVariableName(typ.name) .. "}:" .. func.name .. "(" .. paramsString .. ")${0}"
                             local modulePostfix   = "_" .. typ.name
                             addSnippet(fullName, func, variant, vIdx, body, modulePostfix, postfix)
                         end
@@ -1359,7 +1359,7 @@ local function generateModules(modules)
 
     -- Generate snippets
     for _, mod in ipairs(moduleShortNames) do
-        local body    = { mod.full .. ".${0:}" }
+        local body    = { mod.full .. ".${0}" }
         local key     = mod.full
         snippets[key] = createSnippet(
             { prefixes[mod.full], mod.full },
@@ -1469,6 +1469,7 @@ local function generateConf(fields)
         end
 
         table.insert(body, "end")
+        table.insert(body, "${0}")
         return body
     end
 
