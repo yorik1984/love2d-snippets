@@ -127,7 +127,7 @@ If custom directory is not provided, the default output directory is `snippets/`
 
 ## 📚 References & Related Projects
 
-+ **[love2d-definitions](https://github.com/yorik1984/love2d-definitions)**<br>
++ **[love2d-definitions](https://github.com/yorik1984/love2d-definitions)** <br>
 [LuaCATS](https://luals.github.io/wiki/annotations/) definition for [LÖVE](https://love2d.org/) framework.
 Creates `---@class` and `---@alias` definitions for perfect autocompletion and type checking in IDEs with LuaCATS.
     - **🤖 Automated Updates:** Uses GitHub Actions to stay in sync with the official love-api, just like this plugin.
@@ -135,17 +135,17 @@ Creates `---@class` and `---@alias` definitions for perfect autocompletion and t
     - **🧠 Smart Type System:** Intelligently handles type unions, plural forms (e.g., `tables` → `table[]`), optional parameters, and function overloads.
     - **📌 Version Branches:** Includes branches for specific LÖVE versions (e.g., `11.5`), so you can use annotations that match your project.
 
-+ **[love2d-tresitter.nvim](https://github.com/yorik1984/love2d-treesitter.nvim)**<br>
++ **[love2d-tresitter.nvim](https://github.com/yorik1984/love2d-treesitter.nvim)** <br>
 Is a comprehensive plugin for [Neovim](https://neovim.io/) that highlight [LÖVE](http://love2d.org) syntax in your editor.
 Provides complete LÖVE API syntax highlighting for LÖVE functions, modules, types, and callbacks, with full **[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)** support.
     * **🤖 Automated Updates:** Uses GitHub Actions to stay in sync with the official love-api, just like this definitions.
     * **⚙️ Fully Customizable:** Offers flexible styling options for colors and font styles (bold, italic, etc.).
     * **📌 Version Branches:** Maintains version-specific branches (e.g., `11.5`) to match different LÖVE releases.
 
-+ **[Snip2d](https://github.com/Immow/Snip2d)**<br>
++ **[Snip2d](https://github.com/Immow/Snip2d)** <br>
 Snippets for Lua framework love2d 
 
-+ **[Love2D-Snippets-VSCode](https://github.com/CodingJinxx/Love2D-Snippets-VSCode)**<br>
++ **[Love2D-Snippets-VSCode](https://github.com/CodingJinxx/Love2D-Snippets-VSCode)** <br>
 Snippet Extension for Love2D in Lua
 
 ## 📜 License
@@ -156,8 +156,8 @@ MIT License
   <sub>
     Built with ♡ for the LÖVE community
     <br>
-    <a href="https://github.com/yorik1984/love2d-snippets/issues">Report Issue</a> ·
-    <a href="https://github.com/yorik1984/love2d-snippets/discussions">Discussion</a> ·
+    <a href="https://github.com/yorik1984/love2d-snippets/issues">Report Issue</a> •
+    <a href="https://github.com/yorik1984/love2d-snippets/discussions">Discussion</a> •
     <a href="https://love2d.org/">LÖVE</a>
   </sub>
 </div>

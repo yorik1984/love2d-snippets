@@ -51,7 +51,8 @@
 			"\t${2:t}.modules.video         = ${44|true,false|}",
 			"\t${2:t}.modules.window        = ${45|true,false|}",
 			"\t${2:t}.modules.thread        = ${46|true,false|}",
-			"end"
+			"end",
+			"${0}"
 		],
 		"description": "`conf` as a regular function"
 	},
@@ -107,7 +108,8 @@
 			"\t${2:t}.modules.video         = ${44|true,false|}",
 			"\t${2:t}.modules.window        = ${45|true,false|}",
 			"\t${2:t}.modules.thread        = ${46|true,false|}",
-			"end"
+			"end",
+			"${0}"
 		],
 		"description": "`conf` assigned as a function value"
 	}
