@@ -6,7 +6,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.audio.${0:}"
+			"love.audio.${0}"
 		],
 		"description": "Insert `love.audio.`"
 	},
@@ -17,7 +17,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.data.${0:}"
+			"love.data.${0}"
 		],
 		"description": "Insert `love.data.`"
 	},
@@ -28,7 +28,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.event.${0:}"
+			"love.event.${0}"
 		],
 		"description": "Insert `love.event.`"
 	},
@@ -39,7 +39,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.filesystem.${0:}"
+			"love.filesystem.${0}"
 		],
 		"description": "Insert `love.filesystem.`"
 	},
@@ -50,7 +50,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.font.${0:}"
+			"love.font.${0}"
 		],
 		"description": "Insert `love.font.`"
 	},
@@ -61,7 +61,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.graphics.${0:}"
+			"love.graphics.${0}"
 		],
 		"description": "Insert `love.graphics.`"
 	},
@@ -72,7 +72,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.image.${0:}"
+			"love.image.${0}"
 		],
 		"description": "Insert `love.image.`"
 	},
@@ -83,7 +83,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.joystick.${0:}"
+			"love.joystick.${0}"
 		],
 		"description": "Insert `love.joystick.`"
 	},
@@ -94,7 +94,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.keyboard.${0:}"
+			"love.keyboard.${0}"
 		],
 		"description": "Insert `love.keyboard.`"
 	},
@@ -105,7 +105,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.math.${0:}"
+			"love.math.${0}"
 		],
 		"description": "Insert `love.math.`"
 	},
@@ -116,7 +116,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.mouse.${0:}"
+			"love.mouse.${0}"
 		],
 		"description": "Insert `love.mouse.`"
 	},
@@ -127,7 +127,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.physics.${0:}"
+			"love.physics.${0}"
 		],
 		"description": "Insert `love.physics.`"
 	},
@@ -138,7 +138,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.sound.${0:}"
+			"love.sound.${0}"
 		],
 		"description": "Insert `love.sound.`"
 	},
@@ -149,7 +149,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.system.${0:}"
+			"love.system.${0}"
 		],
 		"description": "Insert `love.system.`"
 	},
@@ -160,7 +160,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.thread.${0:}"
+			"love.thread.${0}"
 		],
 		"description": "Insert `love.thread.`"
 	},
@@ -171,7 +171,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.timer.${0:}"
+			"love.timer.${0}"
 		],
 		"description": "Insert `love.timer.`"
 	},
@@ -182,7 +182,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.touch.${0:}"
+			"love.touch.${0}"
 		],
 		"description": "Insert `love.touch.`"
 	},
@@ -193,7 +193,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.video.${0:}"
+			"love.video.${0}"
 		],
 		"description": "Insert `love.video.`"
 	},
@@ -204,7 +204,7 @@
 		],
 		"scope": "lua",
 		"body": [
-			"love.window.${0:}"
+			"love.window.${0}"
 		],
 		"description": "Insert `love.window.`"
 	}
