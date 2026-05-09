@@ -7123,7 +7123,7 @@
 		"prefix": "newImageFont_graphics",
 		"scope": "lua",
 		"body": [
-			"love.graphics.newImageFont(${1:filename}, ${2:glyphs})${0}"
+			"love.graphics.newImageFont(${1:filename}, ${2:glyphs}, ${3:0})${0}"
 		],
 		"description": "Creates a new specifically formatted image."
 	},
@@ -7131,17 +7131,9 @@
 		"prefix": "newImageFont_graphics2",
 		"scope": "lua",
 		"body": [
-			"love.graphics.newImageFont(${1:imageData}, ${2:glyphs})${0}"
+			"love.graphics.newImageFont(${1:imageData}, ${2:glyphs}, ${3:0})${0}"
 		],
 		"description": "Creates a new specifically formatted image."
-	},
-	"love.graphics.newImageFont()_overload3": {
-		"prefix": "newImageFont_graphics3",
-		"scope": "lua",
-		"body": [
-			"love.graphics.newImageFont(${1:filename}, ${2:glyphs}, ${3:extraspacing})${0}"
-		],
-		"description": "Instead of using this function, consider using a BMFont generator such as bmfont, littera, or bmGlyph with love.graphics.newFont."
 	},
 	"love.graphics.newMesh()": {
 		"prefix": "newMesh_graphics",
@@ -8108,6 +8100,14 @@
 		"scope": "lua",
 		"body": [
 			"love.keyboard.isDown(${1|\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"space\",\"!\",\"\\\"\",\"#\",\"$\",\"&\",\"'\",\"(\",\")\",\"*\",\"+\",\"\\,\",\"-\",\".\",\"/\",\":\",\";\",\"<\",\"=\",\">\",\"?\",\"@\",\"[\",\"\\\\\",\"]\",\"^\",\"_\",\"`\",\"kp0\",\"kp1\",\"kp2\",\"kp3\",\"kp4\",\"kp5\",\"kp6\",\"kp7\",\"kp8\",\"kp9\",\"kp.\",\"kp/\",\"kp*\",\"kp-\",\"kp+\",\"kpenter\",\"kp=\",\"up\",\"down\",\"right\",\"left\",\"home\",\"end\",\"pageup\",\"pagedown\",\"insert\",\"backspace\",\"tab\",\"clear\",\"return\",\"delete\",\"f1\",\"f2\",\"f3\",\"f4\",\"f5\",\"f6\",\"f7\",\"f8\",\"f9\",\"f10\",\"f11\",\"f12\",\"f13\",\"f14\",\"f15\",\"numlock\",\"capslock\",\"scrollock\",\"rshift\",\"lshift\",\"rctrl\",\"lctrl\",\"ralt\",\"lalt\",\"rmeta\",\"lmeta\",\"lsuper\",\"rsuper\",\"mode\",\"compose\",\"pause\",\"escape\",\"help\",\"print\",\"sysreq\",\"break\",\"menu\",\"power\",\"euro\",\"undo\",\"www\",\"mail\",\"calculator\",\"appsearch\",\"apphome\",\"appback\",\"appforward\",\"apprefresh\",\"appbookmarks\"|}, ...)${0}"
+		],
+		"description": "Checks whether a certain key is down."
+	},
+	"love.keyboard.isDown()_overload3": {
+		"prefix": "isDown_keyboard3",
+		"scope": "lua",
+		"body": [
+			"love.keyboard.isDown(${1:keys})${0}"
 		],
 		"description": "Checks whether a certain key is down."
 	},
