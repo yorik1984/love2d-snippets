@@ -1,13 +1,13 @@
 ## 📊 Statistics:
 
-* Constructors: 128
+* Constructors: 127
 * Getters Setters: 380
 * Enums: 58
 * Callbacks: 140
 * Conf: 2
 * Modules: 19
 * Functions: 1176
-* Total snippets generated: **1903**
+* Total snippets generated: **1902**
 
 ## 🗂 Output Files
 

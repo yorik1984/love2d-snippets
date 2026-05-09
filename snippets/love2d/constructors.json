@@ -390,7 +390,7 @@
 		"prefix": "lnewImageFont",
 		"scope": "lua",
 		"body": [
-			"local ${1:font} = love.graphics.newImageFont(${2:filename}, ${3:glyphs})",
+			"local ${1:font} = love.graphics.newImageFont(${2:filename}, ${3:glyphs}, ${4:0})",
 			"${0}"
 		],
 		"description": "Creates a new specifically formatted image. (Constructor)"
@@ -399,16 +399,7 @@
 		"prefix": "lnewImageFont2",
 		"scope": "lua",
 		"body": [
-			"local ${1:font} = love.graphics.newImageFont(${2:imageData}, ${3:glyphs})",
-			"${0}"
-		],
-		"description": "Creates a new specifically formatted image. (Constructor)"
-	},
-	"love.graphics.newImageFont()_overload3": {
-		"prefix": "lnewImageFont3",
-		"scope": "lua",
-		"body": [
-			"local ${1:font} = love.graphics.newImageFont(${2:filename}, ${3:glyphs}, ${4:extraspacing})",
+			"local ${1:font} = love.graphics.newImageFont(${2:imageData}, ${3:glyphs}, ${4:0})",
 			"${0}"
 		],
 		"description": "Creates a new specifically formatted image. (Constructor)"
